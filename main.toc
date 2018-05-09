@@ -1,0 +1,7 @@
+\relax \fontsize {10.95}{13.6}\selectfont \abovedisplayskip 11\p@ plus3\p@ minus6\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \belowdisplayskip \abovedisplayskip \let \leftmargin \leftmargini \parsep 4.5\p@ plus2\p@ minus\p@ \topsep 9\p@ plus3\p@ minus5\p@ \itemsep 4.5\p@ plus2\p@ minus\p@ \leftmargin \leftmargini \parsep 4.5\p@ plus2\p@ minus\p@ \topsep 9\p@ plus3\p@ minus5\p@ \itemsep 4.5\p@ plus2\p@ minus\p@ 
+\contentsline {chapter}{\numberline {1}Background and Previous Work}{2}{chapter.1}
+\contentsline {section}{\numberline {1.1}Chirality and Chiroptical Effects}{2}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Chirality}{2}{subsection.1.1.1}
+\contentsline {section}{\numberline {1.2}Chiral Structures}{2}{section.1.2}
+\contentsline {chapter}{\numberline {2}Experimental Techniques}{4}{chapter.2}
+\contentsline {chapter}{\numberline {3}Experimental Results}{5}{chapter.3}

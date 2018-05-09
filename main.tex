@@ -1,0 +1,134 @@
+%Define style
+\documentclass[11pt,a4paper,final]{report}
+%Set reduced margins
+\usepackage[margin=25mm]{geometry}
+
+% Use fancy headers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+%Set line spacing to 1.5 except captions etc
+\usepackage{setspace}
+\onehalfspacing
+
+%Reduce font size for figure captions
+\usepackage[font=small,labelfont=bf, textfont=it]{caption}
+
+%Enable graphics
+\usepackage{graphicx}
+
+%Enable floats (ie. aligning of multi-line equations)
+\usepackage{float}
+
+%Enable equations package
+\usepackage{amsmath}
+
+%Enable control over section numbering
+\usepackage{titlesec}
+\setcounter{secnumdepth}{4}
+
+%Enable PDF links
+\usepackage{bookmark}
+
+%Enable SI units package
+\usepackage{siunitx}
+
+%Define way to add matrix vertical line, used in 3D matrices and augmenting
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+	\hskip -\arraycolsep
+	\let\@ifnextchar\new@ifnextchar
+	\array{#1}}
+\makeatother
+
+%Define way to add tensor dots
+\def\onedot{$\mathsurround0pt\ldotp$}
+\def\cddot{% two dots stacked vertically
+	\mathbin{\vcenter{\baselineskip.67ex
+		\hbox{\onedot}\hbox{\onedot}}%
+	}}%
+\def\cdddot#1{% three dots 
+	\mathbin{\vcenter{\baselineskip.67ex
+		\hbox{\onedot}\hbox{\onedot}\hbox{\onedot}%
+	}}%
+}
+
+%Title and author info (REDUNDANT WITH CUSTOM TITLE PAGE)
+\title{Thesis 2018}
+\author{
+	Collins, J.T. \\ 
+	Department of Physics\\
+	University of Bath\\
+}
+
+%Include build date
+\date{\today}
+
+
+%Control TOC size
+\AtBeginDocument{
+  \addtocontents{toc}{\normalsize}
+  \addtocontents{lof}{\normalsize}
+}
+
+
+\begin{document}
+
+
+% Custom title page
+\begin{titlepage}
+    \input{./title}
+\end{titlepage}
+
+% Table of contents
+\clearpage
+\tableofcontents
+\clearpage
+
+% Abstract
+\begin{abstract}
+    \input{./abstract}
+\end{abstract}
+\clearpage
+
+
+% Intro text
+\chapter*{Acknowledgements}
+I'd like to thank \LaTeX  for not being as horrible to use as MS Word.
+
+TO-DO:
+\begin{itemize}
+    \item Properly style chapters
+    \item Actually write a thesis
+\end{itemize}
+
+
+% Main text
+\chapter{Background and Previous Work}\label{sec:background}
+\input{./sections/background/ChiropticalEffects}
+\input{./sections/background/ChiralStructures}
+
+\chapter{Experimental Techniques}\label{sec:techniques}
+\input{./sections/techniques/NonlinearOptics}
+\input{./sections/techniques/LinearMicroscopy}
+\input{./sections/techniques/NonlinearMicroscopy}
+\input{./sections/techniques/Diffraction}
+
+\chapter{Experimental Results}\label{sec:results}
+\input{./sections/results/OAinPlanarNanohelices}
+\input{./sections/results/HRSinLiquidNanohelices}
+\input{./sections/results/EnantiomorphingChiralCrosses}
+\input{./sections/results/DiffractionInMicrostructures}
+
+
+% Bibliography
+\bibliographystyle{abbrv}
+\bibliography{library}
+\clearpage
+
+% Appendix
+\chapter*{Appendix}\label{sec:appendix}
+\appendix
+\input{./sections/appendix/PythonAnalysis}
+
+\end{document}
