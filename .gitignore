@@ -1,4 +1,7 @@
-﻿## Core latex/pdflatex auxiliary files:
+﻿## Ignore main pdf
+main.pdf
+
+## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
 *.log
