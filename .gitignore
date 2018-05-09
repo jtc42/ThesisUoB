@@ -1,5 +1,6 @@
 ﻿## Ignore main pdf
 main.pdf
+main.synctex.gz
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
