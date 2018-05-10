@@ -5,7 +5,8 @@
 
 % Use fancy headers
 \usepackage{fancyhdr}
-\pagestyle{fancy}
+%\pagestyle{fancy}
+\pagestyle{headings}
 
 %Set line spacing to 1.5 except captions etc
 \usepackage{setspace}
@@ -16,6 +17,9 @@
 
 %Enable graphics
 \usepackage{graphicx}
+
+%Enable coloured text
+\usepackage{xcolor}
 
 %Enable floats (ie. aligning of multi-line equations)
 \usepackage{float}
@@ -28,7 +32,8 @@
 \setcounter{secnumdepth}{4}
 
 %Enable PDF links
-\usepackage{bookmark}
+%\usepackage{bookmark}
+\usepackage[hidelinks]{hyperref}
 
 %Enable SI units package
 \usepackage{siunitx}
@@ -129,7 +134,7 @@ I'd like to thank \LaTeX  for not being as horrible to use as MS Word.
 
 
 % Bibliography
-\bibliographystyle{abbrv}
+\bibliographystyle{unsrt}
 \bibliography{library}
 \clearpage
 
