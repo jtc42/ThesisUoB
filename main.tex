@@ -38,6 +38,7 @@
 %Enable SI units package
 \usepackage{siunitx}
 
+
 %Define way to add matrix vertical line, used in 3D matrices and augmenting
 \makeatletter
 \renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
@@ -110,7 +111,6 @@ I'd like to thank \LaTeX  for not being as horrible to use as MS Word.
 
 \noindent\textbf{To-do:}
 \begin{itemize}
-    \item Adjust fancy headers
     \item Actually write a thesis
 \end{itemize}
 
@@ -139,8 +139,9 @@ I'd like to thank \LaTeX  for not being as horrible to use as MS Word.
 \clearpage
 
 % Appendix
-\chapter*{Appendix}\label{sec:appendix}
 \appendix
-\input{./sections/appendix/PythonAnalysis}
+\chapter{Background and Previous Work}\label{sec:appendix}
+\chapter{Experimental Results}\label{sec:appendix}
+\input{./sections/appendix/ChiralGeoDiff}
 
 \end{document}
