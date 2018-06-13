@@ -1,7 +1,6 @@
 \section{Second Harmonic Generation Optical Rotation Solely Attributable to Chirality in Plasmonic Metasurfaces}\label{sec:results:OAinPlanarNanohelices}
 This section has largely been copied verbatum from the manuscript \textit{``Second Harmonic Generation Optical Rotation Solely Attributable to Chirality in Plasmonic Metasurfaces''}, Joel~T.~Collins et. al. \cite{Collins2018b}. 
-Experiments were planned by V. K. Valev. Samples were prepared by N. V. S. Braz and P. A. Warburton. Experiments were executed by V. K. Valev, E. Slenders and M. Ameloot. Near-field and scattering simulations were performed by X. Zheng and G. A. E. Vandenbosch. Numerical simulations of the far-field, linear CD were performed by S. Zu and Z. Fang. 
-Analysis of the nonlinear microscopy data was performed by myself, with Python code including sections written by V. K. Valev. The formulation and analysis of modal circular-dichroism based on the near-field simulations was also performed by myself. I produced the first draft of the manuscript, and all authors have subsiquently contributed. 
+V. K. Valev designed the nonlinear experimental setup. A.G.Mark fabricated the samples. SHG data were collected by myself, and D. C. Hooper. Linear optical data were collected by myself and C. Kuppe. All data were analysed myself.I produced the first draft of the manuscript, and all authors have subsiquently contributed.
 \\
 
 Chiral plasmonic nanostructures, those lacking mirror symmetry, can be designed to manipulate the polarization of incident light resulting in chiroptical (chiral optical) effects such as circular dichroism (CD) and optical rotation (OR). Due to high symmetry sensitivity, corresponding effects in second harmonic generation (SHG-CD and SHG-OR) are typically much stronger in comparison. These nonlinear effects have long been used for chiral molecular analysis and characterization, however both linear and nonlinear optical rotation can occur even in achiral structures, if the structure is birefringent due to anisotropy. Crucially, chiroptical effects resulting from anisotropy typically exhibit a strong dependence on structural orientation. Here we report large second-harmonic generation optical rotation of $\pm\SI{45}{\degree}$, due to intrinsic chirality in a highly anisotropic helical metamaterial. The SHG intensity is found to strongly relate to the structural anisotropy, however the angle of SHG-OR is invariant under sample rotation. We show that by tuning the geometry of anisotropic nanostructures, the interaction between anisotropy, chirality, and experiment geometry can allow even greater control over the chiroptical properties of plasmonic metamaterials.
@@ -48,16 +47,61 @@ Moreover, upon measuring the right-handed structures, the SHG-OR reverses to app
 Importantly, SHG-OR is not always independent of sample anisotropy. As discussed in section~\ref{sec:results:OAinPlanarNanohelices:discussion}, SHG is a highly symmetry-sensitive technique, whereby symmetry is expressed in the values of nonlinear susceptibility tensor elements. Depending on the experimental geometry, and on the values of these tensor elements, competing symmetries within the structure can be dominant in the measured results. Indeed, we demonstrate this in Figure~\ref{fig:results:OAinPlanarNanohelices:combined_data}b. The data presented in Figure~\ref{fig:results:OAinPlanarNanohelices:combined_data}b were obtained from the same nanohelices, however whereas in Figure~\ref{fig:results:OAinPlanarNanohelices:combined_data}a we used S-polarized light, here P-polarized light was employed. As in Figure~\ref{fig:results:OAinPlanarNanohelices:combined_data}a, the heat maps correspond to SHG intensity as a function of sample and analyzer rotation angles. Contrary to Figure~\ref{fig:results:OAinPlanarNanohelices:combined_data}a, the SHG-OR angle changes significantly over the regions of SHG emission, closely following the sample rotation angle. This behavior is exactly as expected for SHG-OR, dominantly due to sample anisotropy. The experimental geometry must be carefully selected to address the structural chirality exclusively.
 
 The nonlinear chiroptical behavior reported here is in stark contrast to the linear chiroptical case. The linear OR of the nanohelices was investigated with optical microscopy and spectroscopy. White light from a halogen lamp is linearly polarized and directed to the sample through an Axio Imager M2 microscope. 
+An analyzing polarizer is placed in the reflected light path. The latter can be precisely rotated through $\SI{360}{\degree}$. Under crossed polarizer geometry, only light that has experienced OR reaches the detector. By rotating the analyzer, the sign of this OR can be obtained. 
+Figure~\ref{fig:results:OAinPlanarNanohelices:lin_data}a shows a $3 \times 3$ array of optical microscopy images (in color) of the nanohelices. The rows correspond to three different sample rotation angles ($\SI{0}{\degree}$, $\SI{45}{\degree}$ and $\SI{90}{\degree}$) and the columns corresponds to three analyzer rotation angles ($\SI{85}{\degree}$, $\SI{90}{\degree}$, $\SI{95}{\degree}$).
+The sign of OR is revealed by the color contrast in the images. For a sample oriented at $\SI{0}{\degree}$ and an analyzer positioned at $\SI{85}{\degree}$, the image appears green.
+Upon rotating the analyzer to $\SI{95}{\degree}$, the color changes to red. However, upon orienting the sample at $\SI{90}{\degree}$, the color contrast reverses, indicating an opposite OR. This behavior suggests that the angle of OR depends on sample orientation and that OR changes sign every $\SI{90}{\degree}$. 
+The trend is confirmed by Figure~\ref{fig:results:OAinPlanarNanohelices:lin_data}b, which shows an OR spectral map, obtained upon rotating the sample between crossed polarizers. 
+Here, a $\SI{90}{\degree}$ rotational periodicity for the OR is clearly visible, at wavelengths above $\SI{550}{\nano\m}$. The behavior of the sample is consistent with that of a radiating dipole rotated through $\SI{360}{\degree}$. Such a dipole can be situated at the end-termination of the nanohelices. In the ranges of study, this dipole is excited by wavelengths from $\SI{550}{\nano\m}$ to $\SI{800}{\nano\m}$. The latter is the fundamental wavelength used for the SHG data in Figure~\ref{fig:results:OAinPlanarNanohelices:combined_data}, where the SHG intensity also depends on coupling to the end-termination dipole, as discussed above.
 
 \begin{figure}[htb!]	
     \centering	
     \includegraphics[scale=0.8]{./figures/results/OAinPlanarNanohelices/lin_data.pdf}
 
     \caption{\label{fig:results:OAinPlanarNanohelices:lin_data}
-    Linear optical rotation data obtained through microscopy. \textbf{a)} Microscopy images of left-handed structure under illumination by linearly polarized white light, with various almost-crossed analyzing polarizer angles. By rotating the analyzer slightly away from crossed ($\SI{90}{\degree}$), the spectral dependence of optical rotation can be observed. Longer wavelengths are transmitted more through the analyzer when oriented at $+\SI{5}{\degree}$ away from crossed. Crucially, upon rotating the structure by $\SI{90}{\degree}$, the OR appears to reverse: longer wavelengths are now transmitted more through the analyzer when oriented at $-\SI{5}{\degree}$ from crossed. \textbf{b)} Linear OR map obtained from a spectrometer connected to the microscope viewport, showing clear dependence on sample rotation. Since the sample is between crossed polarizers, positive and negative OR both increase the measured intensity.}	
+    Linear optical rotation data obtained through microscopy. \textbf{a)} Microscopy images of left-handed structure under illumination by linearly polarized white light, with various almost-crossed analyzing polarizer angles. By rotating the analyzer slightly away from crossed ($\SI{90}{\degree}$), the spectral dependence of optical rotation can be observed. Longer wavelengths are transmitted more through the analyzer when oriented at $+\SI{5}{\degree}$ away from crossed. Crucially, upon rotating the structure by $\SI{90}{\degree}$, the OR appears to reverse: longer wavelengths are now transmitted more through the analyzer when oriented at $-\SI{5}{\degree}$ from crossed. \textbf{b)} Linear OR map obtained from a spectrometer connected to the microscope viewport, showing clear dependence on sample rotation. Since the sample is between crossed polarizers, positive and negative OR both increase the measured intensity.}
 \end{figure}
 
 \subsection{Discussion}\label{sec:results:OAinPlanarNanohelices:discussion}
+\textbf{Lots of this can also be moved into the main background section.}
+
+At a given optical frequency $\omega$, the nonlinear chiroptical effects are commonly described in terms of the nonlinear susceptibility tensors, relating the induced polarization ($P$) at the second-harmonic ($2\omega$) to the driving electric ($E$) and magnetic ($B$) fields, by equation~\ref{eq:results:OAinPlanarNanohelices:P2contributions}.\cite{Boyd2008a}
+\begin{equation}\label{eq:results:OAinPlanarNanohelices:P2contributions}	
+    {P_i}\left( {2\omega } \right) = 
+    \varepsilon{_0}\chi_{ijk}^{eee}{E_j}\left(\omega \right){E_k}\left(\omega \right) + \varepsilon{_0}\chi_{ijk}^{eem}{E_j}\left(\omega \right){B_k}\left(\omega \right) + \varepsilon{_0}\chi_{ijk}^{eme}{B_j}\left(\omega \right){E_k}\left(\omega \right)
+\end{equation}
+The indices $i$, $j$, and $k$ describe the Cartesian coordinates of the fields, and can represent $x$, $y$, or $z$ (see Figure~\ref{fig:results:OAinPlanarNanohelices:setup}c). 
+The superscripts $e$ and $m$ stand for electric and magnetic dipole transitions, respectively, while $\varepsilon{_0}$ is the permittivity of vacuum. 
+In addition to equation~\ref{eq:results:OAinPlanarNanohelices:P2contributions}, the incident electromagnetic fields can induce a magnetization $M_i$ analogous to the polarization $P_i$. 
+In our experiment (Figure~\ref{fig:results:OAinPlanarNanohelices:combined_data}a), the incident electric field is polarized perpendicularly to the main helix axis, therefore we can exclude this magnetic contribution. Away from resonance, the magnetic component of the incident light is much weaker than the electric component. 
+In our analysis, we therefore consider only the contribution from electric dipoles ($eee$). Furthermore, for collinear SHG experiments, the incident fields ${E_j}(\omega)$ and ${E_k}(\omega)$ are indistinguishable. This allows equation~\ref{eq:results:OAinPlanarNanohelices:P2contributions} to be reduced under permutation symmetry to equation~\ref{eq:results:OAinPlanarNanohelices:PshgFull}, as in section~\ref{sec:background:NonlinearOptics:tensorsymmetry:permutation}.
+
+\begin{equation}\label{eq:results:OAinPlanarNanohelices:PshgFull}
+	\begin{pmatrix}
+		P_{x}\\ 
+		P_{y}\\ 
+		P_{z}
+	\end{pmatrix} =
+	\begin{pmatrix}
+		\chi_{xxx} & \chi_{xyy} & \chi_{xzz} & \chi_{xyz} & \chi_{xzx} & \chi_{xyx}\\ 
+		\chi_{yxx} & \chi_{yyy} & \chi_{yzz} & \chi_{yzy} & \chi_{yzx} & \chi_{yxy}\\ 
+		\chi_{zxx} & \chi_{zyy} & \chi_{zzz} & \chi_{zyz} & \chi_{zxz} & \chi_{zyx}
+	\end{pmatrix}
+	\begin{pmatrix}
+		E_{x}E_{x}\\ 
+		E_{y}E_{y}\\ 
+		E_{z}E_{z}\\
+		2E_{y}E_{z}\\ 
+		2E_{z}E_{x}\\ 
+		2E_{x}E_{y}
+	\end{pmatrix}
+\end{equation}
+The presence of sample symmetry can further reduce the number of non-zero tensor components. The presence of surface isotropy (full rotational symmetry about the surface normal) causes 11 components to be eliminated (section~\ref{sec:background:NonlinearOptics:tensorsymmetry:isotropy}) we can refer to these as the ``anisotropy components''. Likewise, for a tensor with mirror symmetry, 8 components are eliminated  (section~\ref{sec:background:NonlinearOptics:tensorsymmetry:chirality}). These ``chirality components'' are therefore only present in chiral structures. Importantly, both anisotropy and chirality tensor components can contribute to SHG-OR. 
+
+Our sample is a chiral, anisotropic surface. With S-polarized light, ${E_j}(\omega)$ and ${E_k}(\omega)$ are polarized along the sample $y$-axis. Therefore, only the $\chi_{xyy}$, $\chi_{yyy}$ and $\chi_{zyy}$ tensor components are addressed. Here, we examine each component individually. 
+First, we can see that $\chi_{zyy}$ is neither an in-plane anisotropy, nor a chirality parameter. Second, $\chi_{yyy}$ is an anisotropy but not a chirality parameter. And third, $\chi_{xyy}$ relates to \textit{both} anisotropy and chirality. 
+Rotating the sample by an angle $\theta$ around the surface normal is equivalent to applying a rotation operation to the tensor in equation~\ref{eq:results:OAinPlanarNanohelices:PshgFull}. The treatment can be simplified by introducing effective nonlinear susceptibility tensor components
+
 
 \subsection{Methods}\label{sec:results:OAinPlanarNanohelices:methods}
 \textbf{This section in the paper has details about the experiment. This could be rewritten to reference the generic method thesis section, and acts as specific details. Possibly move these bits inline with the text too?}
