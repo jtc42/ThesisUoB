@@ -1,4 +1,6 @@
-\section{Enantiomorphing chiral crosses}\label{sec:results:EnantiomorphingChiralCrosses}
+\chapter{Enantiomorphing Chiral Plasmonic Nanostructures}\label{sec:results:EnantiomorphingChiralCrosses}
+
+
 This section has largely been copied verbatum from the manuscript \textit{``Enantiomorphing Chiral Plasmonic Nanostructures: A Counterintuitive Sign Reversal of the Nonlinear Circular Dichroism''}, Joel~T.~Collins et. al. \cite{Collins2018}. 
 Experiments were planned by V. K. Valev. Samples were prepared by N. V. S. Braz and P. A. Warburton. Experiments were executed by V. K. Valev, E. Slenders and M. Ameloot. Near-field and scattering simulations were performed by X. Zheng and G. A. E. Vandenbosch. Numerical simulations of the far-field, linear CD were performed by S. Zu and Z. Fang. 
 Analysis of the nonlinear microscopy data was performed by myself, with Python code including sections written by V. K. Valev. The formulation and analysis of modal circular-dichroism based on the near-field simulations was also performed by myself. I produced the first draft of the manuscript, and all authors have subsiquently contributed. 
@@ -12,7 +14,7 @@ Here, the results of an elegant experiment are presented: by designing 35 interm
 Nonlinear multiphoton microscopy is used to demonstrate a new kind of double-bisignate circular dichroism due to enantiomorphing, rather than wavelength change.
 From group theory, a fundamental origin of this plasmonic chiroptical response is proposed. The analysis allows the optimization of plasmonic chiroptical materials.
 
-\subsection{Introduction}\label{sec:results:EnantiomorphingChiralCrosses:introduction}
+\section{Introduction}\label{sec:results:EnantiomorphingChiralCrosses:introduction}
 Throughout the 19th and most of the 20th century, chirality has been associated with chemistry. However, whereas chirality can be crucial for understanding molecules, molecules are not best suited for understanding chirality. Indeed, there are various forms of chirality, such as helical chirality, propeller chirality, supramolecular chirality, extrinsic chirality, etc.\cite{Collins2017, Valev2013b}. These forms all depend on chirality parameters. 
 Ideally, we would like to be able to vary these parameters, i.e., to follow the parameter values as chiral systems transition from one chiral form into another. However, it is impossible to control the size of atoms, the length of chemical bonds, and the orientation of orbitals. Modern nanofabrication techniques have lifted the limitations on tuning chiral parameters.
 
@@ -35,7 +37,7 @@ We demonstrate a new kind of bisignate (of two signs) CD due to enantiomorphing,
 Interestingly, we find that, regardless of their handedness, chiral nanostructures contain modes that can be excited by both left and right circularly polarized (LCP and RCP) light. Furthermore, which modes are dominant (i.e., couple strongest to light) depends on the wavelength or the shape/dimensions of the nanostructure. It is therefore perfectly possible to engineer chiral nano- materials that, at a given wavelength, can only be excited with the “wrong” kind of CPL. 
 Our findings offer the possibility of tuning chiroptical response by selecting particular electromagnetic modes, or sets of modes, among hundreds available, which can enable much more sensitive chiroptical control than what is currently available.
 
-\subsection{Results}\label{sec:results:EnantiomorphingChiralCrosses:results}
+\section{Results}\label{sec:results:EnantiomorphingChiralCrosses:results}
 
 We begin by presenting the purely geometric considerations. Starting with left-handed crosses, we morph their geometry in discrete steps, first into achiral squares and then into right-handed chiral crosses (Figure~\ref{fig:results:EnantiomorphingChiralCrosses:setup}b). For the purposes of comparison, we use a measure of ``chiral geometric difference'' (not to be confused with the geometric chirality parameter). 
 % TODO: Write up the geometric difference stuff in appendix
@@ -65,7 +67,7 @@ Upon considering the nonlinear CD from all these samples, it is obvious that bet
 
 In the far-field, the linear CD response is demonstrated by FDTD simulations data that are displayed in Figure~\ref{fig:results:EnantiomorphingChiralCrosses:l1000modes}a. Clearly, the data in Figure~\ref{fig:results:EnantiomorphingChiralCrosses:l1000modes}a do not match those in Figure~\ref{fig:results:EnantiomorphingChiralCrosses:l1000data}b. One reason for this difference is that the nonlinear CD originates in the near-field, which is very different from the far-field in this kind of structures. To understand the observed reversal of the nonlinear CD, we need to examine the electromagnetic behaviour at the surface of the nanostructures. 
 
-\subsection{Discussion}\label{sec:results:EnantiomorphingChiralCrosses:discussion}
+\section{Discussion}\label{sec:results:EnantiomorphingChiralCrosses:discussion}
 
 \begin{figure}[htb!]	
     \centering	
@@ -121,7 +123,7 @@ The bisignate trend seen in Figure~\ref{fig:results:EnantiomorphingChiralCrosses
 
 We further verify this agreement with a second set of intermediate structures (Figure~\ref{fig:results:EnantiomorphingChiralCrosses:d200}) in which the nanostripe length is varied, for a constant width of $\SI{200}{\nano\m}$. We observe in both the experiments (originating from near-field) and the near-field simulations that the CD emerges away from the achiral structure, and subsequently plateaus. Although longer nanostripes support more electromagnetic modes than shorter ones, these additional modes spread across the whole structure, and do not influence dramatically the key central region. The nonlinear CD measurements probe the the center of the crosses and, consiquently, it plateaus as nanostripe length increases.
 
-\subsection{Conclusions}\label{sec:results:EnantiomorphingChiralCrosses:conclusions}
+\section{Conclusions}\label{sec:results:EnantiomorphingChiralCrosses:conclusions}
 
 This study has focussed on the bisignate CD response as a function of varying structure geometry. With respect to wavelength, both linear and nonlinear chiroptical spectra often exhibit complex bisignate (of two signs) features~\cite{Li2015, Lee2013, Decker2007, Droulias2013, Plum2009}. This behavior can be linked to Kuhn’s sum-rule~\cite{Kuhn1930}, which states that the chiroptical response must be zero over all wavelengths. This dependence on wavelength has been analyzed in terms of exciton coupling~\cite{Guerrero-Martinez2011} nanoparticle-nanoparticle Coulomb coupling~\cite{Fan2010}, and energy level hybridization~\cite{Auguie2011a}.
 In particular, in the linear optical case it was shown that the energetic ordering of the hybridized modes can be changed, resulting in a reversal of the linear CD, upon making small relative position shifts between L-shaped nanoparticles~\cite{Hentschel2015}.

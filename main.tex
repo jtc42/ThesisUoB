@@ -38,6 +38,10 @@
 %Enable SI units package
 \usepackage{siunitx}
 
+%Enable better references including per-chapter bibloiographies
+%\usepackage[sorting=none, refsection=chapter]{biblatex} % load the package
+%\addbibresource{library.bib} % load the library
+
 
 %Define way to add matrix vertical line, used in 3D matrices and augmenting
 \makeatletter
@@ -119,23 +123,18 @@ I'd like to thank \LaTeX  for not being as horrible to use as MS Word.
 
 
 % Main text
-\chapter{Background and Previous Work}\label{sec:background}
-\input{./sections/background/ChiropticalEffects}
-\input{./sections/background/ChiralStructures}
-\input{./sections/background/NonlinearOptics}
+\include{./sections/background/Introduction}
+\include{./sections/background/Chirality}
+\include{./sections/background/NonlinearOptics}
+\include{./sections/background/Plasmonics}
 
-\chapter{Experimental Techniques}\label{sec:techniques}
-\input{./sections/techniques/NonlinearMeasurements}
-\input{./sections/techniques/LinearMicroscopy}
-\input{./sections/techniques/NonlinearMicroscopy}
-\input{./sections/techniques/Diffraction}
+\include{./sections/Framework}
 
-\chapter{Experimental Results}\label{sec:results}
-\input{./sections/results/OAinPlanarNanohelices}\clearpage
-\input{./sections/results/HRSinLiquidNanohelices}\clearpage
-\input{./sections/results/EnantiomorphingChiralCrosses}\clearpage
-\input{./sections/results/DiffractionInMicrostructures}\clearpage
+\include{./sections/results/EnantiomorphingChiralCrosses}
+\include{./sections/results/OAinPlanarNanohelices}
+\include{./sections/results/HRSinLiquidNanohelices}
 
+\include{./sections/Conclusions}
 
 % Bibliography
 \bibliographystyle{unsrt}
@@ -144,6 +143,8 @@ I'd like to thank \LaTeX  for not being as horrible to use as MS Word.
 
 % Appendix
 \appendix
+\chapter{Reducing \texorpdfstring{$\chi^{(2)}$}{Lg} with Symmetry}
+\chapter{Quantifying chirality}
 \input{./sections/appendix/ChiralGeoDiff}
 
 \end{document}
