@@ -32,15 +32,14 @@
 \setcounter{secnumdepth}{4}
 
 %Enable PDF links
-%\usepackage{bookmark}
 \usepackage[hidelinks]{hyperref}
 
 %Enable SI units package
 \usepackage{siunitx}
 
-%Enable better references including per-chapter bibloiographies
-%\usepackage[sorting=none, refsection=chapter]{biblatex} % load the package
-%\addbibresource{library.bib} % load the library
+%Enable inline references
+\usepackage{bibentry}
+\nobibliography*
 
 
 %Define way to add matrix vertical line, used in 3D matrices and augmenting
@@ -90,10 +89,6 @@
     \input{./title}
 \end{titlepage}
 
-% Table of contents
-\clearpage
-\tableofcontents
-\clearpage
 
 % Abstract
 \begin{abstract}
@@ -102,11 +97,17 @@
 \clearpage
 
 
-% Intro text
+% Table of contents
+\clearpage
+\tableofcontents
+\clearpage
+
+
+% Acknowledgements
 \chapter*{Acknowledgements}
 
 \color{red}
-I'd like to thank \LaTeX  for not being as horrible to use as MS Word.
+I'd like to thank \LaTeX  for not being quite as horrible to use as MS Word.
 
 \noindent\textbf{Notes to self:}
 \noindent SyncTeX should be installed separately to function in VS Code. 
@@ -120,6 +121,19 @@ I'd like to thank \LaTeX  for not being as horrible to use as MS Word.
     \item Actually write a thesis
 \end{itemize}
 \color{black}
+
+% Publications
+\chapter*{Publications}
+
+\bibentry{Collins2018b}
+
+\bigskip \noindent \bibentry{Collins2018}
+
+\bigskip \noindent \bibentry{Kuppe2018}
+
+\bigskip \noindent \bibentry{Collins2017}
+
+\bigskip \noindent \bibentry{Hooper2017}
 
 
 % Main text
@@ -137,7 +151,8 @@ I'd like to thank \LaTeX  for not being as horrible to use as MS Word.
 \include{./sections/Conclusions}
 
 % Bibliography
-\bibliographystyle{unsrt}
+%\bibliographystyle{unsrt}
+\bibliographystyle{ieeetr}
 \bibliography{library}
 \clearpage
 
