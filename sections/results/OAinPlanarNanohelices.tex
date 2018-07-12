@@ -71,11 +71,8 @@ Here, a $\SI{90}{\degree}$ rotational periodicity for the OR is clearly visible,
 \end{figure}
 
 \section{Discussion}\label{sec:results:OAinPlanarNanohelices:discussion}
-\textcolor{red}{
-\textbf{Lots of this can also be moved into the main background section.}
-}
-
-At a given optical frequency $\omega$, the nonlinear chiroptical effects are commonly described in terms of the nonlinear susceptibility tensors, relating the induced polarization ($P$) at the second-harmonic ($2\omega$) to the driving electric ($E$) and magnetic ($B$) fields, by equation~\ref{eq:results:OAinPlanarNanohelices:P2contributions}.\cite{Boyd2008a}
+Due to the sub-wavelength dimensions and separation of nanostructure inclusions, our sample can be treated as an effective dielectric medium, described by effective susceptibility tensors as in section~\ref{sec:background:NonlinearOptics:susceptibility}.
+At a given optical frequency $\omega$, the nonlinear chiroptical effects are described in terms of the nonlinear susceptibility tensors, relating the induced polarization ($P$) at the second-harmonic ($2\omega$) to the driving electric ($E$) and magnetic ($B$) fields, by equation~\ref{eq:results:OAinPlanarNanohelices:P2contributions}.\cite{Boyd2008a}
 \begin{equation}\label{eq:results:OAinPlanarNanohelices:P2contributions}	
     {P_i}\left( {2\omega } \right) = 
     \varepsilon{_0}\chi_{ijk}^{eee}{E_j}\left(\omega \right){E_k}\left(\omega \right) + \varepsilon{_0}\chi_{ijk}^{eem}{E_j}\left(\omega \right){B_k}\left(\omega \right) + \varepsilon{_0}\chi_{ijk}^{eme}{B_j}\left(\omega \right){E_k}\left(\omega \right)
@@ -84,33 +81,13 @@ The indices $i$, $j$, and $k$ describe the Cartesian coordinates of the fields, 
 The superscripts $e$ and $m$ stand for electric and magnetic dipole transitions, respectively, while $\varepsilon{_0}$ is the permittivity of vacuum. 
 In addition to equation~\ref{eq:results:OAinPlanarNanohelices:P2contributions}, the incident electromagnetic fields can induce a magnetization $M_i$ analogous to the polarization $P_i$. 
 In our experiment (Figure~\ref{fig:results:OAinPlanarNanohelices:combined_data}a), the incident electric field is polarized perpendicularly to the main helix axis, therefore we can exclude this magnetic contribution. Away from resonance, the magnetic component of the incident light is much weaker than the electric component. 
-In our analysis, we therefore consider only the contribution from electric dipoles ($eee$). Furthermore, for collinear SHG experiments, the incident fields ${E_j}(\omega)$ and ${E_k}(\omega)$ are indistinguishable. This allows equation~\ref{eq:results:OAinPlanarNanohelices:P2contributions} to be reduced under permutation symmetry to equation~\ref{eq:results:OAinPlanarNanohelices:PshgFull}, as in section~\ref{sec:background:NonlinearOptics:tensorsymmetry:permutation}.
+In our analysis, we therefore consider only the contribution from electric dipoles ($eee$). Furthermore, for collinear SHG experiments, the incident fields ${E_j}(\omega)$ and ${E_k}(\omega)$ are indistinguishable. This allows equation~\ref{eq:results:OAinPlanarNanohelices:P2contributions} to be reduced under permutation symmetry as in section~\ref{sec:background:NonlinearOptics:permutation}.
 
-\begin{equation}\label{eq:results:OAinPlanarNanohelices:PshgFull}
-	\begin{pmatrix}
-		P_{x}\\ 
-		P_{y}\\ 
-		P_{z}
-	\end{pmatrix} =
-	\begin{pmatrix}
-		\chi_{xxx} & \chi_{xyy} & \chi_{xzz} & \chi_{xyz} & \chi_{xzx} & \chi_{xyx}\\ 
-		\chi_{yxx} & \chi_{yyy} & \chi_{yzz} & \chi_{yzy} & \chi_{yzx} & \chi_{yxy}\\ 
-		\chi_{zxx} & \chi_{zyy} & \chi_{zzz} & \chi_{zyz} & \chi_{zxz} & \chi_{zyx}
-	\end{pmatrix}
-	\begin{pmatrix}
-		E_{x}E_{x}\\ 
-		E_{y}E_{y}\\ 
-		E_{z}E_{z}\\
-		2E_{y}E_{z}\\ 
-		2E_{z}E_{x}\\ 
-		2E_{x}E_{y}
-	\end{pmatrix}
-\end{equation}
-The presence of sample symmetry can further reduce the number of non-zero tensor components. The presence of surface isotropy (full rotational symmetry about the surface normal) causes 11 components to be eliminated (section~\ref{sec:background:NonlinearOptics:tensorsymmetry:isotropy}) we can refer to these as the ``anisotropy components''. Likewise, for a tensor with mirror symmetry, 8 components are eliminated  (section~\ref{sec:background:NonlinearOptics:tensorsymmetry:chirality}). These ``chirality components'' are therefore only present in chiral structures. Importantly, both anisotropy and chirality tensor components can contribute to SHG-OR. 
+The presence of spatial symmetry can further reduce the number of non-zero tensor components. The presence of surface isotropy (full rotational symmetry about the surface normal) would eliminate 11 components (section~\ref{sec:background:NonlinearOptics:rotation}). We can refer to these as the ``anisotropy components''. Likewise, for a tensor with mirror symmetry, 8 components are eliminated  (section~\ref{sec:background:NonlinearOptics:mirror}). These ``chirality components'' are therefore only present in chiral structures. Importantly, both anisotropy and chirality tensor components can contribute to SHG-OR. 
 
 Our sample is a chiral, anisotropic surface. With S-polarized light, ${E_j}(\omega)$ and ${E_k}(\omega)$ are polarized along the sample $y$-axis. Therefore, only the $\chi_{xyy}$, $\chi_{yyy}$ and $\chi_{zyy}$ tensor components are addressed. Here, we examine each component individually. 
 First, we can see that $\chi_{zyy}$ is neither an in-plane anisotropy, nor a chirality parameter. Second, $\chi_{yyy}$ is an anisotropy but not a chirality parameter. And third, $\chi_{xyy}$ relates to \textit{both} anisotropy and chirality. 
-Rotating the sample by an angle $\theta$ around the surface normal is equivalent to applying a rotation operation to the tensor in equation~\ref{eq:results:OAinPlanarNanohelices:PshgFull}. The treatment can be simplified by introducing effective nonlinear susceptibility tensor components as given in equation~\ref{eq:results:OAinPlanarNanohelices:ChiEff}.
+Rotating the sample by an angle $\theta$ around the surface normal is equivalent to applying a rotation operation to the $\chi_{ijk}(2\omega)$ tensor. The treatment can be simplified by introducing effective nonlinear susceptibility tensor components as given in equation~\ref{eq:results:OAinPlanarNanohelices:ChiEff}.
 
 \begin{equation}\label{eq:results:OAinPlanarNanohelices:ChiEff}
 	\begin{split}
@@ -125,7 +102,7 @@ Rotating the sample by an angle $\theta$ around the surface normal is equivalent
 \end{equation}
 
 Within the dipole approximation, the angle of SHG-OR is $\phi=\arctan{\left(\frac{E_P\left(2\omega\right)}{E_S\left(2\omega\right)}\right)}$. 
-The values of the electric fields at the second harmonic are obtained from equation~\ref{eq:results:OAinPlanarNanohelices:PshgFull} following $\mathbf{E}(2\omega)\sim[\mathbf{n}\times\mathbf{P}(2\omega)]\times\mathbf{n}$, where $\mathbf{P}(2\omega)$ is a vector describing the induced polarization from equation~\ref{eq:results:OAinPlanarNanohelices:PshgFull}, and $\mathbf{n}$ is a unit vector describing the angle of observation. 
+The values of the electric fields at the second harmonic are obtained from $\mathbf{E}(2\omega)\sim[\mathbf{n}\times\mathbf{P}(2\omega)]\times\mathbf{n}$, where $\mathbf{P}(2\omega)$ is a vector describing the induced polarization from equation~\ref{eq:background:NonlinearOptics:permutation:PshgFull}, and $\mathbf{n}$ is a unit vector describing the angle of observation. 
 In our experimental configuration, the angle of optical incidence is $\SI{45}{\degree}$, hence $E_P(2\omega)\propto\frac{1}{2}(\chi_{zyy}^{eff}(\theta)-\chi_{xyy}^{eff}(\theta))$ and $E_P(2\omega)\propto\chi_{yyy}^{eff}(\theta)$. 
 The angle of SHG-OR in this configuration is therefore given by equation~\ref{eq:results:OAinPlanarNanohelices:SHGangle}.
 \begin{equation}\label{eq:results:OAinPlanarNanohelices:SHGangle}
