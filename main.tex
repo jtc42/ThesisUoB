@@ -29,7 +29,7 @@
 
 %Enable control over section numbering
 \usepackage{titlesec}
-\setcounter{secnumdepth}{4}
+\setcounter{secnumdepth}{3}
 
 %Enable PDF links
 \usepackage[hidelinks]{hyperref}
@@ -154,8 +154,9 @@ I'd like to thank \LaTeX  for not being quite as horrible to use as MS Word.
 
 % Appendix
 \appendix
-\chapter{Reducing \texorpdfstring{$\chi^{(2)}$}{Lg} with Symmetry}
-\chapter{Quantifying chirality}
-\input{./sections/appendix/ChiralGeoDiff}
+\chapter{Reducing \texorpdfstring{$\chi^{(2)}$}{Lg} with Symmetry}\label{sec:appendix:rotations}
+\input{./sections/appendix/RotIso}
+\chapter{Quantifying chirality}\label{sec:appendix:QuantifyingChirality}
+\input{./sections/appendix/QuantifyingChirality}
 
 \end{document}
