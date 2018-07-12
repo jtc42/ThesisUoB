@@ -13,9 +13,264 @@
 \subsection{Enhanced Second-Harmonic Generation in Plasmonic Nanomaterials}\label{sec:background:NonlinearOptics:plasmonic}
 
 \section{The Dielectric Susceptibility}\label{sec:background:NonlinearOptics:susceptibility}
-\subsection{Linear Electric Dipoles}
-\subsection{Second-Order Electric Dipoles}
-\subsection{Reducing \texorpdfstring{$\chi^{(2)}$}{Lg} with Symmetry}\label{sec:background:NonlinearOptics:tensorsymmetry}
-\subsubsection{Permutation}\label{sec:background:NonlinearOptics:tensorsymmetry:permutation}
-\subsubsection{Isotropy}\label{sec:background:NonlinearOptics:tensorsymmetry:isotropy}
-\subsubsection{Chirality}\label{sec:background:NonlinearOptics:tensorsymmetry:chirality}
+Within the electric dipole approximation, the macroscopic response of a material to an electric field is described by the polarization density $P_{i}(t)$, as shown in equation~\ref{eq:background:NonlinearOptics:susceptibility:Pti}.
+\begin{equation}\label{eq:background:NonlinearOptics:susceptibility:Pti}
+	P_{i}(t) =  \epsilon_{0}\big[
+				\chi^{(1)}_{ij}  E_{j}(t) +
+				\chi^{(2)}_{ijk}  E_{j}(t) E_{k}(t) +
+				\chi^{(3)}_{ijkl}  E_{j}(t) E_{k}(t) E_{l}(t)+ \ldots
+				\big]
+\end{equation}
+Here each of the indices $i,j,k,l,\ldots$ are the Cartesian coordinates of the associated field (ie. each index can take on $x$, $y$, or $z$.) We see that for each higher order term, an additional field is required. This stands to reason as second order nonlinear effects require two-photon absorption, third order require three photons, and so on. For each additional field, the rank of the associated susceptibility tensor increases accordingly. We also see more clearly now that even harmonics require a material lacking inversion symmetry. Under inversion we apply $\mathbf{r}\rightarrow -\mathbf{r}$, hence $\mathbf{P} \rightarrow -\mathbf{P}$, and $\mathbf{E} \rightarrow -\mathbf{E}$. For a centrosymmetric medium, we know that $\mathbf{P}(-\mathbf{E}) = -\mathbf{P}(\mathbf{E})$, and so by equating components, for any even $n$ terms, $\chi^{(n)}=-\chi^{(n)}$ meaning $\chi^{(n)} = 0$. Therefore, emission at even-order harmonics is forbidden in centrosymmetric media.
+
+\subsection{Linear Electric Dipoles}\label{sec:background:NonlinearOptics:linearP}
+The linear response of a material in the dipole approximation can be described entirely by the first-order term in equation~\ref{eq:background:NonlinearOptics:susceptibility:Pti}. In the frequency domain, this becomes
+
+\begin{equation}
+	P_{i}(\omega) =  \epsilon_{0}
+				\chi^{(1)}_{ij}(\omega)  E_{j}(\omega)
+\end{equation}
+In vector notation, this is given explicitly by
+\begin{equation}
+	\mathbf{P}(\omega) =  \epsilon_{0}
+				\begin{bmatrix}
+		\chi_{xx} & \chi_{xy} & \chi_{xz}\\ 
+		\chi_{yx} & \chi_{yy} & \chi_{yz}\\ 
+		\chi_{zx} & \chi_{xy} & \chi_{zz}
+	\end{bmatrix} \cdot \mathbf{E}_{1}(\omega)
+\end{equation}
+When studying nonlinear effects, the emitted radiation from the linear response will still be present, and almost always significantly stronger than the nonlinear response.
+
+
+\subsection{Second-Order Electric Dipoles}\label{sec:background:NonlinearOptics:shgP}
+For second order effects $\chi^{(2)}_{ijk}$ is a rank 3 tensor of 27 components, which can be fully represented as
+\begin{equation}\label{eq:background:NonlinearOptics:shgP:chiFull}
+	\chi^{(2)}_{ijk} =
+	\begin{bmatrix}
+		\chi_{xxx} & \chi_{xyy} & \chi_{xzz} & \chi_{xyz} & \chi_{xzy} & \chi_{xzx} & \chi_{xxz} & \chi_{xxy} & \chi_{xyx}\\ 
+		\chi_{yxx} & \chi_{yyy} & \chi_{yzz} & \chi_{yyz} & \chi_{yzy} & \chi_{yzx} & \chi_{yxz} & \chi_{yxy} & \chi_{yyx}\\ 
+		\chi_{zxx} & \chi_{zyy} & \chi_{zzz} & \chi_{zyz} & \chi_{zzy} & \chi_{zzx} & \chi_{zxz} & \chi_{zxy} & \chi_{zyx}
+	\end{bmatrix}
+\end{equation}
+Second-order nonlinear effects require two fields, as they are two-photon effects, however in practice these can be a single high-intensity field. We will first consider the general case allowing for two separate fields.
+
+In the frequency domain, two input fields $E_{j}(\omega_{p} )$ and $E_{k}(\omega_{q} )$ lead to an internal polarisation $P_{i}(\omega_{p}\pm\omega_{q} )$. As seen earlier, the susceptibility must now contain information about the response to three fields (two in, one out), each in three dimensions. 
+
+\begin{equation}\label{eq:background:NonlinearOptics:shgP:Psfg}
+	P_{i}(\omega=\omega_{p}\pm\omega_{q} ) =  \epsilon_{0} \sum_{jk} \sum_{(pq)}
+				\chi^{(2)}_{ijk}(\omega, \omega_{p},\omega_{q} ) 
+				E_{j}(\omega_{p} ) E_{k}(\omega_{q} )
+\end{equation}
+The sum $\sum_{(pq)}$ is over fields who's frequencies sum to a fixed $\omega=\omega_{p}\pm\omega_{q}$. For two distinct input fields, at $\omega_{1}$ and $\omega_{2}$, $\omega_{p}$ and $\omega_{q}$ can each take one of these two values. This means that for known but different input frequencies, the polarisation can be given by equation \ref{eq:background:NonlinearOptics:shgP:Pw1w2}.
+\begin{equation}\label{eq:background:NonlinearOptics:shgP:Pw1w2}
+	P_{i}(\omega=\omega_{1}+\omega_{2} ) =  \epsilon_{0} \sum_{jk} \big[
+				\chi^{(2)}_{ijk}(\omega, \omega_{1},\omega_{2} ) 
+				E_{j}(\omega_{1} ) E_{k}(\omega_{2} ) +
+				\chi^{(2)}_{ijk}(\omega, \omega_{2},\omega_{1} ) 
+				E_{j}(\omega_{2} ) E_{k}(\omega_{1} )
+				\big]
+\end{equation}
+Due to permutation symmetry, where $E_{j}(\omega_{1} )=E_{k}(\omega_{1} )$ and $E_{j}(\omega_{2} )=E_{k}(\omega_{2} )$, this reduces to equation \ref{eq:background:NonlinearOptics:shgP:Pw1w2b} \cite[eq. 1.3.15]{Boyd2008a}.
+\begin{equation}\label{eq:background:NonlinearOptics:shgP:Pw1w2b}
+	P_{i}(\omega=\omega_{1}+\omega_{2} ) =  \epsilon_{0} \sum_{jk}
+				2 \chi^{(2)}_{ijk}(\omega, \omega_{1},\omega_{2} ) 
+				E_{j}(\omega_{1} ) E_{k}(\omega_{2} )
+\end{equation}
+
+For second harmonic generation, we consider the case of a single input field, where now $\omega_{p}=\omega_{q}=\omega_{1}$, resulting in a polarisation $P_{i}(\omega=2\omega_{1} )$. In this case, the sum $\sum_{(pq)}$ collapses to a single term, and the polarisation is described by equation~\ref{eq:background:NonlinearOptics:shgP:Pw1w1}.
+\begin{equation}\label{eq:background:NonlinearOptics:shgP:Pw1w1}
+	P_{i}(\omega=2\omega_{1} ) =  \epsilon_{0} \sum_{jk}
+				\chi^{(2)}_{ijk}(\omega, \omega_{1},\omega_{1} ) 
+				E_{j}(\omega_{1} ) E_{k}(\omega_{1} )
+\end{equation}
+
+
+%\subsection{Reducing \texorpdfstring{$\chi^{(2)}$}{Lg} with Symmetry}\label{sec:background:NonlinearOptics:tensorsymmetry}
+
+\subsection{Reducing \texorpdfstring{$\chi^{(2)}$}{Lg} with Permutation Symmetry}\label{sec:background:NonlinearOptics:permutation}
+Since $E_{j}(\omega_{1} )$ and $E_{k}(\omega_{1} )$ are indistinguishable for a single input beam, in the case of SHG we can reduce $\chi^{(2)}_{i, j, k}$ to a $3\times6$ matrix. This is because (for j,k) $x,y$ and $y,x$ are equal, $x,z$ and $z,x$ are equal, and $z,y$ and $y,z$ are equal. We need only consider half of these terms, and terms where j=k. We define our new matrix $d_{il}$ with the replacements in table~\ref{table:jkl}.
+
+\begin{table}[H]
+\centering
+\caption{}
+\begin{tabular}{lllllll}
+j,k: & 1,1 & 2,2 & 3,3 & 2,3 or 3,2 & 1,3 or 3,1 & 1,2 or 2,1 \\
+l:   & 1   & 2   & 3   & 4          & 5          & 6          
+\end{tabular}
+\label{table:jkl}
+\end{table}
+The remaining terms are then rearranged, reducing from equation~\ref{eq:background:NonlinearOptics:shgP:chiFull} to
+\begin{equation}\label{eq:background:NonlinearOptics:permutation:dil}
+	d_{il}=
+	\begin{pmatrix}
+		\chi_{xxx} & \chi_{xyy} & \chi_{xzz} & \chi_{xyz} & \chi_{xzx} & \chi_{xyx}\\ 
+		\chi_{yxx} & \chi_{yyy} & \chi_{yzz} & \chi_{yzy} & \chi_{yzx} & \chi_{yxy}\\ 
+		\chi_{zxx} & \chi_{zyy} & \chi_{zzz} & \chi_{zyz} & \chi_{zxz} & \chi_{zyx}
+	\end{pmatrix}
+\end{equation}
+Following the same reduction and rearrangement, the tensor product of the fields under permutation symmetry is also reduced, leaving the polarisation for second harmonic generation in 3 dimensions as
+\begin{equation}\label{eq:background:NonlinearOptics:permutation:PshgFull}
+	\begin{pmatrix}
+		P_{x}\\ 
+		P_{y}\\ 
+		P_{z}
+	\end{pmatrix} =
+	\begin{pmatrix}
+		\chi_{xxx} & \chi_{xyy} & \chi_{xzz} & \chi_{xyz} & \chi_{xzx} & \chi_{xyx}\\ 
+		\chi_{yxx} & \chi_{yyy} & \chi_{yzz} & \chi_{yzy} & \chi_{yzx} & \chi_{yxy}\\ 
+		\chi_{zxx} & \chi_{zyy} & \chi_{zzz} & \chi_{zyz} & \chi_{zxz} & \chi_{zyx}
+	\end{pmatrix}
+	\begin{pmatrix}
+		E_{x}E_{x}\\ 
+		E_{y}E_{y}\\ 
+		E_{z}E_{z}\\
+		2E_{y}E_{z}\\ 
+		2E_{z}E_{x}\\ 
+		2E_{x}E_{y}
+	\end{pmatrix}
+\end{equation}
+
+\subsection{Reducing \texorpdfstring{$\chi^{(2)}$}{Lg} with Rotational Symmetry}\label{sec:background:NonlinearOptics:rotation}
+he number of tensor components can also be reduced by considering rotational symmetry. If we rotate the system by an angle $\theta$ about a particular axis, we can define the new, rotated axes by applying the a set of coordinate transformations. For example, rotating in the $x-y$ plane, about the $z$ axis, applies the transformations
+\begin{equation}\label{eq:background:NonlinearOptics:rotation:generalTrans}
+    \begin{split}
+        x \rightarrow x \cos{\theta} - y \sin{\theta} \\
+        y \rightarrow x \sin{\theta} +y \cos{\theta} \\
+        z \rightarrow z
+    \end{split}
+\end{equation}
+In matrix notation, this is given by
+\begin{equation}\label{eq:background:NonlinearOptics:rotation:MatrixTrans}
+	\begin{pmatrix}
+		x^{\prime}\\ 
+		y^{\prime}\\ 
+		z^{\prime}
+	\end{pmatrix} =
+	\begin{bmatrix}
+		\cos{\theta} & -\sin{\theta} & 0\\ 
+		\sin{\theta} & \cos{\theta} & 0\\ 
+		0 & 0 & 1
+	\end{bmatrix}
+	\begin{pmatrix}
+		x\\ 
+		y\\ 
+		z
+	\end{pmatrix}
+\end{equation}
+Following the same reasoning, we reach the matrices for rotating about each coordinate axis.
+\begin{equation}\label{eq:background:NonlinearOptics:rotation:AllRotationMatrices}
+\begin{split}
+	&R(\theta_{z})_{ij} =
+	\begin{bmatrix}
+		\cos{\theta_{z}} & -\sin{\theta_{z}} & 0\\ 
+		\sin{\theta_{z}} & \cos{\theta_{z}} & 0\\ 
+		0 & 0 & 1
+	\end{bmatrix}\\	
+	&R(\theta_{y})_{ij} =
+	\begin{bmatrix}
+		\cos{\theta_{y}} & 0 & \sin{\theta_{y}}\\ 
+		0 & 1 & 0\\ 
+		-\sin{\theta_{y}} & 0 & \cos{\theta_{y}}
+	\end{bmatrix}\\	
+	&R(\theta_{x})_{ij} =
+	\begin{bmatrix}
+		1 & 0 & 0\\ 
+		0 & \cos{\theta_{x}} & -\sin{\theta_{x}}\\ 
+		0 & \sin{\theta_{x}} & \cos{\theta_{x}}
+	\end{bmatrix}\\	
+\end{split}
+\end{equation}
+Rotations around multiple axes can then be solved by applying successive rotation matrices in the same way. 
+
+For rotational symmetry in the $x-y$ plane, we first rotate the tensor by the angle corresponding to our symmetry using
+\begin{equation}\label{eq:background:NonlinearOptics:rotation:RotateChi}
+	\chi_{ijk}^{\prime} =  R(\theta)_{i\alpha}R(\theta)_{j\beta}R(\theta)_{k\gamma}\chi^{(2)}_{\alpha \beta \gamma}
+\end{equation}
+Due to symmetry, the tensor should remain unchanged under this transformation, and so we impose the equality $\chi_{ijk}^{\prime}=\chi_{ijk}$ to find any component dependencies. Solving for rotational symmetry can show various tensor components as being dependant, or necessarily equalling zero. Examples of this are given in Appendix~\ref{sec:appendix:rotations}.
+
+
+\paragraph{C\texorpdfstring{$_4$}{Lg} Symmetry and Rotational Isotropy} \label{sec:appendix:RotIso}
+It is worth making note of the special case of planar 4-fold rotational symmetry (C$_4$ symmetry in Schoenflies notation), whose tensor and dependencies are found in Apendix~\ref{sec:appendix:rotations:4foldRot}. Due to the set of dependencies and vanishing components, applying an arbitrary $x-y$ rotation to the C$_4$ tensor results in no change of any components. 
+
+Furthermore, a structure is isotropic (C$_{\infty}$ in Schoenflies notation) when the tensor remains unchanged under any rotation. In tensor notation, for any value of $\theta$ we can say that in an isotropic structure
+\begin{equation}\label{eq:background:NonlinearOptics:rotation:RotIsoTensor}
+	R(\theta_{z})_{i\alpha}R(\theta_{z})_{j\beta}R(\theta_{z})_{k\gamma}\chi^{(2)}_{\alpha \beta \gamma}
+	=\chi^{(2)}_{ijk}
+\end{equation}
+Since this condition is met for a  C$_4$ tensor, 2-dimensional rotational isotropy is found to give the same tensor dependencies as under C$_4$ symmetry~\cite[\S E.1.8]{Popov1995}. In full, we find that for both C$_4$ and C$_{\infty}$ structures, the tensors can be reduced to
+\begin{equation}\label{eq:background:NonlinearOptics:rotation:IsotropicChi}
+	\chi^{(2)}_{ijk} =
+	\begin{bmatrix}
+		0 & 0 & 0 & \chi_{xyz} & \chi_{xzy} & \chi_{xzx} & \chi_{xxz} & 0 & 0\\ 
+		0 & 0 & 0 & \chi_{yyz} & \chi_{yzy} & \chi_{yzx} & \chi_{yxz} & 0 & 0\\ 
+		\chi_{zxx} & \chi_{zyy} & \chi_{zzz} & 0 & 0 & 0 & 0 & \chi_{zxy} & \chi_{zyx}
+	\end{bmatrix}
+\end{equation}
+with dependencies given by
+\begin{equation}\label{eq:background:NonlinearOptics:rotation:IsotropicDependancies}
+\begin{split}
+	&\chi_{xyz} = -\chi_{yxz}, \chi_{xzy} = -\chi_{yzx}, \chi_{xzx} = \chi_{yzy} \\
+	&\chi_{xxz} = \chi_{yyz}, \chi_{zxx} = \chi_{zyy}, \chi_{zxy} = -\chi_{zyx} \\
+	&\chi_{zzz}
+\end{split}
+\end{equation}
+
+
+
+\subsection{Reducing \texorpdfstring{$\chi^{(2)}$}{Lg} with Mirror Symmetry}\label{sec:background:NonlinearOptics:mirror}
+So far we have only considered structure lacking mirror symmetry, that is those which are chiral. The application of mirror symmetry for achiral structures can further reduce the number of independent tensor components.
+
+A reflection in the $y$ axis can be described by a transformation matrix
+
+\begin{equation}\label{eq:background:NonlinearOptics:mirror:yReflect}
+	A^{y}_{ij} =
+	\begin{bmatrix}
+		-1 & 0 & 0\\ 
+		0 & 1 & 0\\ 
+		0 & 0 & 1
+	\end{bmatrix}\\	
+\end{equation}
+If the line of mirror symmetry lies at an angle relative to this, the rotation matrices in equation~\ref{eq:background:NonlinearOptics:rotation:AllRotationMatrices} can be applied to the system first. 
+
+Under mirror symmetry about the $y$ axis, we impose the equality
+\begin{equation}\label{eq:background:NonlinearOptics:mirror:MirrorSymmetry}
+	A^{y}_{i\alpha}A^{y}_{j\beta}A^{y}_{k\gamma}\chi^{(2)}_{\alpha \beta \gamma}
+	=\chi^{(2)}_{ijk}
+\end{equation}
+From here, the initial and reflected tensors can be compared. It is found that the general tensor for such an achiral structure reduces to
+\begin{equation}\label{eq:background:NonlinearOptics:mirror:chiMirrory}
+	\chi^{(2)}_{ijk} =
+	\begin{bmatrix}
+		0 & 0 & 0 & 0 & 0 & \chi_{xzx} & \chi_{xxz} & \chi_{xxy} & \chi_{xyx}\\ 
+		\chi_{yxx} & \chi_{yyy} & \chi_{yzz} & \chi_{yyz} & \chi_{yzy} & 0 & 0 & 0 & 0\\ 
+		\chi_{zxx} & \chi_{zyy} & \chi_{zzz} & \chi_{zyz} & \chi_{zzy} & 0 & 0 & 0 & 0
+	\end{bmatrix}
+\end{equation}
+These component reductions can then be applied on top of any other symmetries exhibited by the structure.
+
+\paragraph{Chiral Isotropic Structures}
+\label{sec:ChiralIso}
+
+Another special case worth noting regards mirror symmetry in planar isotropic (and C$_4$) structures. Under mirror symmetry, the C$_4$/C$_\infty$ tensor (equation~\ref{eq:background:NonlinearOptics:rotation:IsotropicDependancies}) reduces to
+\begin{equation}\label{eq:background:NonlinearOptics:mirror:IsotropicMirrorChi}
+	\chi^{(2)}_{ijk} =
+	\begin{bmatrix}
+		0 & 0 & 0 & 0 & 0 & \chi_{xzx} & \chi_{xxz} & 0 & 0\\ 
+		0 & 0 & 0 & \chi_{yyz} & \chi_{yzy} & 0 & 0 & 0 & 0\\ 
+		\chi_{zxx} & \chi_{zyy} & \chi_{zzz} & 0 & 0 & 0 & 0 & 0 & 0
+	\end{bmatrix}
+\end{equation}
+Since only 3 independent components are removed, the chirality of an isotropic structure can be fully described by the following components:
+\begin{equation}\label{eq:background:NonlinearOptics:mirror:IsoChiralComponents}
+\chi_{xyz} = -\chi_{yxz}, \chi_{xzy} = -\chi_{yzx}, \chi_{zxy} = -\chi_{zyx} 
+\end{equation}
+In the case of SHG, applying permutation symmetry reduces this further to
+\begin{equation}\label{eq:background:NonlinearOptics:mirror:ReducedIsoChiral}
+	d_{il} = 
+	\begin{pmatrix}
+		0 & 0 & 0 & 0 & \chi_{xzx} & 0\\ 
+		0 & 0 & 0 & \chi_{yzy} & 0 & 0\\ 
+		\chi_{zxx} & \chi_{zyy} & \chi_{zzz} & 0 & 0 & 0
+	\end{pmatrix} 
+\end{equation}
+The chirality is now described by a single independent component, since under permutation symmetry $\chi_{xyz} = -\chi_{yzx}$. Because of this, for C$_4$/C$_\infty$ structures the chiral contribution to SHG is often parametrized by this single ``chiral component''~$\chi_{xyz}$.
