@@ -1,0 +1,121 @@
+\section{4-fold Rotational Symmetry}\label{sec:appendix:rotations:4foldRot}
+
+For a rotation of $\theta=\frac{\pi}{2}$, the transformation matrix is given by
+
+\begin{equation}\label{eq:pi/2RotationMatrix}
+	R(\theta=\frac{\pi}{2})_{i,j} =
+	\begin{bmatrix}
+		0 & -1 & 0\\ 
+		1 & 0 & 0\\ 
+		0 & 0 & 1
+	\end{bmatrix}
+\end{equation}
+We apply the rotation to $\chi_{ijk}$ given in equation~\ref{eq:background:NonlinearOptics:shgP:chiFull}, as in equation~\ref{eq:background:NonlinearOptics:rotation:RotateChi}, giving
+\begin{equation}\label{eq:ChiFull4fold}
+	\chi_{ijk}^{\prime} =
+	\begin{bmatrix}
+		-\chi_{yyy} & -\chi_{yxx} & -\chi_{yzz} & -\chi_{yxz} & -\chi_{yzx} & \chi_{yzy} & \chi_{yyz} & \chi_{yyx} & \chi_{yxy}\\ 
+		\chi_{xyy} & \chi_{xxx} & \chi_{xzz} & \chi_{xxz} & \chi_{xzx} & -\chi_{xzy} & -\chi_{xyz} & -\chi_{xyx} & -\chi_{xxy}\\ 
+		\chi_{zyy} & \chi_{zxx} & \chi_{zzz} & \chi_{zxz} & \chi_{zzx} & -\chi_{zzy} & -\chi_{zyz} & -\chi_{zyx} & -\chi_{zxy}
+	\end{bmatrix}
+\end{equation}
+By enforcing the symmetry $\chi_{ijk}^{\prime}=\chi_{ijk}$, we find that 7 independent components remain, leaving
+\begin{equation}\label{eq:4foldChi}
+	\chi^{(2)}_{ijk} =
+	\begin{bmatrix}
+		0 & 0 & 0 & \chi_{xyz} & \chi_{xzy} & \chi_{xzx} & \chi_{xxz} & 0 & 0\\ 
+		0 & 0 & 0 & \chi_{yyz} & \chi_{yzy} & \chi_{yzx} & \chi_{yxz} & 0 & 0\\ 
+		\chi_{zxx} & \chi_{zyy} & \chi_{zzz} & 0 & 0 & 0 & 0 & \chi_{zxy} & \chi_{zyx}
+	\end{bmatrix}
+\end{equation}
+with dependencies given by
+\begin{equation}\label{eq:4foldDependancies}
+\begin{split}
+	&\chi_{xyz} = -\chi_{yxz}, \chi_{xzy} = -\chi_{yzx}, \chi_{xzx} = \chi_{yzy} \\
+	&\chi_{xxz} = \chi_{yyz}, \chi_{zxx} = \chi_{zyy}, \chi_{zxy} = -\chi_{zyx} \\
+	&\chi_{zzz}
+\end{split}
+\end{equation}
+Applying permutation symmetry leaves the reduced tensor as
+\begin{equation}\label{eq:Reduced4fold}
+	d_{il} = 
+	\begin{pmatrix}
+		0 & 0 & 0 & \chi_{xyz} & \chi_{xzx} & 0\\ 
+		0 & 0 & 0 & \chi_{yzy} & \chi_{yzx} & 0\\ 
+		\chi_{zxx} & \chi_{zyy} & \chi_{zzz} & 0 & 0 & 0
+	\end{pmatrix} 
+\end{equation}
+with dependencies $\chi_{xyz} = -\chi_{yzx}$, $\chi_{yzy} = \chi_{xzx}$, and $\chi_{zxx} = \chi_{zyy}$.
+
+
+\section{2-fold Rotational Symmetry}\label{sec:appendix:rotations:2foldrot}
+
+In the case of 2-fold rotational symmetry around the z axis, the appropriate rotation matrix is given by equation~\ref{eq:background:NonlinearOptics:rotation:AllRotationMatrices} as
+\begin{equation}\label{eq:piRotationMatrix}
+	R(\theta=\pi)_{i,j} =
+	\begin{bmatrix}
+		-1 & 0 & 0\\ 
+		0 & -1 & 0\\ 
+		0 & 0 & 1
+	\end{bmatrix}
+\end{equation}
+This corresponds to the coordinate substitution $x\rightarrow-x$, $y\rightarrow-y$, $z\rightarrow z$. Again, applying rotation to $\chi_{ijk}$ and enforcing the symmetry $\chi_{ijk}^{\prime}=\chi_{ijk}$ leaves the reduced tensor
+\begin{equation}\label{eq:2foldChi}
+	\chi^{(2)}_{ijk} =
+	\begin{bmatrix}
+		0 & 0 & 0 & \chi_{xyz} & \chi_{xzy} & 0 & 0 & \chi_{xxy} & \chi_{xyx}\\ 
+		\chi_{yxx} & \chi_{yyy} & \chi_{yzz} & 0 & 0 & \chi_{yzx} & \chi_{yxz} & 0 & 0\\ 
+		0 & 0 & 0 & \chi_{zyz} & \chi_{zzy} & 0 & 0 & \chi_{zxy} & \chi_{zyx}
+	\end{bmatrix}
+\end{equation}
+with all remaining components left independent~\cite{Boyd2008a}. 
+
+\section{3-fold Rotational Symmetry}\label{sec:appendix:rotations:3foldrot}
+
+The case of 3-fold rotational symmetry is more complex, since for a rotation of $\theta=\frac{2}{3}\pi$ radians the rotation matrix is given by
+\begin{equation}\label{eq:2pi/3RotationMatrix}
+	R(\theta=\frac{2}{3}\pi)_{i,j} =
+	\begin{bmatrix}
+		-\frac{1}{2}x & -\frac{\sqrt{3}}{2} & 0\\ 
+		\frac{\sqrt{3}}{2} & -\frac{1}{2} & 0\\ 
+		0 & 0 & 1
+	\end{bmatrix}
+\end{equation}
+As before, we can rotate $\chi_{ijk}$ and equate to the initial tensor, giving
+\begin{equation}\label{eq:RotateChi3fold}
+	\chi^{\prime}_{ijk} =  
+	R(\theta_{z})_{i\alpha} 
+	R(\theta_{z})_{j\beta}
+	R(\theta_{z})_{k\gamma}
+	\chi^{(2)}_{\alpha \beta \gamma} =
+	\chi_{ijk}
+\end{equation}
+This leaves the reduced tensor as
+\begin{equation}\label{eq:3foldChi}
+	\chi^{(2)}_{ijk} =
+	\begin{bmatrix}
+		\chi_{xxx} & \chi_{xyy} & 0 & \chi_{xyz} & \chi_{xzy} & \chi_{xzx} & \chi_{xxz} & \chi_{xxy} & \chi_{xyx}\\ 
+		\chi_{yxx} & \chi_{yyy} & 0 & \chi_{yyz} & \chi_{yzy} & \chi_{yzx} & \chi_{yxz} & \chi_{yxy} & \chi_{yyx}\\ 
+		\chi_{zxx} & \chi_{zyy} & \chi_{zzz} & 0 & 0 & 0 & 0 & \chi_{zxy} & \chi_{zyx}
+	\end{bmatrix}
+\end{equation}
+with the dependencies 
+\begin{equation}\label{eq:3foldDependancies}
+\begin{split}
+	&\chi_{xxx} = -\chi_{xyy} = -\chi_{yyz} = -\chi_{yxy}\\
+	&\chi_{xyz} = -\chi_{yxz}, \chi_{xzy} = -\chi_{yzx}\\
+	&\chi_{xzx} = \chi_{yzy}, \chi_{xxz} = \chi_{yyz}\\
+	&\chi_{yyy} = -\chi_{yxx} = -\chi_{xxy} = -\chi_{xyx}\\
+	&\chi_{zxx} = \chi_{zyy}, \chi_{zxy} = -\chi_{zyx}\\
+	&\chi_{zzz}
+\end{split}
+\end{equation}
+Under permutation symmetry, this reduces to
+\begin{equation}\label{eq:Reduced3fold}
+	d_{il} = 
+	\begin{pmatrix}
+		\chi_{xxx} & \chi_{xyy} & 0 & \chi_{xyz} & \chi_{xzx} & \chi_{xyx}\\ 
+		\chi_{yxx} & \chi_{yyy} & 0 & \chi_{yzy} & \chi_{yzx} & \chi_{yxy}\\ 
+		\chi_{zxx} & \chi_{zyy} & \chi_{zzz} & 0 & 0 & 0
+	\end{pmatrix}
+\end{equation}
