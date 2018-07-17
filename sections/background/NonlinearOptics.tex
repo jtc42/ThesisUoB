@@ -1,14 +1,9 @@
 \chapter{Nonlinear Optics}\label{sec:background:NonlinearOptics}
 
-\section{Introduction}
-\begin{itemize}
-    \item Microscopic theory of NLO (Lorentz model etc.)
-    \item NLO in context of chirality, leading into next section 
-\end{itemize}
-\subsection{The Lorentz Model}
-In the Lorentz-oscillator model of an atom driven by an electric field $E(t)$, the 1-dimensional equation of motion of an electron, with an effective mass $m_0$ and charge $e$, in a harmonic potential $U(x) = (1/2)kx^{2}$ is described by
+\section{The Lorentz Oscillating Dipole}
+In the Lorentz-oscillator model of an atom driven by an electric field $E(t)$, the 1-dimensional equation of motion of an electron, with an effective mass $m_0$ and charge $q$, in a harmonic potential $U(x) = (1/2)kx^{2}$ is described by
 \begin{equation}\label{eq:NonlinearOptics:eqMotion}
-	m_{0} \frac{d^2 x}{dt^2} + m_{0} \gamma \frac{dx}{dt} + m_{0} \omega_{0}^2 x = -e E(t)
+	m_{0} \frac{d^2 x}{dt^2} + m_{0} \gamma \frac{dx}{dt} + m_{0} \omega_{0}^2 x = -q E(t)
 \end{equation}
 Here, $x$ is the positional displacement of the electron. $m_{0} \gamma \frac{dx}{dt}$ describes the damping force. $\omega_{0}$ describes the resonant frequency of the system, and is defined in terms of a spring constant $k$ by $\omega_{0} = \sqrt{k/m_{0}}$. The restoring force $m_{0} \omega_{0}^2 x = kx$ then relates to the potential by
 \begin{equation}
@@ -18,47 +13,49 @@ The displacement of the electric $x(t)$ results in a dipole moment $p(t) = ex(t)
 
 In the case of a driving field $E(t) = E_0 e^{-(i\omega t + \phi_E)}$, oscillating at a frequency $\omega$ with a phase $\phi_E$, solutions for $x(t)$ will take the form of $x(t) = x_0 e^{-(i\omega t + \phi_x)}$. By including phase information by making $x_0$ and $E_0$ complex, these expressions can be substituted into equation~\ref{eq:NonlinearOptics:eqMotion} and solved for $x_0$ giving
 \begin{equation}\label{eq:NonlinearOptics:x0}
-	x_0 = \frac{-e E_0}{m_0 (\omega_{0}^2 -\omega^2 -i \gamma \omega)}
+	x_0 = \frac{-q E_0}{m_0 (\omega_{0}^2 -\omega^2 -i \gamma \omega)}
 \end{equation}
-The macroscopic induced polarization $P(t) = N e x(t)$ is now given by
-\begin{equation}
+The macroscopic induced polarization $P(t) = N q x(t)$ is now given by
+\begin{equation}\label{eq:NonlinearOptics:PfullLinear}
 	\begin{split}
-		P(t) = & N e \left( \frac{-e E_0}{m_0 (\omega_{0}^2 -\omega^2 -i \gamma \omega)} \right) e^{-(i\omega t)} \\
-		= & \frac{N e^2}{m_0} \left( \frac{1}{\omega_{0}^2 -\omega^2 -i \gamma \omega} \right) E_0 e^{-(i\omega t)} \\
-		= & \frac{N e^2}{m_0} \left( \frac{1}{\omega_{0}^2 -\omega^2 -i \gamma \omega} \right) E(t)
+		P(t) = & N q \left( \frac{-q E_0}{m_0 (\omega_{0}^2 -\omega^2 -i \gamma \omega)} \right) e^{-(i\omega t)} \\
+		= & \frac{N q^2}{m_0} \left( \frac{1}{\omega_{0}^2 -\omega^2 -i \gamma \omega} \right) E_0 e^{-(i\omega t)} \\
+		= & \frac{N q^2}{m_0} \left( \frac{1}{\omega_{0}^2 -\omega^2 -i \gamma \omega} \right) E(t)
 	\end{split}
 \end{equation}
-For convenience we can introduce the electric susceptibility $\chi$, such that the induced polarization $P(t) = \varepsilon_0 \chi E(t)$. In the frequency domain, when driving at a frequency $\omega$ this can be equivalently given as $P(\omega) = \varepsilon_0 \chi(\omega) E(\omega)$.
+For convenience we can introduce the electric susceptibility $\chi$, such that the induced polarization $P(t) = \varepsilon_0 \chi E(t)$. In the frequency domain, when driving at a frequency $\omega$ this can be equivalently given as $P(\omega) = \varepsilon_0 \chi E(\omega)$.
 
 \subsection{Nonlinear Terms}
 In the more general case of an anharmonic potential, the potential contains higher order terms and can be described by $U(x) = (1/2)kx^{2} + (1/3)\beta_2 x^3 + (1/4)\beta_3 x^4 + ...$. The corresponding restoring force leads to an equation of motion
 \begin{equation}\label{eq:NonlinearOptics:eqMotionNonlinear}
-	\frac{d^2 x}{dt^2} + \gamma \frac{dx}{dt} + \omega_{0}^2 x + \beta_2 x^2 +  \beta_3 x^3 + ... = -\frac{e}{m_{0} } E(t)
+	\frac{d^2 x}{dt^2} + \gamma \frac{dx}{dt} + \omega_{0}^2 x + \beta_2 x^2 +  \beta_3 x^3 + ... = -\frac{q}{m_{0} } E(t)
 \end{equation}
 For an oscillating $E(t)$, solving for $x(t)$ is difficult, however we can make use of the fact that, in general, $\omega_{0}^2 \ll \beta_2 \ll \beta_3 \ll ...$ to find a power series solution. By expanding $x = x_1 + x_2 + ...$ and equating successive higher orders, we obtain
 \begin{equation}
 	\begin{split}
-		& \frac{d^2 x_1}{dt^2} + \gamma \frac{dx_1}{dt} + \omega_{0}^2 x_1 = -\frac{e}{m_{0} } E(t) \\
+		& \frac{d^2 x_1}{dt^2} + \gamma \frac{dx_1}{dt} + \omega_{0}^2 x_1 = -\frac{q}{m_{0} } E(t) \\
 		& \frac{d^2 x_2}{dt^2} + \gamma \frac{dx_2}{dt} + \omega_{0}^2 x_2 = \beta_2 x_1^2 \\
 		& \frac{d^2 x_3}{dt^2} + \gamma \frac{dx_3}{dt} + \omega_{0}^2 x_3 = 2\beta_2 x_1 x_2 + \beta_3 x_1^3 \\
 		& ...
 	\end{split}
 \end{equation}
-The lowest order here is equyivalent to equation~\ref{eq:NonlinearOptics:eqMotion}, and so equation~\ref{eq:NonlinearOptics:x0} provides an expression for our $x_1$ term, for a system driven by an electric field oscillating at a frequency $\omega$.
+The lowest order here is equyivalent to equation~\ref{eq:NonlinearOptics:eqMotion}, and so equation~\ref{eq:NonlinearOptics:x0} provides an expression for our $x_1$ term, for a system driven by an electric field oscillating at a frequency $\omega$:
+\begin{equation}
+	x_{1}(t) = \frac{-q}{m_0 (\omega_{0}^2 -\omega^2 -i \gamma \omega)} E_0 e^{-i\omega t}
+\end{equation}
+Squaring $x_{1}(t)$, to obtain $x_{2}(t)$, gives both a DC component (no oscillation), and components oscillating at $\pm 2\omega$, proportional to $E_{0}^2$ given by 
+\begin{equation}
+	\begin{split}
+		x_{2}(t)\vert_{\mp 2\omega} = \frac{q^2}{m_0 (\omega_{0}^2 -\omega^2 \pm i \gamma \omega)^2} E_0^2 e^{\pm i 2\omega t}
+	\end{split}
+\end{equation}
+This is a specific degenerate case of second-order nonlinearity, where the driving field oscillates at a single frequency $\omega$. More generally, second-order nonlienar effects can be driven by two fields oscillating at different frequencies $\omega_1$ and $\omega_2$. In this case, $x_{2}(t)$ has components oscillating at both $\omega_1 + \omega_2$ and $\omega_1 - \omega_2$. In this work, however, we will focus on the degenerate case of second-order nonlinearity, resulting in motion at $2\omega$.
 
-\begin{itemize}
-	\item Now in the case of an anharmonic potential (with cubic term), restoring force has $x^2$ term. 
-	\item Now we have a second-order term of the displacement, leading to a $P(2\omega)$ polarization.
-	\item In general we can describe the macroscopic response with (literally take first sentence from the dielectric susceptibility section, leading in to it)
-\end{itemize}
-
-
+Following from equation~\ref{eq:NonlinearOptics:PfullLinear}, from  the second-order nonlinear term $x_{2}(t)$ results in an additional component in the induced polarization, $P(t)\vert_{\mp 2\omega} = N q x_{2}(t)\vert_{\mp 2\omega}$, oscillating at $2\omega$ and proportional to $E_0^2$. The second-order electric susceptibility $\chi^{(2)}$ is introduced to describe the second-order polarization, such that $P(2\omega) = \varepsilon_0 \chi^{(2)} E(\omega)^2$. Higher order nonlinearity is described by additional components in the induced polarization, characterized by higher order susceptibilities $\chi^{(n)}$.
 
 \section{The Dielectric Susceptibility}\label{sec:background:NonlinearOptics:susceptibility}
-\begin{itemize}
-    \item Relate definitions to the previous section
-\end{itemize}
-Within the electric dipole approximation, the macroscopic response of a material to an electric field is described by the polarization density $P_{i}(t)$, as shown in equation~\ref{eq:background:NonlinearOptics:susceptibility:Pti}.
+
+The general, 3-dimensional, macroscopic response of a material to an electric field is described by in terms of susceptibility tensors, as shown in equation~\ref{eq:background:NonlinearOptics:susceptibility:Pti}.
 \begin{equation}\label{eq:background:NonlinearOptics:susceptibility:Pti}
 	P_{i}(t) =  \epsilon_{0}\big[
 				\chi^{(1)}_{ij}  E_{j}(t) +
@@ -66,10 +63,10 @@ Within the electric dipole approximation, the macroscopic response of a material
 				\chi^{(3)}_{ijkl}  E_{j}(t) E_{k}(t) E_{l}(t)+ \ldots
 				\big]
 \end{equation}
-Here each of the indices $i,j,k,l,\ldots$ are the Cartesian coordinates of the associated field (ie. each index can take on $x$, $y$, or $z$.) We see that for each higher order term, an additional field is required. This stands to reason as second order nonlinear effects require two-photon absorption, third order require three photons, and so on. For each additional field, the rank of the associated susceptibility tensor increases accordingly. We also see more clearly now that even harmonics require a material lacking inversion symmetry. Under inversion we apply $\mathbf{r}\rightarrow -\mathbf{r}$, hence $\mathbf{P} \rightarrow -\mathbf{P}$, and $\mathbf{E} \rightarrow -\mathbf{E}$. For a centrosymmetric medium, we know that $\mathbf{P}(-\mathbf{E}) = -\mathbf{P}(\mathbf{E})$, and so by equating components, for any even $n$ terms, $\chi^{(n)}=-\chi^{(n)}$ meaning $\chi^{(n)} = 0$. Therefore, emission at even-order harmonics is forbidden in centrosymmetric media.
+Here each of the indices $i,j,k,l,\ldots$ are the Cartesian coordinates of the associated field (ie. each index can take on $x$, $y$, or $z$.) We see that for each higher order term, an additional field is required, and the rank of the associated susceptibility tensor increases accordingly. We also find that even harmonics require a material lacking inversion symmetry. Under inversion we apply $\mathbf{r}\rightarrow -\mathbf{r}$, hence $\mathbf{P} \rightarrow -\mathbf{P}$, and $\mathbf{E} \rightarrow -\mathbf{E}$. For a centrosymmetric medium,  $\mathbf{P}(-\mathbf{E}) = -\mathbf{P}(\mathbf{E})$, and so by equating components, for any even $n$ terms, $\chi^{(n)}=-\chi^{(n)}$ meaning $\chi^{(n)} = 0$. Therefore, emission at even-order harmonics is forbidden in centrosymmetric media.
 
 \subsection{Linear Electric Dipoles}\label{sec:background:NonlinearOptics:linearP}
-The linear response of a material in the dipole approximation can be described entirely by the first-order term in equation~\ref{eq:background:NonlinearOptics:susceptibility:Pti}. In the frequency domain, this becomes
+The 3-dimensional linear response of a material in the dipole approximation can be described entirely by the first-order term in equation~\ref{eq:background:NonlinearOptics:susceptibility:Pti}. In the frequency domain, this becomes
 
 \begin{equation}
 	P_{i}(\omega) =  \epsilon_{0}
