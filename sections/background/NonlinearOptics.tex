@@ -30,7 +30,7 @@ In the more general case of an anharmonic potential, the potential contains high
 \begin{equation}\label{eq:NonlinearOptics:eqMotionNonlinear}
 	\frac{d^2 x}{dt^2} + \gamma \frac{dx}{dt} + \omega_{0}^2 x + \beta_2 x^2 +  \beta_3 x^3 + ... = -\frac{q}{m_{0} } E(t)
 \end{equation}
-For an oscillating $E(t)$, solving for $x(t)$ is difficult, however we can make use of the fact that, in general, $\omega_{0}^2 \ll \beta_2 \ll \beta_3 \ll ...$ to find a power series solution. By expanding $x = x_1 + x_2 + ...$ and equating successive higher orders, we obtain
+For an oscillating $E(t)$, solving for $x(t)$ is difficult, however we can make use of the fact that, in general, $\omega_{0}^2 \ll \beta_2 \ll \beta_3 \ll ...$ to find a power series solution. By expanding $x = x_1 + x_2 + ...$ and equating successive higher orders, we obtain~\cite[\S 1.4.1]{Boyd2008a}
 \begin{equation}
 	\begin{split}
 		& \frac{d^2 x_1}{dt^2} + \gamma \frac{dx_1}{dt} + \omega_{0}^2 x_1 = -\frac{q}{m_{0} } E(t) \\
@@ -39,17 +39,23 @@ For an oscillating $E(t)$, solving for $x(t)$ is difficult, however we can make 
 		& ...
 	\end{split}
 \end{equation}
-The lowest order here is equyivalent to equation~\ref{eq:NonlinearOptics:eqMotion}, and so equation~\ref{eq:NonlinearOptics:x0} provides an expression for our $x_1$ term, for a system driven by an electric field oscillating at a frequency $\omega$:
+For convenience we introduce the denominator function
 \begin{equation}
-	x_{1}(t) = \frac{-q}{m_0 (\omega_{0}^2 -\omega^2 -i \gamma \omega)} E_0 e^{-i\omega t}
+	D(\omega) = \omega_{0}^2 -\omega^2 -i \gamma \omega
 \end{equation}
-Squaring $x_{1}(t)$, to obtain $x_{2}(t)$, gives both a DC component (no oscillation), and components oscillating at $\pm 2\omega$, proportional to $E_{0}^2$ given by 
+The lowest order here is equyivalent to equation~\ref{eq:NonlinearOptics:eqMotion}, and so equation~\ref{eq:NonlinearOptics:x0} provides an expression for our $x_1$ term, for a system driven by an electric field oscillating at a frequency $\omega$
 \begin{equation}
-	\begin{split}
-		x_{2}(t)\vert_{\mp 2\omega} = \frac{q^2}{m_0 (\omega_{0}^2 -\omega^2 \pm i \gamma \omega)^2} E_0^2 e^{\pm i 2\omega t}
-	\end{split}
+	x_{1}(t) = \frac{-q}{m_0 D(\omega)} E_0 e^{-i\omega t}
 \end{equation}
-This is a specific degenerate case of second-order nonlinearity, where the driving field oscillates at a single frequency $\omega$. More generally, second-order nonlienar effects can be driven by two fields oscillating at different frequencies $\omega_1$ and $\omega_2$. In this case, $x_{2}(t)$ has components oscillating at both $\omega_1 + \omega_2$ and $\omega_1 - \omega_2$. In this work, however, we will focus on the degenerate case of second-order nonlinearity, resulting in motion at $2\omega$.
+Squaring $x_{1}(t)$, to obtain $x_{2}(t)$, gives both a DC component ($\omega=0$), and components oscillating at $\pm 2\omega$, proportional to $E_{0}^2$ given by 
+\begin{equation}
+	x_{2}(t)\vert_{\mp 2\omega} = \frac{\beta_2 q^2}{m_{0}^2 D(\pm 2\omega) D^{2}(\omega)} E_0^2 e^{\pm i 2\omega t}
+\end{equation}
+This is a specific degenerate case of second-order nonlinearity, where the driving field oscillates at a single frequency $\omega$. More generally, second-order nonlienar effects can be driven by two fields oscillating at different frequencies $\omega_1$ and $\omega_2$, with complex amplitudes $E_{\omega_1}$ and  $E_{\omega_2}$ respectively. In this case, $x_{2}(t)$ has components oscillating at $\omega_1 \pm \omega_2$~\cite[\S 1.4.1]{Boyd2008a}
+\begin{equation}
+	x_{2}(t)\vert_{\omega_1 \pm \omega_2} = \frac{\beta_2 q^2}{m_{0}^2 D(\omega_1 \pm \omega_2) D(\omega_1) D(\pm\omega_2)} E_{\omega_1} E_{\omega_2} e^{i (\omega_1 \pm \omega_2) t}
+\end{equation}
+In this work, however, we will focus on the degenerate case of second-order nonlinearity, resulting in motion at $2\omega$.
 
 Following from equation~\ref{eq:NonlinearOptics:PfullLinear}, from  the second-order nonlinear term $x_{2}(t)$ results in an additional component in the induced polarization, $P(t)\vert_{\mp 2\omega} = N q x_{2}(t)\vert_{\mp 2\omega}$, oscillating at $2\omega$ and proportional to $E_0^2$. The second-order electric susceptibility $\chi^{(2)}$ is introduced to describe the second-order polarization, such that $P(2\omega) = \varepsilon_0 \chi^{(2)} E(\omega)^2$. Higher order nonlinearity is described by additional components in the induced polarization, characterized by higher order susceptibilities $\chi^{(n)}$.
 
