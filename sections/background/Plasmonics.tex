@@ -2,23 +2,43 @@
 
 \section{Introduction}
 \begin{itemize}
-    \item Very brief overview of propagating plasmons, momentum matching requirements etc.
+    \item Very brief overview of propagating surface plasmon polaritons
+    \begin{itemize}
+        \item Dispersion relations of SPP and light, momentum matching conditions
+        \item Conservation of momentum applies. Effective mass of the SPP and the fact it propagates necessitates momentum matching in order to resonantly drive the SPP with light.
+        \item Very brief description of the experimental geometries used for momentum matching (Kretschmann and Otto geometries)
+    \end{itemize}
     \item Properties and applications of propagating plasmons, ie SERS
 \end{itemize}
 
 \section{Localised Surface Plasmons}\label{sec:background:Plasmonics:Metamaterials}
 \begin{itemize}
+    \item Quasi-static approximation: field is constant over the size of the particle
     \item Sub-wavelength nanoparticles, removing need for momentum matching
-    \item LSP Resonances
-    \item Sub-wavelength field enhancement/confinement between coupled nanoparticles
-    \item Introduce concept of metamaterials/effective media
+    \item LSP resonances determined by the nanoparticle material, shape, and dimensions in the dipole approximation (valid for ``vanishingly small'', deep sub-wavelength, particles.)
+    \begin{itemize}
+        \item Example for spherical nanoparticles (well established)
+        \item Use this example to qualitatively discuss how the particle acts a bit like a Lorentz oscillator
+        \item In many systems the nanoparticle geometry is significantly more complex, and the LSP resonance cannot be determined analytically
+    \end{itemize}
+    \item Applications in photonic
+    \begin{itemize}
+        \item Sub-wavelength field enhancement/confinement between coupled nanoparticles, and super-resolution imaging
+        \item Introduce concept of metamaterials/effective media
+    \end{itemize}
 \end{itemize}
 
 \section{Quasi-Localised Surface Plasmons and Plasmonic Modes}
 \begin{itemize}
-    \item Intermediate regieme of nanoantennae \cite{Zheng2013, Zheng2015}.
-    \item DISCUSS WITH VENTSI (and XUEZHI?): Why don't we need to momentum-match in our larger structures? They're bigger than the wavelength used.
-    \item Plasmonic modes in structures close to wavelength dimensions
+    \item Intermediate regieme of nanostructures, beyond the quasi-static approximation. Structure dimensions are close to, or larger than, the wavelength.
+    \item The near-field optical behaviour in this regieme can be understood in terms of current density modes. 
+    \begin{itemize}
+        \item The geometry of the metallic surface will permit a set of plasmon modes
+        \item Higher order modes can be excited across the surface of the structure. 
+        \item The plasmonic modes are effectively non-propagating current-density standing waves, and thus have zero net momentum. Thus, even in this regieme momentum matching is not a requirement to achieve plasmon resonance.
+    \end{itemize}
+    \item Zheng's work demonstrated that the plasmonic response of metallic nanostructures in this intermediate regieme can be decomposed into a set of current density eigenmodes~\cite{Zheng2012}. This work was extended to collections of coupled nanostructures~\cite{Zheng2013}. 
+    \item The optical response can be further understood by applying group theory to the plasmonic eigenmode set~\cite{Zheng2015}, allowing the current density modes to be grouped by the optical polarisation states that exclusively excite them.
 \end{itemize}
 
 \section{Chiral Plasmonic Nanostructures}
@@ -27,3 +47,6 @@
 \end{itemize}
 
 \subsection{Superchiral Fields from Plasmonic Metasurfaces}
+\begin{itemize}
+    \item Literature review
+\end{itemize}
