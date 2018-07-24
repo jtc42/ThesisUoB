@@ -17,4 +17,16 @@
             ]
         }
     ],
+    "latex-workshop.view.pdf.external.synctex": {
+        "command": "SumatraPDF.exe",
+        "args": [
+          "-forward-search",
+          "%TEX%",
+          "%LINE%",
+          "-reuse-instance",
+          "-inverse-search",
+          "\"code.exe\" -g \"%f:%l\"",
+          "%PDF%",
+        ]
+    },
 }
