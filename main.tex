@@ -110,8 +110,40 @@
 I'd like to thank \LaTeX  for not being quite as horrible to use as MS Word.
 
 \noindent\textbf{Notes to self:}
-\noindent SyncTeX should be installed separately to function in VS Code. 
-\noindent Install from choco (https://chocolatey.org/packages/synctex), \\or download from TeXLive (https://www.tug.org/svn/texlive/trunk/Master/bin/win32/) then place synctex.exe and kpathsea***.dll in /Program Files/MiKTeX 2.9/miktex/bin/x64/.
+
+\noindent SyncTeX should be installed separately to function in VS Code. \\
+Install from choco
+\begin{verbatim}
+	https://chocolatey.org/packages/synctex
+\end{verbatim}
+or download from TeXLive 
+\begin{verbatim}
+	https://www.tug.org/svn/texlive/trunk/Master/bin/win32/
+\end{verbatim}
+then place synctex.exe and kpathsea***.dll in /Program Files/MiKTeX 2.9/miktex/bin/x64/.
+
+\noindent To make SumatraPDF work with inverse-search, set Sumatra inverse search command (in Sumatra settings) to 
+\begin{verbatim}
+"C:\Program Files\Microsoft VS Code\Code.exe" -g "%f:%l"
+\end{verbatim}
+
+\noindent To make Sumatra work with forward-search, add to user or workspace settings
+\begin{verbatim}
+	"latex-workshop.view.pdf.external.synctex": {
+		"command": "SumatraPDF",
+		"args": [
+			"-forward-search",
+			"%TEX%",
+			"%LINE%",
+			"-reuse-instance",
+			"-inverse-search",
+			"\"code.exe\" -g \"%f:%l\"",
+			"%PDF%",
+		]
+	},
+\end{verbatim}
+
+\clearpage
 
 \noindent\textbf{To-do:}
 \begin{itemize}
