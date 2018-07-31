@@ -56,6 +56,7 @@
         "lipkin",
         "lsps",
         "magnetoelectric",
+        "metamaterial",
         "metamaterials",
         "metasurfaces",
         "nanohelix",
@@ -68,6 +69,7 @@
         "nonlinearity",
         "permittivities",
         "permittivity",
+        "photonic",
         "plasmon",
         "plasmonic",
         "plasmons",
@@ -80,6 +82,7 @@
         "setup",
         "spps",
         "superchiral",
-        "tellegen"
+        "tellegen",
+        "wavevector"
     ],
 }
