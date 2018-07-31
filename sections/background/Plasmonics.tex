@@ -1,30 +1,24 @@
 \chapter{Plasmonic Nanomaterials}\label{sec:background:Plasmonics}
 
-\section{Introduction}
 \begin{itemize}
     \item Brief literature overview of nanostructure fabrication, brief history of plasmonic nanomaterials.
-    \item The response of a metal surface to incident light can be modelled in terms of plasma oscillations. By treating the metal as a free-electron gas (plasma) surrounding a lattice of positive charges, the electromagnetic response can be described by the motion of this plasma in response to external electromagnetic fields
-    \item At a metal-dielectric interface, surface plasmon polaritons describe the coupling of incident light to induced propagating electron density waves on the metal surface. These coupled waves are known as surface plasmon polaritons (SPPs).
-    \item SPPs propagate along the metal-dielectric interface, with an exponentially decaying intensity normal to the surface.
-    \item We consider an interface between a metal and a dielectric, of permittivities $\varepsilon_1$ and $\varepsilon_2$ respectively (figure~\ref{fig:background:Plasmonics:SPP}a). The metal necessarily has permittivity ${\mathop{\rm Re}\nolimits}(\varepsilon_1)<0$. Excitation of SPPs require the real parts of $\varepsilon_1$ and $\varepsilon_2$ to be of opposite sign, that is, the interface is between a conductor and an insulator.
-    \item In this configuration, the dispersion relation for a surface plasmon polariton propagating in the $x$ direction, oscillating at frequency $\omega$, is given by equation~\ref{eq:Plasmonics:SPPdispersion}.
-    \item Conservation of momentum must be considered when optically exciting surface plasmon polaritons.
-    \begin{itemize}
-        \item For light incident on the interface via the dielectric described by $\varepsilon_2$, the optical dispersion relation $k_0 = \omega / c = \omega \sqrt{\mu_0 \varepsilon_2}$ shows that the projection of the optical momentum in the direction of SPP propagation will always be lower than that of the SPP (figure~\ref{fig:background:Plasmonics:SPP}b).
-        \item Various experimental configurations have been demonstrated to allow the excitation of SPPs with optical radiation. These commonly involve exciting a SPP at a metal-dielectric interface with light propagating through a different dielectric, interacting at an adjacent interface.
-        \item Examples of Kretschmann and Otto geometries
-    \end{itemize}
+    \item Recent advances in the fabrication of nano-scale, tailor-designed structures have allowed the exploration of novel optical effects arising from the interaction between light and nanomaterials. Perhaps most commonly exploited are plasmonic materials: metallic structures within a dielectric environment whose optical properties are affected not only by material choice, but also their structural geometry.
+    \item Find some seminal paper about plasmonic materials
 \end{itemize}
-
-\begin{equation}\label{eq:Plasmonics:SPPdispersion}
-    k^{SPP}_{x} = k_0 \sqrt{\frac{\varepsilon_{1}\varepsilon_{2}}{\varepsilon_{1}+\varepsilon_{2}}} = \frac{\omega}{c} \sqrt{\frac{\varepsilon_{1}\varepsilon_{2}}{\varepsilon_{1}+\varepsilon_{2}}}
-\end{equation}
+The general response of a metal surface to incident light can be modelled in terms of plasma oscillations. By treating the metal as a free-electron gas (plasma) surrounding a lattice of positive charges, the electromagnetic response can be described by the motion of this plasma in response to external electromagnetic fields. 
+At a metal-dielectric interface, incident light can drive electron-density waves that propagate along the metal surface. The coupled electromagnetic radiation and electron-density waves are known as surface plasmon polaritons (SPPs), and will propagate along the metal-dielectric interface, with an exponentially decaying intensity normal to the surface.
 
 \begin{figure}[htb!]
     \centering
     \includegraphics[scale=1.0]{./figures/background/plasmonics/spp.pdf}
     \caption{\label{fig:background:Plasmonics:SPP} WRITE CAPTION \textbf{a)} Surface plasmon polariton at a metal-dielectric interface. \textbf{b)} Schematic of SPP dispersion relations. For any particular interface, SPPs cannot be excited by light impinging from the dielectric at that interface. Light propagating through glass can however be phase-matched to a SPP at a metal-air interface, for example. The phase-matching point is illustrated with arrows. }
 \end{figure}
+
+We consider an interface between a metal and a dielectric, of permittivities $\varepsilon_1$ and $\varepsilon_2$ respectively (figure~\ref{fig:background:Plasmonics:SPP}a). The metal necessarily has permittivity ${\mathop{\rm Re}\nolimits}(\varepsilon_1)<0$. Excitation of SPPs require the real parts of $\varepsilon_1$ and $\varepsilon_2$ to be of opposite sign, that is, the interface is between a conductor and an insulator. In this configuration, the dispersion relation for a surface plasmon polariton propagating in the $x$ direction, oscillating at frequency $\omega$, is given by equation~\ref{eq:Plasmonics:SPPdispersion}. 
+\begin{equation}\label{eq:Plasmonics:SPPdispersion}
+    k^{SPP}_{x} = k_0 \sqrt{\frac{\varepsilon_{1}\varepsilon_{2}}{\varepsilon_{1}+\varepsilon_{2}}} = \frac{\omega}{c} \sqrt{\frac{\varepsilon_{1}\varepsilon_{2}}{\varepsilon_{1}+\varepsilon_{2}}}
+\end{equation}
+For light incident on the interface via the dielectric described by $\varepsilon_2$, the optical dispersion relation $k_0 = \omega / c = \omega \sqrt{\mu_0 \varepsilon_2}$ shows that the projection of the optical momentum in the direction of SPP propagation will always be lower than that of the SPP (figure~\ref{fig:background:Plasmonics:SPP}b). Conservation of momentum must be considered when optically exciting surface plasmon polaritons, and so SPPs cannot be excited by light incident from the same dielectric as at the metal interface. Various experimental configurations have been demonstrated to allow the excitation of SPPs with optical radiation, most commonly the Kretschmann and Otto geometries. These involve exciting a SPP at a metal-dielectric interface with light propagating through a different dielectric, interacting at an adjacent interface. In this work, however, we make use of plasmonic structure with characteristic dimensions comparable to, or smaller than, the wavelength of light in order to alleviate the momentum matching conditions. In these cases, the surface plasmons are confined to the nanoparticle surface, and are known as localised surface plasmons.
 
 
 \section{Localised Surface Plasmons}\label{sec:background:Plasmonics:Metamaterials}
