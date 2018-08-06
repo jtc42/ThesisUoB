@@ -1,7 +1,16 @@
 %Define style
 \documentclass[11pt,a4paper,final]{report}
 %Set reduced margins
-\usepackage[margin=25mm]{geometry}
+%\usepackage[margin=25mm]{geometry}
+\usepackage{geometry}
+\geometry{a4paper,
+  twoside,
+  margin=20mm,
+  bindingoffset=20mm, %Extra margin on binding edge (must total 40mm)
+  top=25mm, %Override top margin
+  bottom=25mm, %Override bottom margin
+  heightrounded,
+}
 
 % Use fancy headers
 \usepackage{fancyhdr}
@@ -81,7 +90,6 @@
   \addtocontents{lof}{\normalsize}
 }
 
-
 \begin{document}
 
 
@@ -90,16 +98,16 @@
     \input{./title}
 \end{titlepage}
 
-
 % Abstract
 \begin{abstract}
+	\setcounter{page}{0}  % Fix the janky page numbering to get the correct binding-edge margin
     \input{./abstract}
 \end{abstract}
 \clearpage
 
-
+\pagenumbering{arabic}  % Start normal page numbering
 % Table of contents
-\clearpage
+\clearpage 
 \tableofcontents
 \clearpage
 
