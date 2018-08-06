@@ -50,37 +50,30 @@ Another interesting application of deep sub-wavelength plasmonic nanostructures 
 
 \subsection{Electromagnetic Field Confinement}\label{sec:Plasmonics:confinement}
 
+An effect crucial to this work, and indeed the field of nanophotonics generally, is the ability for plasmonic nanoparticles to confine electromagnetic fields to sub-wavelength scales. This confinement results in two useful properties: the field is highly localised to small regions of space, allowing targeting of electromagnetic interactions to regions below the diffraction limit, and correspondingly, the enhancement in field intensity within these regions. The precise mechanism of field confinement depends largely on the system being considered, however perhaps the simplest contribution is from the localised surface plasmon resonance. 
+When a metallic nanoparticle is excited close to a plasmon resonance, the induced dipole oscillates at its maximum amplitude. This results in a resonant scattering and absorption of light, leading to locally enhanced electromagnetic fields around the particle. For sub-wavelength nanoparticles, this allows for sub-wavelength field confinement: The localised surface plasmon mode volume is limited by the particles dimensions, and the local electromagnetic field is determined by the, now tightly confined, surface plasmon mode. Coupling this mode to incident light results in an enhanced local electromagnetic field at the particle surface. Like the LSP resonance itself, the enhancement factor (the ratio of the field amplitude at the particle surface, and without the particle present) at resonance strongly depends on the particle material, geometry, and surroundings~\cite{Dynich2009, Tanabe2008}.
+
+Aside from enhanced near-fields at the plasmon resonance, geometric effects can lead to even greater levels of field confinement, with correspondingly high intensity enhancements. Broadly, any effect that confines charge to a region of space within a conductor will lead to a enhanced electromagnetic fields at the surface. 
+An important contribution in plasmonic nanostructures can come from the lightning-rod effect. In the context of electrostatics, the lightning-rod effect describes the confinement of electric fields at sharp gradients of conducting structures, such as corners or tapered tips. Charge is confined more efficiently to regions of sharp surface gradients on a charged conductor, and so the electric field lines at the surface of the conductor will generally be localised around these sharp features. In spherical nanoparticles, the curvature of the sphere results in charge confinement at the surfaces along the axis of excitation polarisation, resulting in greater field confinement along this direction~\cite{Tanabe2008}. However, nanostructure geometries with sharper features greatly increase the field enhancement associated with the lightning-rod effect, localising the field strongly at sharp corners and edges~\cite{Dreaden2011, Lee2010, Valev2012d}.
+
+Another contribution to field enhancement associated with charge confinement is from coupling between plasmonic nanostructures. A simple example is a pair of sub-wavelength nanoparticles, separated by a distance $d \ll \lambda$. This system behaves as a pair of point dipoles interacting via the near-field (figure~\ref{fig:background:Plasmonics:LSP}b). In the limit of small separation $d$, the coupled system will radiate as a dipole, and resonantly scatter when excited by light at it's resonant frequency. When driven by a field polarised along the chain axis, the gap between particles introduces a capacitance dependent on particle geometry and separation. This capacitance red-shifts the resonant frequency of the longitudinal hybridised plasmon mode along that axis. When driven by light polarized perpendicular to the chain axis, a transverse hybridised plasmon mode is excited, with lower inter-particle capacitance, blue-shifting the resonant frequency. Crucially, the capacitance of the inter-particle gap results in the confinement of charge on the inner surfaces of the particles. The confinement of charge directly leads to confinement of the electromagnetic fields in the region between particles. Both the inter-particle field confinement, and associated shifts in the LSP resonance have been studied experimentally and theoretically for long chains of nanoparticles~\cite{Krenn1999, Krenn1999a}, pairs of nanoparticles~\cite{Huang2016}, and periodic nanostructure arrays~\cite{Lee2016, Valev2011b, Valev2012a}.
+
+The ability to strongly confine electromagnetic fields has found a wide range of applications, of particular note in surface-enhanced Raman scattering (SERS). Raman scattering experiments typically probe molecular transitions by spectroscopically analysing light inelastically scattered from a molecule. Spectral shifts in the scattered light correspond to the energy of molecular transitions, acting as a probe for substance composition. However, the probability of inelastic scattering is low compared to elastic scattering, and thus Raman scattering it typically a very weak effect. In SERS experiments, molecular samples are bound close to a nanostructured metal surface. Incident light resonantly excites surface plasmons in the metallic structures, leading to an enhanced near-field at the metal surface. The enhanced near-field scatters from the molecular sample, and the plasmonic nanostructures can then function as resonant transmitting antennae for the scattered light, providing a second source of enhancement. The combination of these two sources of enhancement lead to a potential enhancement in the overall detected Raman scattering signal of $10^{10}$~\cite{Fromm2006}. Although the precise limitations of SERS are debated~\cite{LeRu2007}, enhancements of several orders of magnitude have nevertheless been experimentally demonstrated using coupled spherical nanoparticles~\cite{Talley2005}, bowtie antennae (making use of the lightning-rod enhancement)~\cite{Fromm2006}, and roughened metal surface, showing sensitivity down to single-molecule detection~\cite{Blackie2009}. Plasmonic field confinement has also found applications in sub-wavelength imaging~\cite{Huang2010a}, photodetection~\cite{Ishi2005}, and scanning near-field optical microscopy (SNOM)~\cite{Wenzel2008} by making use of sub-wavelength resonant antennae.
+
+\subsection{Enhanced Second-Harmonic Generation}\label{sec:background:NonlinearOptics:plasmonic}
+
+\subsection{Enhanced Chiral-Optical Interactions} \label{sec:background:Plasmonics:chiralPlasmonics}
 \begin{itemize}
-    \item Enhancement via localised surface plasmon resonance (excitation/scattering). 
-    \begin{itemize}
-        \item When a metallic nanoparticle is excited close to a plasmon resonance, the induced dipole oscillates at maximum amplitude. This results in a resonant scattering and absorption of light, leading to locally enhanced electromagnetic fields around the particle. 
-        \item For sub-wavelength nanoparticles, this allows for sub-wavelength field confinement. The localised surface plasmon mode volume is limited by the particles sub-wavelength dimensions. Since the local electromagnetic field is determined by the, now tightly confined, surface plasmon mode, coupling this mode to incident light results in a confined local electromagnetic field at the particle surface.
-        \item Example of enhancement from single nanoparticles
-    \end{itemize}
-    \item Enhancement via coupled localised surface plasmons (capacitance)
-        \begin{itemize}
-            \item A simple example is a pair of sub-wavelength nanoparticles, separated by a distance $d \ll \lambda$. This system behaves as a pair of point dipoles interacting via the near-field (figure~\ref{fig:background:Plasmonics:LSP}b). In the limit of small separation $d$, the coupled system will radiate as a dipole, and resonantly scatter when excited by light at it's resonant frequency. However, when driven by a field polarised along the chain axis, the gap between particles introduces a capacitance dependent on particle geometry and separation. This capacitance shifts the resonant frequency of the hybridised plasmon mode along that axis.
-            \item Crucially, the capacitance of the gap results in the confinement of charge on the inner surfaces of the particles. This confinement of charge directly leads to confinement of the electromagnetic fields in the region between particles.
-            \item Example of enhancement from coupled nanoparticles
-        \end{itemize}
-    \item Enhancement via lightning-rod effect (charge confinement)
-    \begin{itemize}
-        \item An additional enhancement in field confinement can come from the ``lightning-rod effect''. In the context of electrostatics, the lightning-rod effect describes the confinement of electric fields at sharp gradients of conducting structures, such as corners or tapered tips. Charge is confined more efficiently to regions of sharp surface gradients on a charged conductor, and so the electric field lines at the surface of the conductor will generally be localised around these sharp features.
-        \item While not necessarily a relevant enhancement when considering coupled spherical nanoparticles, nanostructure geometries with sharper features, especially when multiple sharp features are closely coupled to each other, can greatly benefit from the additional confinement associated with the lightning-rod effect.
-        \item Examples of field hotspots at the edges of nanostructures
-        \begin{itemize}
-            \item Direct observation of near-field localisation around the sharp features of a chiral nanostructure by ``nano-jets''~\cite{Valev2012d}
-        \end{itemize}
-    \end{itemize}
-    
-    \item Applications (literature review)
-    \begin{itemize}
-        \item Frequently used for SERS
-        \item Sub-wavelength imaging (brief)
-        \item Enhancement in chiral-optical measurements. Anything NOT about superchiral light, eg molecules between coupled spherical nanoparticles (see review sections).
-        \item Enhanced nonlinear effects (due to strong intensity dependence) (most relevant to this work)
-    \end{itemize}
+    \item Freedom of fabrication techniques allow symmetries to be explored.
+    \item Second-order nonlinear processes, which already enhance chiroptical measurements, can themselves be enhanced as described in section~\ref{sec:Plasmonics:confinement}.
+    \item Literature review. Lots of references in~\cite[\S 3.2]{Collins2017}
 \end{itemize}
+
+\subsubsection{Superchiral Fields from Plasmonic Metasurfaces}
+\begin{itemize}
+    \item Literature review (directly from \cite[\S 4.3]{Collins2017})
+\end{itemize}
+
 
 \section{Beyond the Quasi-Static Approximation}
 \begin{itemize}
@@ -99,16 +92,5 @@ Another interesting application of deep sub-wavelength plasmonic nanostructures 
 \end{itemize}
 
 
-\section{Chiral Plasmonic Nanostructures} \label{sec:background:Plasmonics:chiralPlasmonics}
-\begin{itemize}
-    \item Freedom of fabrication techniques allow symmetries to be explored.
-    \item Second-order nonlinear processes, which already enhance chiroptical measurements, can themselves be enhanced as described in section~\ref{sec:Plasmonics:confinement}.
-    \item Literature review. Lots of references in~\cite[\S 3.2]{Collins2017}
-\end{itemize}
 
-\subsection{Superchiral Fields from Plasmonic Metasurfaces}
-\begin{itemize}
-    \item Literature review (directly from \cite[\S 4.3]{Collins2017})
-\end{itemize}
 
-\section{Enhanced Second-Harmonic Generation}\label{sec:background:NonlinearOptics:plasmonic}
