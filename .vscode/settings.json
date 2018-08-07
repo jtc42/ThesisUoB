@@ -60,6 +60,7 @@
         "magnetoelectric",
         "metamaterial",
         "metamaterials",
+        "metasurface",
         "metasurfaces",
         "nanohelix",
         "nanomaterials",
@@ -92,6 +93,7 @@
         "spps",
         "superchiral",
         "tellegen",
+        "wavefront",
         "wavevector"
     ],
     "cSpell.diagnosticLevel": "Hint",
