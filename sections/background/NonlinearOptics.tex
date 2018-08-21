@@ -330,8 +330,10 @@ The chirality is now described by a single independent component, since under pe
 \section{Second-Harmonic Generation as a Probe for Chirality}\label{sec:background:NonlinearOptics:chirality}
 \begin{itemize}
 	\item In-depth (with maths) symmetry discussion
-	\item The mathematical form of SHG-CD, and how SHG-CD is perhaps not the best name for the effect, as the physical origin is entirely different, and does not result from asymmetric extinction like linear CD does. We're talking about a dissymmetry in the rate of SHG under RCP and LCP illumination. Maybe SHG-CID (circular intensity difference). Possibly even change every reference to SHG-CD to SHG-CID throughout the thesis? Controversial, am I right?
     \item Literature review on SHG enhanced chiroptics (NOT PLASMONIC)
 \end{itemize}
 
-
+In second-harmonic generation optical activity experiments, analogues of linear circular dichroism and optical rotation can be measured. Second-harmonic generation optical rotation (SHG-OR) closely follows the definition discussed in section \ref{sec:background:Chirality:Chiroptics}: The angle of SHG-OR is given by the angle between the incident polarisation axis, and the angle of linearly polarised SHG from the material. The nonlinear analogue of circular dichroism is, however, somewhat less clearly defined. Often, SHG optical activity experiments measure a difference in the SHG \textit{intensity} from RCP and LCP incident light, $I_{RCP}$ and $I_{LCP}$ respectively. This is then normalised to $(I_{RCP} - I_{LCP})/(I_{RCP} + I_{LCP})$, and this quantity is called the SHG circular dichroism. However, this quantity typically gives no spectral information, and relates to the field intensity, rather than amplitude. A more appropriate term is ``circular intensity difference'' (CID), as used commonly in Raman optical activity measurements~\cite[\S 1.4]{Barron2004}. The CID is defined identically, and will be used here as a more suitable naming convention. The SHG-CID is thus defined by
+\begin{equation}\label{eq:background:NonlinearOptics:CID}	
+	\mathrm{SHG \mhyphen CID} = \frac{I_{RCP}^{SHG} - I_{LCP}^{SHG}}{I_{RCP}^{SHG} + I_{LCP}^{SHG}}
+\end{equation}
