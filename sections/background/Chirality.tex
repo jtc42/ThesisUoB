@@ -69,7 +69,7 @@ In the case of a non-gyrotropic material (exhibiting no magneto-optic rotation),
     \end{split}
 \end{equation}
 The expressions shown in equation~\ref{eq:background:chirality:isotropicConstitutive} are a special case of equation~\ref{eq:background:chirality:fullConstitutive}, where no magneto-electric cross-coupling is present, so $\bf{\tilde \xi}=\bf{\tilde \zeta}=0$ and due to isotropy, $\bf{\tilde \varepsilon}$ and $\bf{\tilde \mu}$ become scalars. 
-In the case of a non-chiral anisotropic material, $\bf{\tilde \xi}=\bf{\tilde \zeta}=0$ however $\bf{\tilde \varepsilon}$ and $\bf{\tilde \mu}$ remain as matrices. Most relevant in this discussion however is the special case of a bi-isotropic, or isotropic chiral, medium. 
+In the case of a non-chiral anisotropic material, $\bf{\tilde \xi}=\bf{\tilde \zeta}=0$ however $\bf{\tilde \varepsilon}$ and $\bf{\tilde \mu}$ remain as matrices. Most relevant in this discussion however is the special case of a homogeneous bi-isotropic, or isotropic chiral, medium. 
 In this case the matrix components reduce to scalars, but all four components remain. The constraints given in equation~\ref{eq:background:chirality:nongyroConstraints} apply, and so we find that $\xi =-\zeta $.
 
 There are several ways to write the remaining relations, including Post's relations~\cite{Capolino2009}, Born's relations~\cite{Lekner1999, Barnett2016} , and Tellegen's relations~\cite{Capolino2009,kong1986,lindell1994} (equation~\ref{eq:background:chirality:tellegensRelations}). Tellegen's relations will be used here, however the various forms are equivalent.
@@ -86,40 +86,127 @@ There are several ways to write the remaining relations, including Post's relati
     \begin{bmatrix}
         \mathbf{E} \\
         \mathbf{H}
-    \end{bmatrix}
+    \end{bmatrix}.
 \end{equation}
 Here, ${{\varepsilon }_{r}}$ and $\mu_r$ are the relative permittivity and permeability of the material respectively, and $\kappa$ is known as the ``chirality parameter''. In order to describe the electromagnetic wave propagation through the chiral medium, we start by making use of the source-free time-harmonic Maxwell's equations, for a field oscillating at a frequency $\omega$:
-\begin{equation}\label{eq:background:chirality:maxwell}
-    \begin{split}
-        & \nabla \cdot \mathbf{D} = \nabla \cdot \mathbf{E} = 0 \\
-        & \nabla \cdot \mathbf{B} = \nabla \cdot \mathbf{H} = 0 \\
-        & \nabla \times \mathbf{E} = i \omega \mathbf{B} \\
-        & \nabla \times \mathbf{H} = -i \omega \mathbf{D}
-    \end{split}
-\end{equation}
+\begin{align}
+    & \nabla \cdot \mathbf{D} = \nabla \cdot \mathbf{E} = 0 \label{eq:background:chirality:maxwellD}\\
+    & \nabla \cdot \mathbf{B} = \nabla \cdot \mathbf{H} = 0 \label{eq:background:chirality:maxwellB}\\
+    & \nabla \times \mathbf{E} = i \omega \mathbf{B} \label{eq:background:chirality:maxwellE}\\
+    & \nabla \times \mathbf{H} = -i \omega \mathbf{D} \label{eq:background:chirality:maxwellH}.
+\end{align}
 For simplicity, we can rewrite equation~\ref{eq:background:chirality:tellegensRelations} in terms of $\varepsilon = \varepsilon_0 \varepsilon_r$, $\mu = \mu_0 \mu_r$, and $\gamma = \kappa \sqrt{\mu_0 \varepsilon_0}$ to give:
-\begin{equation}\label{eq:background:chirality:tellegensSimplified}
+\begin{align}
+    & \mathbf{D} = \varepsilon \mathbf{E} + i \gamma \mathbf{H} \label{eq:background:chirality:tellegensSimplifiedD} \\
+    & \mathbf{H} = \frac{1}{\mu}( \mathbf{B} + i \gamma \mathbf{E} ) \label{eq:background:chirality:tellegensSimplifiedH}.
+\end{align}
+Inserting equation~\ref{eq:background:chirality:maxwellB} into equation~\ref{eq:background:chirality:tellegensSimplifiedH} gives an expression for $\mathbf{H}$ eliminating all fields other than $\mathbf{E}$:
+\begin{equation}\label{eq:background:chirality:HofE}
+    \mathbf{H} = \frac{1}{\mu} \left( \frac{1}{i \omega} \nabla \times \mathbf{E} + i \gamma \mathbf{E} \right).
+\end{equation}
+By equating expressions for $\mathbf{D}$ obtained from equations~\ref{eq:background:chirality:maxwellH} and~\ref{eq:background:chirality:tellegensSimplifiedD} we obtain:
+\begin{equation}\label{eq:background:chirality:equatingD}
+    \frac{i}{\omega} \nabla \times \mathbf{H} = \varepsilon \mathbf{E} + i \gamma \mathbf{H}.
+\end{equation}
+Substituting equation~\ref{eq:background:chirality:HofE} into equation~\ref{eq:background:chirality:equatingD} gives:
+\begin{equation}\label{eq:background:chirality:diffEfull}
+    \frac{i}{\omega \mu} \nabla \times \left( \frac{1}{i \omega} \nabla \times \mathbf{E} + i \gamma \mathbf{E} \right) = \varepsilon \mathbf{E} + i \frac{\gamma}{\mu} \left( \frac{1}{i \omega} \nabla \times \mathbf{E} + i \gamma \mathbf{E} \right).
+\end{equation}
+For a homogeneous isotropic chiral medium this can be simplified to obtain the following differential equation for the electric field:
+\begin{equation}\label{eq:background:chirality:diffEreduced}
+    \nabla \times (\nabla \times \mathbf{E}) - (\varepsilon \mu - \gamma^2)\omega^2 \mathbf{E} - 2 \omega \gamma \nabla \times \mathbf{E} = 0.
+\end{equation}
+By making use of the vector identity $\nabla \times (\nabla \times \mathbf{E}) = \nabla(\nabla \cdot \mathbf{E}) - \nabla^2 \mathbf{E}$ and equation~\ref{eq:background:chirality:maxwellD}, this is further simplified to give:
+\begin{equation}\label{eq:background:chirality:diffE}
+    \nabla^2 \mathbf{E} + (\varepsilon \mu - \gamma^2)\omega^2 \mathbf{E} + 2 \omega \gamma \nabla \times \mathbf{E} = 0.
+\end{equation}
+Due to isotropy and homogeneity we can, without loss of generality, assume a monochromatic plane-wave solution propagating in the $z$ direction with a wavevector $k$ of the form
+\begin{equation}
+    \mathbf{E} = \begin{bmatrix}
+        \tilde E_x \\
+        \tilde E_y \\
+        \tilde E_z
+      \end{bmatrix} e^{i k z}
+\end{equation}
+where $\tilde E_x$, $\tilde E_y$, and $\tilde E_z$ are the complex scalar amplitudes of $x$, $y$, and $z$ components of the oscillating electric field respectively. The problem can be further simplified by noting that $\nabla \cdot \mathbf{E} = 0$, therefore $\tilde E_z = 0$. Inserting this solution into equation~\ref{eq:background:chirality:diffE}, and leaving in vector notation, gives:
+\begin{equation}\label{eq:background:chirality:diffEvec}
+    \nabla^2 \begin{bmatrix}\tilde E_x e^{i k z}\\ \tilde E_y e^{i k z} \\0 \end{bmatrix}+ (\varepsilon \mu - \gamma^2)\omega^2 \begin{bmatrix}\tilde E_x e^{i k z}\\ \tilde E_y e^{i k z} \\0 \end{bmatrix} + 2 \omega \gamma \nabla \times \begin{bmatrix}\tilde E_x e^{i k z}\\ \tilde E_y e^{i k z} \\0 \end{bmatrix} = 0.
+\end{equation}
+Expending the del operator terms using
+\begin{equation}
+    \nabla^2 
+    \begin{bmatrix}
+        \tilde E_x e^{i k z}\\ 
+        \tilde E_y e^{i k z} \\
+        0 
+    \end{bmatrix} 
+    = 
+    \begin{bmatrix} 
+        \tilde E_x \\ 
+        \tilde E_y \\ 
+        0 
+    \end{bmatrix} 
+    (-k^2 e^{i k z}), \qquad
+    \nabla \times
+    \begin{bmatrix}
+        \tilde E_x e^{i k z}\\ 
+        \tilde E_y e^{i k z} \\
+        0 
+    \end{bmatrix} 
+    = 
+    \begin{bmatrix} 
+        -\tilde E_y \\ 
+        \tilde E_x \\ 
+        0 
+    \end{bmatrix} 
+    (i k e^{i k z}) 
+\end{equation}
+reduces equation~\ref{eq:background:chirality:diffEvec} to
+\begin{equation}\label{eq:background:chirality:waveEreduced}
+    -k^2 \begin{bmatrix}\tilde E_x\\ \tilde E_y\end{bmatrix} e^{i k z} + (\varepsilon \mu - \gamma^2)\omega^2 \begin{bmatrix}\tilde E_x\\ \tilde E_y\end{bmatrix} e^{i k z} + 2 i \omega k \gamma \begin{bmatrix}\tilde E_x\\ \tilde E_y\end{bmatrix} e^{i k z} = 0.
+\end{equation}
+Equation~\ref{eq:background:chirality:waveEreduced} can then be recast as an eigenproblem of the form $\underline{M}\mathbf{E} = 0$, specifically:
+\begin{equation}
+    \begin{bmatrix}
+		(\varepsilon \mu - \gamma^2)\omega^2 -k^2  & -2 i \omega k \gamma \\ 
+		2 i \omega k \gamma & (\varepsilon \mu - \gamma^2)\omega^2 -k^2
+    \end{bmatrix}
+    \begin{bmatrix} 
+        \tilde E_x \\ 
+        \tilde E_y
+    \end{bmatrix} 
+    = 0.
+\end{equation}
+This problem has nontrivial solutions if and only if 
+\begin{equation}
+    \mathrm{det}(\underline{M}) = 
+    \begin{vmatrix}
+        (\varepsilon \mu - \gamma^2)\omega^2 -k^2  & -2 i \omega k \gamma \\ 
+		2 i \omega k \gamma & (\varepsilon \mu - \gamma^2)\omega^2 -k^2
+    \end{vmatrix}    
+    = 0
+\end{equation}
+Finding the determinant of $\underline{M}$ gives
+\begin{equation}
+    \mathrm{det}(\underline{M}) = 
+    \omega^4 (\gamma^2 - \varepsilon \mu)^2 - 2 k^2 \omega^2 (\gamma^2 + \varepsilon \mu) + k^4
+    = 0.
+\end{equation}
+Solutions to this expression yield the dispersion relations for light propagating through the medium:
+\begin{equation}
     \begin{split}
-        & \mathbf{D} = \varepsilon \mathbf{E} + i \gamma \mathbf{H} \\
-        & \mathbf{B} = \mu \mathbf{H} - i \gamma \mathbf{E}
+        & k_{\pm} = \omega (\sqrt{\varepsilon \mu} \pm \gamma)
     \end{split}
 \end{equation}
-
-
-
-
-
-Solving Maxwell's equations for a monochromatic plane wave propagating in the $z$ direction through the medium described by equation~\ref{eq:background:chirality:tellegensRelations} results in two eigenwaves with wave numbers given by equation~\ref{eq:background:chirality:kpmKappa}~\cite{Wang2014a, Qiu2008}, where $k_0$ is the wave number in vacuum. In a chiral medium these eigenwaves of wave number ${{k}_{+}}$ and ${{k}_{-}}$ correspond to right and left circularly polarized light respectively.
+In terms of the chirality parameter $\kappa$, these can be rewritten as
 \begin{equation}\label{eq:background:chirality:kpmKappa}
     {k_\pm } = {k_0}\left( {\sqrt {{\mu _r}{\varepsilon _r}}  \pm \kappa } \right)
 \end{equation}
-From this, the corresponding refractive indices for RCP and LCP light are given by equation~\ref{eq:background:chirality:npmKappa}~\cite{Capolino2009, Qiu2008, Valev2013b}. 
+where $k_0=\omega / c_0$ is the wave number in vacuum (and $c_0=1/\sqrt {{\mu _0}{\varepsilon _0}}$ is the speed of light in vacuum). The eigenwaves of wave numbers ${{k}_{+}}$ and ${{k}_{-}}$ correspond to right and left circularly polarized light respectively.
+From this, the corresponding refractive indices of the medium for RCP and LCP light are given by equation~\ref{eq:background:chirality:npmKappa}~\cite{Capolino2009, Qiu2008, Valev2013b}. 
 \begin{equation}\label{eq:background:chirality:npmKappa}
     {n_ \pm } = \sqrt {{\mu _r}{\varepsilon _r}}  \pm \kappa
 \end{equation}
-
-
-
 
 
 \section{Chiroptical Effects}\label{sec:background:Chirality:Chiroptics}
