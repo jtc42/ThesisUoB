@@ -95,7 +95,7 @@ Here, ${{\varepsilon }_{r}}$ and $\mu_r$ are the relative permittivity and perme
     & \nabla \times \mathbf{E} = i \omega \mathbf{B} \label{eq:background:chirality:maxwellE}\\
     & \nabla \times \mathbf{H} = -i \omega \mathbf{D} \label{eq:background:chirality:maxwellH}.
 \end{align}
-For simplicity, we can rewrite equation~\ref{eq:background:chirality:tellegensRelations} in terms of $\varepsilon = \varepsilon_0 \varepsilon_r$, $\mu = \mu_0 \mu_r$, and $\gamma = \kappa \sqrt{\mu_0 \varepsilon_0}$ to give:
+For simplicity, we rewrite equation~\ref{eq:background:chirality:tellegensRelations} in terms of $\varepsilon = \varepsilon_0 \varepsilon_r$, $\mu = \mu_0 \mu_r$, and $\gamma = \kappa \sqrt{\mu_0 \varepsilon_0}$ to give:
 \begin{align}
     & \mathbf{D} = \varepsilon \mathbf{E} + i \gamma \mathbf{H} \label{eq:background:chirality:tellegensSimplifiedD} \\
     & \mathbf{H} = \frac{1}{\mu}( \mathbf{B} + i \gamma \mathbf{E} ) \label{eq:background:chirality:tellegensSimplifiedH}.
@@ -104,7 +104,7 @@ Inserting equation~\ref{eq:background:chirality:maxwellB} into equation~\ref{eq:
 \begin{equation}\label{eq:background:chirality:HofE}
     \mathbf{H} = \frac{1}{\mu} \left( \frac{1}{i \omega} \nabla \times \mathbf{E} + i \gamma \mathbf{E} \right).
 \end{equation}
-By equating expressions for $\mathbf{D}$ obtained from equations~\ref{eq:background:chirality:maxwellH} and~\ref{eq:background:chirality:tellegensSimplifiedD} we obtain:
+By equating expressions for $\mathbf{D}$ from equations~\ref{eq:background:chirality:maxwellH} and~\ref{eq:background:chirality:tellegensSimplifiedD} we obtain:
 \begin{equation}\label{eq:background:chirality:equatingD}
     \frac{i}{\omega} \nabla \times \mathbf{H} = \varepsilon \mathbf{E} + i \gamma \mathbf{H}.
 \end{equation}
@@ -202,8 +202,12 @@ In terms of the chirality parameter $\kappa$, these can be rewritten as
 \begin{equation}\label{eq:background:chirality:kpmKappa}
     {k_\pm } = {k_0}\left( {\sqrt {{\mu _r}{\varepsilon _r}}  \pm \kappa } \right)
 \end{equation}
-where $k_0=\omega / c_0$ is the wave number in vacuum (and $c_0=1/\sqrt {{\mu _0}{\varepsilon _0}}$ is the speed of light in vacuum). The eigenwaves of wave numbers ${{k}_{+}}$ and ${{k}_{-}}$ correspond to right and left circularly polarized light respectively.
-From this, the corresponding refractive indices of the medium for RCP and LCP light are given by equation~\ref{eq:background:chirality:npmKappa}~\cite{Capolino2009, Qiu2008, Valev2013b}. 
+where $k_0=\omega / c_0$ is the wave number in vacuum (and $c_0=1/\sqrt {{\mu _0}{\varepsilon _0}}$ is the speed of light in vacuum). The associated eigenwaves $\mathbf{E}_+$ and $\mathbf{E}_-$ are given by
+\begin{equation}
+    \mathbf{E}_{\pm} = \begin{bmatrix}\tilde E_x\\ \pm i \tilde E_y\end{bmatrix} e^{i k z}
+\end{equation}
+and correspond to right ($+$) and left ($-$) circularly polarized light respectively~\cite[\S 2.2]{Lekner1999}\cite{Chern2013}.
+The refractive indices of the medium for propagating RCP and LCP light are therefore given by equation~\ref{eq:background:chirality:npmKappa}~\cite{Capolino2009, Qiu2008, Valev2013b}. 
 \begin{equation}\label{eq:background:chirality:npmKappa}
     {n_ \pm } = \sqrt {{\mu _r}{\varepsilon _r}}  \pm \kappa
 \end{equation}
