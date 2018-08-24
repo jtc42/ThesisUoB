@@ -88,7 +88,28 @@ There are several ways to write the remaining relations, including Post's relati
         \mathbf{H}
     \end{bmatrix}
 \end{equation}
-Here, ${{\varepsilon }_{r}}$ and $\mu_r$ are the relative permittivity and permeability of the material respectively, and $\kappa$ is known as the ``chirality parameter''. Solving Maxwell's equations for a monochromatic plane wave propagating in the $z$ direction through the medium described by equation~\ref{eq:background:chirality:tellegensRelations} results in two eigenwaves with wave numbers given by equation~\ref{eq:background:chirality:kpmKappa}~\cite{Wang2014a, Qiu2008}, where $k_0$ is the wave number in vacuum. In a chiral medium these eigenwaves of wave number ${{k}_{+}}$ and ${{k}_{-}}$ correspond to right and left circularly polarized light respectively.
+Here, ${{\varepsilon }_{r}}$ and $\mu_r$ are the relative permittivity and permeability of the material respectively, and $\kappa$ is known as the ``chirality parameter''. In order to describe the electromagnetic wave propagation through the chiral medium, we start by making use of the source-free time-harmonic Maxwell's equations, for a field oscillating at a frequency $\omega$:
+\begin{equation}\label{eq:background:chirality:maxwell}
+    \begin{split}
+        & \nabla \cdot \mathbf{D} = \nabla \cdot \mathbf{E} = 0 \\
+        & \nabla \cdot \mathbf{B} = \nabla \cdot \mathbf{H} = 0 \\
+        & \nabla \times \mathbf{E} = i \omega \mathbf{B} \\
+        & \nabla \times \mathbf{H} = -i \omega \mathbf{D}
+    \end{split}
+\end{equation}
+For simplicity, we can rewrite equation~\ref{eq:background:chirality:tellegensRelations} in terms of $\varepsilon = \varepsilon_0 \varepsilon_r$, $\mu = \mu_0 \mu_r$, and $\gamma = \kappa \sqrt{\mu_0 \varepsilon_0}$ to give:
+\begin{equation}\label{eq:background:chirality:tellegensSimplified}
+    \begin{split}
+        & \mathbf{D} = \varepsilon \mathbf{E} + i \gamma \mathbf{H} \\
+        & \mathbf{B} = \mu \mathbf{H} - i \gamma \mathbf{E}
+    \end{split}
+\end{equation}
+
+
+
+
+
+Solving Maxwell's equations for a monochromatic plane wave propagating in the $z$ direction through the medium described by equation~\ref{eq:background:chirality:tellegensRelations} results in two eigenwaves with wave numbers given by equation~\ref{eq:background:chirality:kpmKappa}~\cite{Wang2014a, Qiu2008}, where $k_0$ is the wave number in vacuum. In a chiral medium these eigenwaves of wave number ${{k}_{+}}$ and ${{k}_{-}}$ correspond to right and left circularly polarized light respectively.
 \begin{equation}\label{eq:background:chirality:kpmKappa}
     {k_\pm } = {k_0}\left( {\sqrt {{\mu _r}{\varepsilon _r}}  \pm \kappa } \right)
 \end{equation}
@@ -96,6 +117,10 @@ From this, the corresponding refractive indices for RCP and LCP light are given 
 \begin{equation}\label{eq:background:chirality:npmKappa}
     {n_ \pm } = \sqrt {{\mu _r}{\varepsilon _r}}  \pm \kappa
 \end{equation}
+
+
+
+
 
 \section{Chiroptical Effects}\label{sec:background:Chirality:Chiroptics}
 Any material with a non-zero chirality parameter $\kappa$ will necessarily exhibit chiroptical effects dependent on it's real and imaginary parts. As in section~\ref{sec:background:Chirality:Structural}, the real part of the refractive index of a medium $n$ describes the phase velocity of light propagating through the medium, and the imaginary part describes the absorption of light by the medium. From equation~\ref{eq:background:chirality:kpmKappa}, $\operatorname{Im}(\kappa)$ thus describes the differential \textit{absorption} of LCP and RCP light, known as circular dichroism (CD). 
