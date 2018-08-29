@@ -97,8 +97,8 @@ Here, ${{\varepsilon }_{r}}$ and $\mu_r$ are the relative permittivity and perme
 \begin{align}
     & \nabla \cdot \mathbf{D} = \nabla \cdot \mathbf{E} = 0 \label{eq:background:chirality:maxwellD}\\
     & \nabla \cdot \mathbf{B} = \nabla \cdot \mathbf{H} = 0 \label{eq:background:chirality:maxwellB}\\
-    & \nabla \times \mathbf{E} = i \omega \mathbf{B} \label{eq:background:chirality:maxwellE}\\
-    & \nabla \times \mathbf{H} = -i \omega \mathbf{D} \label{eq:background:chirality:maxwellH}.
+    & \nabla \times \mathbf{E} = \frac{\partial \mathbf{B}}{\partial t} = i \omega \mathbf{B} \label{eq:background:chirality:maxwellE}\\
+    & \nabla \times \mathbf{H} =  -\frac{\partial \mathbf{D}}{\partial t} = -i \omega \mathbf{D} \label{eq:background:chirality:maxwellH}.
 \end{align}
 For simplicity, we rewrite equation~\ref{eq:background:chirality:tellegensRelations} in terms of $\varepsilon = \varepsilon_0 \varepsilon_r$, $\mu = \mu_0 \mu_r$, and $\gamma = \kappa \sqrt{\mu_0 \varepsilon_0}$ to give:
 \begin{align}
@@ -109,7 +109,7 @@ Inserting equation~\ref{eq:background:chirality:maxwellB} into equation~\ref{eq:
 \begin{equation}\label{eq:background:chirality:HofE}
     \mathbf{H} = \frac{1}{\mu} \left( \frac{1}{i \omega} \nabla \times \mathbf{E} + i \gamma \mathbf{E} \right).
 \end{equation}
-By equating expressions for $\mathbf{D}$ from equations~\ref{eq:background:chirality:maxwellH} and~\ref{eq:background:chirality:tellegensSimplifiedD} we obtain:
+Then, by equating expressions for $\mathbf{D}$ from equations~\ref{eq:background:chirality:maxwellH} and~\ref{eq:background:chirality:tellegensSimplifiedD} we obtain:
 \begin{equation}\label{eq:background:chirality:equatingD}
     \frac{i}{\omega} \nabla \times \mathbf{H} = \varepsilon \mathbf{E} + i \gamma \mathbf{H}.
 \end{equation}
@@ -117,7 +117,7 @@ Substituting equation~\ref{eq:background:chirality:HofE} into equation~\ref{eq:b
 \begin{equation}\label{eq:background:chirality:diffEfull}
     \frac{i}{\omega \mu} \nabla \times \left( \frac{1}{i \omega} \nabla \times \mathbf{E} + i \gamma \mathbf{E} \right) = \varepsilon \mathbf{E} + i \frac{\gamma}{\mu} \left( \frac{1}{i \omega} \nabla \times \mathbf{E} + i \gamma \mathbf{E} \right).
 \end{equation}
-For a homogeneous isotropic chiral medium this can be simplified to obtain the following differential equation for the electric field:
+For a \textit{homogeneous} isotropic chiral medium this can be simplified to obtain the following differential equation for the electric field:
 \begin{equation}\label{eq:background:chirality:diffEreduced}
     \nabla \times (\nabla \times \mathbf{E}) - (\varepsilon \mu - \gamma^2)\omega^2 \mathbf{E} - 2 \omega \gamma \nabla \times \mathbf{E} = 0.
 \end{equation}
@@ -133,11 +133,11 @@ Due to isotropy and homogeneity we can, without loss of generality, assume a mon
         \tilde E_z
       \end{bmatrix} e^{i k z}
 \end{equation}
-where $\tilde E_x$, $\tilde E_y$, and $\tilde E_z$ are the complex scalar amplitudes of $x$, $y$, and $z$ components of the oscillating electric field respectively. The problem can be further simplified by noting that $\nabla \cdot \mathbf{E} = 0$, therefore $\tilde E_z = 0$. Inserting this solution into equation~\ref{eq:background:chirality:diffE}, and leaving in vector notation, gives:
+where $\tilde E_x$, $\tilde E_y$, and $\tilde E_z$ are the complex scalar amplitudes of $x$, $y$, and $z$ components of the oscillating electric field respectively. The problem can be further simplified by noting that $\nabla \cdot \mathbf{E} = 0$ (equation~\ref{eq:background:chirality:maxwellD}), and therefore $\tilde E_z = 0$. Inserting the plane-wave solution into equation~\ref{eq:background:chirality:diffE}, and leaving in vector notation, gives:
 \begin{equation}\label{eq:background:chirality:diffEvec}
     \nabla^2 \begin{bmatrix}\tilde E_x e^{i k z}\\ \tilde E_y e^{i k z} \\0 \end{bmatrix}+ (\varepsilon \mu - \gamma^2)\omega^2 \begin{bmatrix}\tilde E_x e^{i k z}\\ \tilde E_y e^{i k z} \\0 \end{bmatrix} + 2 \omega \gamma \nabla \times \begin{bmatrix}\tilde E_x e^{i k z}\\ \tilde E_y e^{i k z} \\0 \end{bmatrix} = 0.
 \end{equation}
-Expending the del operator terms using
+Expanding the del operator terms using
 \begin{equation}
     \nabla^2 
     \begin{bmatrix}
