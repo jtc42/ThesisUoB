@@ -1,0 +1,12 @@
+Significant time during this project has been spent developing Python libraries to automate the acquisition and analysis of data taken from a range of experimental setups. This section briefly discusses the purpose of the most significant libraries developed, and where to find the publicly available source code.
+
+\section{Automated Data Acquisition}\label{sec:appendix:labdo}
+Diffraction CID experiments undertaken by C. Kuppe (reference~\cite{Kuppe2018}) made use of automated lab hardware from a range of manufacturers, each using their own software platforms for automation. Moreover, we found early on that errors in one piece of hardware could result in difficult to recover errors in other parts of the experimental setup. With this in mind, a Python library was developed to alleviate these two main issues: A standard device class was created with required methods describing safe and emergency shutdown procedures, and robust error handling was introduced, allowing experiments to continue in the event of a non-critical fault, or be safely closed down in the event of an irrecoverable fault in any single piece of hardware.
+Parts of this library were used in the acquisition of chiroptical microscopy measurements from section~\ref{sec:results:OAinPlanarNanohelices}, and may be used in SHG measurements in the future.
+
+The developed code was recently merged into the ``LabDo'' project, started by J. Stirling, and can be found at \url{https://gitlab.com/jtc42/LabDo.git}.
+The specific implementation of this library used by C. Kuppe in all diffraction CID measurements can be found at \url{https://gitlab.com/jtc42/LabDo-CD-Spectrometer}.
+
+\section{Automated Data Analysis}\label{sec:appendix:pyshg}
+Due to the large number of degrees of freedom during SHG chiroptical measurements, as found in references~\cite{Hooper2017, Collins2018b}, any individual heatmap required the processing and analysis of many thousands of data points. For this reason, another Python 3 library was developed to automate this analysis as much as reasonably possible. By using metadata embedded by LabView acquisition code developed by D. C. Hooper, all previously unsorted and unfiltered data can be pulled into the library, and plots for common typed of experiment can be automatically generated. This included heatmaps for SHG-CID measurements, as well as SHG optical rotation heatmaps (and curve fitting data) such as those in section~\ref{sec:results:OAinPlanarNanohelices}.
+The developed code can be found at \url{https://github.com/jtc42/mpnp-shg-analysis}.
