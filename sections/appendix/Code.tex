@@ -6,7 +6,7 @@ Diffraction CID experiments undertaken by C. Kuppe (reference~\cite{Kuppe2018}) 
 The library defined a common class for all lab hardware, requiring certain functions like standard and emergency shutdown procedures. When opening communication with a device, the system attaches that device to an object responsible for tracking the status of all active devices. Communication cannot be opened to a device without this. In the event of a repeated, irrecoverable exception in communication, all devices are automatically shut down in the safest way possible. Additionally, when the experiment is finished, communication with all devices is automatically safely closed, without any required user input. All behaviour can, however, be overridden by the lab user if needed. 
 Parts of this library were used in the acquisition of chiroptical microscopy measurements from section~\ref{sec:results:OAinPlanarNanohelices}, and may be used in SHG measurements in the future.
 
-The developed code was recently merged into the ``LabDo'' project, started by J. Stirling, and can be found at \url{https://gitlab.com/jtc42/LabDo.git}.
+The developed code was recently merged into a fork of the ``LabDo'' module, by J. Stirling. The fork can be found at \url{https://gitlab.com/jtc42/LabDo.git}.
 The specific implementation of this library used by C. Kuppe in all diffraction CID measurements can be found at \url{https://gitlab.com/jtc42/LabDo-CD-Spectrometer}.
 
 \section{Automated Data Analysis}\label{sec:appendix:pyshg}
