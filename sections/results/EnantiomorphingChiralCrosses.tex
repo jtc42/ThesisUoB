@@ -2,7 +2,7 @@
 
 
 Sections of this chapter have been copied verbatim from the (published) manuscript \textit{``Enantiomorphing Chiral Plasmonic Nanostructures: A Counterintuitive Sign Reversal of the Nonlinear Circular Dichroism''}, Joel T. Collins et. al. \cite{Collins2018}. 
-Experiments were planned by V. K. Valev. Samples were prepared by N. V. S. Braz and P. A. Warburton. Experiments were executed by V. K. Valev, E. Slenders and M. Ameloot. Near-field and scattering simulations were performed by X. Zheng and G. A. E. Vandenbosch. Numerical simulations of the far-field, linear CD were performed by S. Zu and Z. Fang. 
+Experiments were planned by V. K. Valev. Samples were prepared by N. V. S. Braz and P. A. Warburton. SHG microscopy experiments were executed by V. K. Valev, E. Slenders and M. Ameloot. Linear scattering spectra were obtained by myself and C. Kuppe, and analysed by myself. Near-field and scattering simulations were performed by X. Zheng and G. A. E. Vandenbosch. Numerical simulations of the linear far-field reflection CID were performed by S. Zu and Z. Fang. 
 Analysis of the nonlinear microscopy data was performed by myself, with Python code including sections written by V. K. Valev. The formulation and analysis of modal circular-dichroism based on the near-field simulations was also performed by myself. I produced the manuscript draft, and all authors have subsiquently contributed. 
 
 \bigskip \noindent
@@ -24,16 +24,16 @@ Moreover, by optimizing \textit{optical chirality} (section~\ref{sec:background:
 Despite the advantages of creating intermediate geometries, it is rare to find studies where these have been investigated in detail. Between two enantiomorphs, there can be several path- ways for intermediate geometries and those might be quite different (Figure~\ref{fig:results:EnantiomorphingChiralCrosses:setup}a). 
 Also, a priory, it is not clear what the best number of intermediate geometries should be. Indeed this is highly dependent on the geometric and material properties of the structures, as well as on the wavelength ranges used. In the literature, examples can be found of studying both enantio- morphs of a structure, its achiral variant, and a small number of intermediate steps only \cite{Zu2016}.Consequently, important and interesting behavior can go unnoticed.
 
-\begin{figure}[htb!]	
+\begin{figure}[htb]	
     \centering	
     \includegraphics[scale=1]{./figures/results/EnantiomorphingChiralCrosses/setup.pdf}
     \caption{\label{fig:results:EnantiomorphingChiralCrosses:setup}
     \textbf{a)} Representation of two possible pathways to enantiomorph a right-handed structure (R) into a left-handed structure (L), through an achiral geometry. Here, we examine the pathway on the right side of the circle. \textbf{b)} As the left-handed chiral crosses change into achiral square structures and into right-handed chiral crosses, the chiral geometric difference diminishes until it reaches 0 in the achiral case and then reverse its value. \textbf{c)} Schematic diagram of the multiphoton microscopy experiments. \textbf{d)} Geometry and depth profile of the chiral crosses samples.}	
 \end{figure}
 
-Here, we report an elegant experiment, impossible to perform with chiral molecules: by designing 35 intermediate geometries, we ``enantiomorph'' plasmonic nanostructures from one handedness to the other, passing through an achiral geometry. 
-We demonstrate a new kind of bisignate (of two signs) circular intensity difference (CID) due to enantiomorphing, rather than wavelength change, in the nonlinear emission from near-field hotspots. Contrary to what would be expected from pure geometric considerations, the nonlinear chiroptical signal reverses sign thrice, i.e., it is double-bisignate. In order to understand this result, we perform a full modal analysis of the structures in combination with irreducible representations (group theory). 
-Interestingly, we find that, regardless of their handedness, chiral nanostructures contain modes that can be excited by both left and right circularly polarized (LCP and RCP) light. Furthermore, which modes are dominant (i.e., couple strongest to light) depends on the wavelength or the shape/dimensions of the nanostructure. It is therefore perfectly possible to engineer chiral nano- materials that, at a given wavelength, can only be excited with the ``wrong'' kind of CPL. 
+Here, we developed an experiment impossible to perform with chiral molecules: by designing 35 intermediate geometries, we ``enantiomorph'' plasmonic nanostructures from one handedness to the other, passing through an achiral geometry. 
+We demonstrate a bisignate circular intensity difference (CID) due to enantiomorphing, rather than wavelength change, in the nonlinear emission from near-field hotspots. Contrary to what would be expected from pure geometric considerations, the nonlinear chiroptical signal reverses sign thrice, i.e., it is double-bisignate. In order to understand this result, we perform a full modal analysis of the structures in combination with group theory. 
+We find that, regardless of their handedness, chiral nanostructures contain modes that can be excited by both left and right circularly polarized (LCP and RCP) light. Furthermore, which modes are dominant (i.e., couple strongest to light) depends on the wavelength or the shape/dimensions of the nanostructure. It is therefore perfectly possible to engineer chiral nano- materials that, at a given wavelength, can only be excited with the ``wrong'' kind of CPL. 
 Our findings offer the possibility of tuning chiroptical response by selecting particular electromagnetic modes, or sets of modes, among hundreds available, which can enable much more sensitive chiroptical control than what is currently available.
 
 \section{Results}\label{sec:results:EnantiomorphingChiralCrosses:results}
@@ -63,12 +63,12 @@ The nonlinear microscopy images obtained contain roughly 60 crosses of each type
 It should be noted that the SEM pictures in Figure~\ref{fig:results:EnantiomorphingChiralCrosses:l1000data}a are only a subset of the entire range of samples we studied. The full set started from $w= \SI{100}{\nano\m}$ and progressed to $w=\SI{1000}{\nano\m}$, in steps of $\SI{50}{\nano\m}$. 
 Upon considering the nonlinear CID from all these samples, it is obvious that between $w=\SI{200}{\nano\m}$ and $w=\SI{800}{\nano\m}$, the chiroptical response is unambiguously reversed, i.e. with clearly separated error bars. The nonlinear CID that we measured is collected in the far-field and it is very different from the linear circular dichroism in the far-field. 
 
-In the far-field, the linear CID response is demonstrated by FDTD simulations data that are displayed in Figure~\ref{fig:results:EnantiomorphingChiralCrosses:scatteringsim}. Clearly, the data in Figure~\ref{fig:results:EnantiomorphingChiralCrosses:scatteringsim} do not match those in Figure~\ref{fig:results:EnantiomorphingChiralCrosses:l1000data}b. One reason for this difference is that the nonlinear CID originates in the near-field, which is very different from the far-field in this kind of structures. To understand the observed reversal of the nonlinear CID, we need to examine the electromagnetic behaviour at the surface of the nanostructures. 
+In the far-field, the linear CID response is demonstrated by FDTD simulations data that are displayed in Figure~\ref{fig:results:EnantiomorphingChiralCrosses:reflectionsim}. Additional linear scattering spectra simulations and experimental data are given in Appendix~\ref{sec:appendix:CrossesScatteringSpectra}. Clearly, the data in Figure~\ref{fig:results:EnantiomorphingChiralCrosses:reflectionsim} do not match those in Figure~\ref{fig:results:EnantiomorphingChiralCrosses:l1000data}b. One reason for this difference is that the nonlinear CID originates in the near-field, which is very different from the far-field in this kind of structures. To understand the observed reversal of the nonlinear CID, we need to examine the electromagnetic behaviour at the surface of the nanostructures. 
 
 \begin{figure}[htb!]	
     \centering	
-    \includegraphics[scale=1]{./figures/results/EnantiomorphingChiralCrosses/scattering_sim.pdf}
-    \caption{\label{fig:results:EnantiomorphingChiralCrosses:scatteringsim}
+    \includegraphics[scale=1]{./figures/results/EnantiomorphingChiralCrosses/reflection_sim.pdf}
+    \caption{\label{fig:results:EnantiomorphingChiralCrosses:reflectionsim}
     Numerically-obtained far-field linear reflection CD for left-handed chiral cross structures. The lineshape of the linear CD response is significantly different to that obtained from nonlinear CID measurements.}	
 \end{figure}
 
