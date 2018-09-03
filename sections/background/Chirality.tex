@@ -81,14 +81,14 @@ There are several ways to write the remaining relations, including Post's relati
         \mathbf{H}
     \end{bmatrix}.
 \end{equation}
-Here, ${{\varepsilon }_{r}}$ and $\mu_r$ are the relative permittivity and permeability of the material respectively, and $\kappa$ is known as the ``chirality parameter''. In order to describe the electromagnetic wave propagation through the chiral medium, we start by making use of the source-free time-harmonic Maxwell's equations, for a field oscillating at a frequency $\omega$:
+Here, ${{\varepsilon }_{r}}$ and $\mu_r$ are the relative permittivity and permeability of the material respectively, and $\kappa$ is known as the ``chirality parameter''. In order to describe electromagnetic wave propagation through the chiral medium, we start by making use of the source-free time-harmonic Maxwell's equations, for a field oscillating at a frequency $\omega$:
 \begin{align}
     & \nabla \cdot \mathbf{D} = \nabla \cdot \mathbf{E} = 0 \label{eq:background:chirality:maxwellD}\\
     & \nabla \cdot \mathbf{B} = \nabla \cdot \mathbf{H} = 0 \label{eq:background:chirality:maxwellB}\\
     & \nabla \times \mathbf{E} = \frac{\partial \mathbf{B}}{\partial t} = i \omega \mathbf{B} \label{eq:background:chirality:maxwellE}\\
     & \nabla \times \mathbf{H} =  -\frac{\partial \mathbf{D}}{\partial t} = -i \omega \mathbf{D} \label{eq:background:chirality:maxwellH}.
 \end{align}
-For simplicity, we rewrite equation~\ref{eq:background:chirality:tellegensRelations} in terms of $\varepsilon = \varepsilon_0 \varepsilon_r$, $\mu = \mu_0 \mu_r$, and $\gamma = \kappa \sqrt{\mu_0 \varepsilon_0}$ to give:
+For simplicity, equation~\ref{eq:background:chirality:tellegensRelations} can be rewritten in terms of $\varepsilon = \varepsilon_0 \varepsilon_r$, $\mu = \mu_0 \mu_r$, and $\gamma = \kappa \sqrt{\mu_0 \varepsilon_0}$ to give:
 \begin{align}
     & \mathbf{D} = \varepsilon \mathbf{E} + i \gamma \mathbf{H} \label{eq:background:chirality:tellegensSimplifiedD} \\
     & \mathbf{H} = \frac{1}{\mu}( \mathbf{B} + i \gamma \mathbf{E} ) \label{eq:background:chirality:tellegensSimplifiedH}.
@@ -170,7 +170,7 @@ Equation~\ref{eq:background:chirality:waveEreduced} can then be recast as an eig
     \end{bmatrix} 
     = 0.
 \end{equation}
-This problem has nontrivial solutions if and only if 
+This problem has nontrivial solutions only if 
 \begin{equation}
     \mathrm{det}(\underline{M}) = 
     \begin{vmatrix}
@@ -185,7 +185,7 @@ Finding the determinant of $\underline{M}$ gives
     \omega^4 (\gamma^2 - \varepsilon \mu)^2 - 2 k^2 \omega^2 (\gamma^2 + \varepsilon \mu) + k^4
     = 0.
 \end{equation}
-Solutions to this expression yield the dispersion relations for light propagating through the medium:
+Solutions to this expression then directly yield the dispersion relations for light propagating through the medium:
 \begin{equation}
     \begin{split}
         & k_{\pm} = \omega (\sqrt{\varepsilon \mu} \pm \gamma)
