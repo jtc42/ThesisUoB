@@ -1,6 +1,7 @@
 ﻿## Ignore main pdf
 main.pdf
 main.synctex.gz
+wordcount.txt
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
