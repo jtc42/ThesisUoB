@@ -1,5 +1,5 @@
 $hashes = git rev-list --all
-$outfile = "./wordcount.txt"
+$outfile = "../wordcount.txt"
 
 Clear-Content $outfile 
 

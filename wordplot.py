@@ -6,7 +6,7 @@ from datetime import datetime
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 
-filename = "./wordcount.txt"
+filename = "../wordcount.txt"
 
 dates = []
 words = []
