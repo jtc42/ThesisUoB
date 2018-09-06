@@ -1,0 +1,16 @@
+\section{Laser Specifications}\label{sec:appendix:hardware:maitai}
+
+The laser system used in sections~\ref{sec:results:OAinPlanarNanohelices} and~\ref{sec:results:HRS} is a commercial Spectra-Physics Mai-Tai HP Ti:Sapphire pulsed laser. 
+At $\SI{800}{\nano\m}$ wavelength, the laser operates at a repetition rate $f_p = \SI{80}{\mega\hertz}$ with a full width half maximum pulse duration of $t_p = \SI{100}{\femto\s}$. 
+A maximum average power $P_{max} = \SI{2.9}{\watt}$ is obtainable at this wavelength, giving a peak pulse power:
+\begin{equation}
+    P_{peak} = \frac{P_{max}}{t_p f_p} = \SI{362.5}{\kilo\watt}
+\end{equation}
+In practice, operating at maximum power would almost always result in severe sample damage, due to continuous heating effects. However, for our nonlinear optics experiments, high peak pulse power is desirable, as the nonlinear emission is strongly dependent on the electric field intensity (section~\ref{sec:background:NonlinearOptics}). Ideally, the average power should be reduced significantly, while still allowing for high peak pulse power. This is realised with the use of an optical chopper wheel, operating with a duty cycle $D = 1.7\%$. This provides a ``cool-down'' period, without altering the laser peak pulse power. The maximum average power after the chopper is thus given by
+\begin{equation}
+    P_{avg} =  P_{peak} f_p D t_p = \SI{49}{\milli\watt}
+\end{equation}
+In our experiments, a pair of linear polarisers are placed \textit{before} the optical chopper to allow for free control over the peak pulse power in addition to the fixed reduction in average power from the chopper. The laser powers stated in sections~\ref{sec:results:OAinPlanarNanohelices} and~\ref{sec:results:HRS} are the average power following both of these reductions. Since the optical chopper operates with a fixed duty cycle, the peak power is obtained from the measured average power incident on the sample following:
+\begin{equation}
+    P_{peak} = \frac{P_{avg}}{0.017(t_p f_p)}
+\end{equation}
