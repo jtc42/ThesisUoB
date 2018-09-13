@@ -212,19 +212,19 @@ In matrix notation, this is given by
 Following the same reasoning, we reach the matrices for rotating about each coordinate axis.
 \begin{equation}\label{eq:background:NonlinearOptics:rotation:AllRotationMatrices}
 \begin{split}
-	&R(\theta_{z})_{ij} =
+	&R^{z}(\theta_{z})_{ij} =
 	\begin{bmatrix}
 		\cos{\theta_{z}} & -\sin{\theta_{z}} & 0\\ 
 		\sin{\theta_{z}} & \cos{\theta_{z}} & 0\\ 
 		0 & 0 & 1
 	\end{bmatrix}\\	
-	&R(\theta_{y})_{ij} =
+	&R^{y}(\theta_{y})_{ij} =
 	\begin{bmatrix}
 		\cos{\theta_{y}} & 0 & \sin{\theta_{y}}\\ 
 		0 & 1 & 0\\ 
 		-\sin{\theta_{y}} & 0 & \cos{\theta_{y}}
 	\end{bmatrix}\\	
-	&R(\theta_{x})_{ij} =
+	&R^{x}(\theta_{x})_{ij} =
 	\begin{bmatrix}
 		1 & 0 & 0\\ 
 		0 & \cos{\theta_{x}} & -\sin{\theta_{x}}\\ 
@@ -236,7 +236,7 @@ Rotations around multiple axes can then be solved by applying successive rotatio
 
 For rotational symmetry in the $x-y$ plane, we first rotate the tensor by the angle corresponding to our symmetry using
 \begin{equation}\label{eq:background:NonlinearOptics:rotation:RotateChi}
-	\chi_{ijk}^{\prime} =  R(\theta)_{i\alpha}R(\theta)_{j\beta}R(\theta)_{k\gamma}\chi^{(2)}_{\alpha \beta \gamma}
+	\chi_{ijk}^{\prime} =  R^{z}(\theta)_{i\alpha}R^{z}(\theta)_{j\beta}R^{z}(\theta)_{k\gamma}\chi^{(2)}_{\alpha \beta \gamma}
 \end{equation}
 Due to symmetry, the tensor should remain unchanged under this transformation, and so we impose the equality $\chi_{ijk}^{\prime}=\chi_{ijk}$ to find any component dependencies. Solving for rotational symmetry can show various tensor components as being dependant, or necessarily equalling zero. Examples of this are given in Appendix~\ref{sec:appendix:rotations}.
 
