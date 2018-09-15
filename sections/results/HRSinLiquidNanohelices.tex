@@ -109,20 +109,20 @@ This results in a depolarisation effect, in which light is scattered equally at 
 
 \section{Discussion}
 
-\subsection{Physical Origin of HRS Optical Activity}
-In hyper-Rayleigh scattering experiments, the measured second harmonic intensity originates from the hyper-polarizability $\beta^{2}$ of the (achiral) scatterers: $I(2\omega) \propto \langle \beta^{2}_{HRS} \rangle$.
-In a perfectly 3-dimensionally isotropic liquid, HRS is entirely forbidden within the electric dipole approximation. By acting on the hyperpolarizability tensor with rotation matrices for all 3 axes and equating to the unrotated tensor for any arbitrary rotation (thus enforcing true 3D isotropy), every component of the hyperpolarizability tensor reduces to zero.
+Within the electric dipole approximation, the second-order induced polarisation of a single scatterer is described by the hyper-polarisability tensor $\beta_{ijk}$. This tensor is similar in nature to the second-order susceptibility tensor discussed in section~\ref{sec:background:NonlinearOptics:susceptibility}, and relates the induced polarisation of the particle $\mu_{i}$ to a driving electric field by $\mu_{i}(2\omega) =  \epsilon_{0} \beta_{ijk} E_{j}(\omega) E_{k}(\omega)$. For a single scatterer, the HRS intensity is thus proportional to the square of the hyper-polarisability tensor $\beta_{ijk}^2$. In liquid suspensions, the total measured HRS intensity originates from the incoherent sum of randomly oriented scatterers within the illumination volume.
+The measured HRS intensity is thus proportional to the rotational average of the square of the hyper-polarisability tensor $I(2\omega) \propto \langle \beta^{2} \rangle$.
+In a perfectly 3-dimensionally isotropic liquid, HRS is entirely forbidden within this electric dipole approximation. By acting on the hyperpolarizability tensor with rotation matrices for all 3 axes and equating to the unrotated tensor for any arbitrary rotation (thus enforcing true 3D isotropy), every component of the hyperpolarizability tensor reduces to zero.
 
-In our experiments, during a single laser pulse, and over the beam volume, there is statistically likely to be a slight deviation from perfect isotropy, an ``anisotropic excess''. This slight deviation allows for non-zero HRS during that pulse, with intensity and polarization dependent on the orientation of the ``anisotropic excess''. By integrating over many shots (our 30 second counting window), the orientational dependence of any single shot's HRS signal is averaged out, and general structural information can be obtained.
+In these experiments however, during a single laser pulse, and over the beam volume, there is statistically likely to be a slight deviation from perfect isotropy, an ``anisotropic excess''. This slight deviation allows for non-zero HRS during that pulse, with intensity and polarization dependent on the orientation of the anisotropic excess. By integrating over many shots (our 30 second counting window), the orientational dependence of any single shot's HRS signal is averaged out, and general structural information can be obtained.
 However, this orientational averaging forbids SHG-CID. Mathematically, the averaging process can be described in terms of the normalized triple integral:
 \begin{equation}
-    I_{HRS} \propto
+    I(2\omega) \propto
     \left(\frac{1}{2\pi}\right)^3
     \int_{0}^{2\pi} \int_{0}^{2\pi} \int_{0}^{2\pi}
-    \beta_{ijk}^{(2) \prime} (\theta, \phi, \psi)
+    \beta_{ijk} ^{\prime 2} (\theta, \phi, \psi)
     d\theta d\phi d\psi
 \end{equation}
-Similar to chapter~\ref{sec:results:OAinPlanarNanohelices}, $\beta_{ijk}^{(2)} (\theta, \phi, \psi)$ describes an effective hyper-polarisability tensor after rotation about the $z$, $y$, and $x$ axis by angles $\theta$, $\phi$, and $\psi$ respectively. In full tensor notation this is described in terms of the rotation matrices by (given in section~\ref{sec:background:NonlinearOptics:rotation}) by
+Similar to chapter~\ref{sec:results:OAinPlanarNanohelices}, $\beta_{ijk}^{\prime} (\theta, \phi, \psi)$ describes an effective hyper-polarisability tensor after rotation about the $z$, $y$, and $x$ axis by angles $\theta$, $\phi$, and $\psi$ respectively. In full tensor notation this is described in terms of the rotation matrices by (given in section~\ref{sec:background:NonlinearOptics:rotation}) by
 \begin{equation}
     \begin{split}
         \beta_{ijk}^{(2) \prime} (\theta, \phi, \psi) =
