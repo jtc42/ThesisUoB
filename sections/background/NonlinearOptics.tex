@@ -3,29 +3,29 @@
 In this section we will discuss how nonlinear optics can be used as a sensitive probe for structural symmetry, in particular chirality. This will primarily focus on second-harmonic generation (SHG), and the macroscopic description of SHG in nonlinear media. By considering the symmetry of tensors describing the nonlinear properties of a dielectric medium, it is revealed that SHG is a highly sensitive technique for probing chirality. Chiroptical effects at the second-harmonic provide valuable intrinsic background reduction, and entirely new information compared to linear chiroptical effects discussed previously. First however, we will first consider the microscopic behaviour of a single oscillating dipole used to describe the origin of nonlinear optical behaviour.
 
 \section{The Lorentz Oscillator}\label{sec:background:NonlinearOptics:lorentz}
-In the Lorentz model of an oscillating dipole driven by an electric field $E(t)$, the 1-dimensional motion of an electron, with an effective mass $m_0$ and charge $q$, in a harmonic potential $U(x) = (1/2)kx^{2}$ is described by
+In the Lorentz model of an oscillating dipole driven by a time-varying electric field $E(t)$, the 1-dimensional motion of an electron, with an effective mass $m_0$ and charge $q$, in a harmonic potential $U(x) = (1/2)kx^{2}$ is described by
 \begin{equation}\label{eq:NonlinearOptics:eqMotion}
-	m_{0} \frac{d^2 x}{dt^2} + m_{0} \gamma \frac{dx}{dt} + m_{0} \omega_{0}^2 x = -q E(t)
+	m_{0} \frac{d^2 x}{dt^2} + m_{0} \gamma \frac{dx}{dt} + m_{0} \omega_{0}^2 x = -q E(t).
 \end{equation}
-Here, $x$ is the positional displacement of the electron, and $m_{0} \gamma \frac{dx}{dt}$ describes a damping force. $\omega_{0}$ describes the resonant frequency of the system, and is defined in terms of a spring constant $k$ by $\omega_{0} = \sqrt{k/m_{0}}$. The restoring force $m_{0} \omega_{0}^2 x = kx$ relates to the potential $U(x)$ by
+Here, $x$ is the positional displacement of the electron, and $m_{0} \gamma \frac{dx}{dt}$ describes a damping force for a damping ratio $\gamma$. $\omega_{0}$ describes the resonant frequency of the system, and is defined in terms of a spring constant $k$ by $\omega_{0} = \sqrt{k/m_{0}}$. The restoring force $m_{0} \omega_{0}^2 x = kx$ is related to the potential $U(x)$ by
 \begin{equation}
-	F_{restoring} = \frac{d}{dx} U(x) = \frac{d}{dx} (1/2)kx^{2} = kx
+	F_{restoring} = \frac{d}{dx} U(x) = \frac{d}{dx} (1/2)kx^{2} = kx.
 \end{equation}
-The displacement of the electric $x(t)$ results in a dipole moment $p(t) = ex(t)$, leading to a macroscopic induced polarization of a material given by $P(t) = Np(t)$ where $N$ is the number of oscillators per unit volume.
+The displacement $x(t)$ of the electron, of charge $e$,  results in a dipole moment $p(t) = ex(t)$, leading to a macroscopic induced polarization of a material given by $P(t) = Np(t)$ where $N$ is the number of oscillators per unit volume.
 
-In the case of a driving field $E(t) = E_0 e^{-(i\omega t + \phi_E)}$, oscillating at a frequency $\omega$ with a phase $\phi_E$, solutions for $x(t)$ will take the form of $x(t) = x_0 e^{-(i\omega t + \phi_x)}$. By including phase information by making $x_0$ and $E_0$ complex, these expressions can be substituted into equation~\ref{eq:NonlinearOptics:eqMotion} and solved for $x_0$ giving
+In the case of a driving field $E(t) = E_0 e^{-(i\omega t + \phi_E)}$, oscillating at a frequency $\omega$ with a phase $\phi_E$, solutions for $x(t)$ take the form of $x(t) = x_0 e^{-(i\omega t + \phi_x)}$. By including phase information by making $x_0$ and $E_0$ complex, these expressions can be substituted into equation~\ref{eq:NonlinearOptics:eqMotion} and solved for $x_0$ giving
 \begin{equation}\label{eq:NonlinearOptics:x0}
-	x_0 = \frac{-q E_0}{m_0 (\omega_{0}^2 -\omega^2 -i \gamma \omega)}
+	x_0 = \frac{-q E_0}{m_0 (\omega_{0}^2 -\omega^2 -i \gamma \omega)}.
 \end{equation}
 The macroscopic induced polarization $P(t) = N q x(t)$ is now given by
 \begin{equation}\label{eq:NonlinearOptics:PfullLinear}
 	\begin{split}
 		P(t) = & N q \left( \frac{-q E_0}{m_0 (\omega_{0}^2 -\omega^2 -i \gamma \omega)} \right) e^{-(i\omega t)} \\
 		= & \frac{N q^2}{m_0} \left( \frac{1}{\omega_{0}^2 -\omega^2 -i \gamma \omega} \right) E_0 e^{-(i\omega t)} \\
-		= & \frac{N q^2}{m_0} \left( \frac{1}{\omega_{0}^2 -\omega^2 -i \gamma \omega} \right) E(t)
+		= & \frac{N q^2}{m_0} \left( \frac{1}{\omega_{0}^2 -\omega^2 -i \gamma \omega} \right) E(t).
 	\end{split}
 \end{equation}
-We can now introduce the electric susceptibility $\chi$, such that the induced polarization $P(t) = \varepsilon_0 \chi E(t)$. In the simple linear case given in equation~\ref{eq:NonlinearOptics:PfullLinear}, the susceptibility is given by
+We can now introduce the macroscopic electric susceptibility $\chi$, such that the induced polarization $P(t)$ can be directly related to the electric field by $P(t) = \varepsilon_0 \chi E(t)$. In the linear case given in equation~\ref{eq:NonlinearOptics:PfullLinear}, the susceptibility is given by
 \begin{equation}\label{eq:NonlinearOptics:chiFullLinear}
 		\chi = \frac{N q^2}{\varepsilon_0 m_0} \left( \frac{1}{\omega_{0}^2 -\omega^2 -i \gamma \omega} \right)
 \end{equation}
@@ -34,7 +34,7 @@ In the frequency domain, when driving at a frequency $\omega$ this notation can 
 \subsection{Nonlinear Terms}
 A more general anharmonic potential contains higher order terms, and can be described by $U(x) = (1/2)kx^{2} + (1/3)\beta_2 x^3 + (1/4)\beta_3 x^4 + ...$. The corresponding restoring force leads to an equation of motion
 \begin{equation}\label{eq:NonlinearOptics:eqMotionNonlinear}
-	\frac{d^2 x}{dt^2} + \gamma \frac{dx}{dt} + \omega_{0}^2 x + \beta_2 x^2 +  \beta_3 x^3 + ... = -\frac{q}{m_{0} } E(t)
+	\frac{d^2 x}{dt^2} + \gamma \frac{dx}{dt} + \omega_{0}^2 x + \beta_2 x^2 +  \beta_3 x^3 + ... = -\frac{q}{m_{0} } E(t).
 \end{equation}
 For an oscillating $E(t)$, solving for $x(t)$ is difficult, however we can make use of the fact that, in general, $\omega_{0}^2 \ll \beta_2 \ll \beta_3 \ll ...$ to find a power series solution. By expanding $x = x_1 + x_2 + ...$ and equating successive higher orders, we obtain~\cite[\S 1.4.1]{Boyd2008a}
 \begin{equation}\label{eq:NonlinearOptics:xorders}
@@ -45,13 +45,13 @@ For an oscillating $E(t)$, solving for $x(t)$ is difficult, however we can make 
 		& ...
 	\end{split}
 \end{equation}
-For convenience we here introduce the denominator function $D(\omega)$, and again consider a system driven by an electric field oscillating at a frequency $\omega$.
+For convenience we introduce the denominator function $D(\omega)$, and again consider a system driven by an electric field oscillating at a frequency $\omega$.
 \begin{equation}
 	D(\omega) = \omega_{0}^2 -\omega^2 -i \gamma \omega
 \end{equation}
-The lowest order in equation~\ref{eq:NonlinearOptics:xorders} ($x_{1}$) is equivalent to the system described by equation~\ref{eq:NonlinearOptics:eqMotion}, and so equation~\ref{eq:NonlinearOptics:x0} provides an expression for our $x_1$ term. This can be given in terms of the denominator function as
+The lowest order in equation~\ref{eq:NonlinearOptics:xorders} ($x_{1}$) is equivalent to the system described by equation~\ref{eq:NonlinearOptics:eqMotion}. As equation~\ref{eq:NonlinearOptics:x0} provides an expression for our $x_1$ term, $x_1$ can be given in terms of the denominator function as
 \begin{equation}
-	x_{1}(t) = \frac{-q}{m_0 D(\omega)} E_0 e^{-i\omega t}
+	x_{1}(t) = \frac{-q}{m_0 D(\omega)} E_0 e^{-i\omega t}.
 \end{equation}
 Squaring $x_{1}(t)$, to obtain $x_{2}(t)$, gives both a DC component ($\omega=0$), and components oscillating at $\pm 2\omega$, proportional in amplitude to $E_{0}^2$, described by
 \begin{equation}
@@ -59,7 +59,7 @@ Squaring $x_{1}(t)$, to obtain $x_{2}(t)$, gives both a DC component ($\omega=0$
 \end{equation}
 This is a specific degenerate case of second-order nonlinearity, where the driving field oscillates at a single frequency $\omega$. More generally, second-order nonlinear effects can be driven by two fields oscillating at different frequencies $\omega_1$ and $\omega_2$, with complex amplitudes $E_{\omega_1}$ and  $E_{\omega_2}$ respectively. In this case, $x_{2}(t)$ has components oscillating at $\omega_1 \pm \omega_2$ described by equation~\ref{eq:NonlinearOptics:x2SFG}~\cite[\S 1.4.1]{Boyd2008a}.
 \begin{equation}\label{eq:NonlinearOptics:x2SFG}
-	x_{2}(t)\vert_{\omega_1 \pm \omega_2} = \frac{\beta_2 q^2}{m_{0}^2 D(\omega_1 \pm \omega_2) D(\omega_1) D(\pm\omega_2)} E_{\omega_1} E_{\omega_2} e^{i (\omega_1 \pm \omega_2) t}
+	x_{2}(t)\vert_{\omega_1 \pm \omega_2} = \frac{\beta_2 q^2}{m_{0}^2 D(\omega_1 \pm \omega_2) D(\omega_1) D(\pm\omega_2)} E_{\omega_1} E_{\omega_2} e^{i (\omega_1 \pm \omega_2) t}.
 \end{equation}
 In this work, however, we will focus on the degenerate case of second-order nonlinearity, resulting in motion at $2\omega$.
 
@@ -73,16 +73,17 @@ The general, 3-dimensional, macroscopic response of a material to an electric fi
 				\chi^{(1)}_{ij}  E_{j}(t) +
 				\chi^{(2)}_{ijk}  E_{j}(t) E_{k}(t) +
 				\chi^{(3)}_{ijkl}  E_{j}(t) E_{k}(t) E_{l}(t)+ \ldots
-				\big]
+				\big].
 \end{equation}
-Here each of the indices $i,j,k,l,\ldots$ are the Cartesian coordinates of the associated field (ie. each index can take on $x$, $y$, or $z$.) We see that for each higher order term, an additional field is required, and the rank of the associated susceptibility tensor increases accordingly. We also find that even harmonics require a material lacking inversion symmetry. Under inversion we apply $\mathbf{r}\rightarrow -\mathbf{r}$, hence $\mathbf{P} \rightarrow -\mathbf{P}$, and $\mathbf{E} \rightarrow -\mathbf{E}$. For a centrosymmetric medium,  $\mathbf{P}(-\mathbf{E}) = -\mathbf{P}(\mathbf{E})$, and so by equating components, for any even $n$ terms, $\chi^{(n)}=-\chi^{(n)}$ meaning $\chi^{(n)} = 0$. Therefore, emission at even-order harmonics is forbidden in centrosymmetric media.
+Here each of the indices $i,j,k,l,\ldots$ are the Cartesian directions of the associated field (ie. each index can take on $x$, $y$, or $z$.) For each higher order term, an additional field is required, and the rank of the associated susceptibility tensor increases accordingly. 
+We also find that even harmonics require a material lacking inversion symmetry. Under inversion we apply $\mathbf{r}\rightarrow -\mathbf{r}$, hence $\mathbf{P} \rightarrow -\mathbf{P}$, and $\mathbf{E} \rightarrow -\mathbf{E}$. For a centrosymmetric medium, it follows that $\mathbf{P}(-\mathbf{E}) = -\mathbf{P}(\mathbf{E})$, and so by equating components, for any even $n$ terms, $\chi^{(n)}=-\chi^{(n)}$ meaning $\chi^{(n)} = 0$. Therefore, nonlinear processes at even-order harmonics are forbidden in centrosymmetric media.
 
 \subsection{Linear Electric Dipoles}\label{sec:background:NonlinearOptics:linearP}
 The 3-dimensional linear response of a material in the dipole approximation can be described entirely by the first-order term in equation~\ref{eq:background:NonlinearOptics:susceptibility:Pti}. In the frequency domain, this becomes
 
 \begin{equation}
 	P_{i}(\omega) =  \epsilon_{0}
-				\chi^{(1)}_{ij}(\omega)  E_{j}(\omega)
+				\chi^{(1)}_{ij}(\omega)  E_{j}(\omega).
 \end{equation}
 In vector notation, this is given explicitly by
 \begin{equation}
@@ -91,9 +92,9 @@ In vector notation, this is given explicitly by
 		\chi_{xx} & \chi_{xy} & \chi_{xz}\\ 
 		\chi_{yx} & \chi_{yy} & \chi_{yz}\\ 
 		\chi_{zx} & \chi_{xy} & \chi_{zz}
-	\end{bmatrix} \cdot \mathbf{E}_{1}(\omega)
+	\end{bmatrix} \cdot \mathbf{E}_{1}(\omega).
 \end{equation}
-When studying nonlinear effects, the emitted radiation from the linear response will still be present, and almost always significantly stronger than the nonlinear response.
+When studying nonlinear effects, the emitted radiation from the linear response will still be present, and is almost always significantly stronger than the nonlinear response.
 
 
 \subsection{Second-Order Electric Dipoles}\label{sec:background:NonlinearOptics:shgP}
@@ -108,36 +109,35 @@ For second order effects $\chi^{(2)}_{ijk}$ is a rank 3 tensor of 27 components,
 \end{equation}
 Second-order nonlinear effects require two fields, however in practice these can be a single high-intensity field. We will first consider the general case allowing for two separate fields.
 
-In the frequency domain, two input fields $E_{j}(\omega_{p} )$ and $E_{k}(\omega_{q} )$ lead to an internal polarisation $P_{i}(\omega_{p}\pm\omega_{q} )$. As seen earlier, the susceptibility must now contain information about the response to three fields (two in, one out), each in three dimensions. 
-
+In the frequency domain, two input fields $E_{j}(\omega_{p} )$ and $E_{k}(\omega_{q} )$ lead to an internal polarisation $P_{i}(\omega_{p}\pm\omega_{q} )$. As seen earlier, the susceptibility must now contain information about the response to three fields (two in, one out), each in three dimensions. The polarisation is then described by 
 \begin{equation}\label{eq:background:NonlinearOptics:shgP:Psfg}
 	P_{i}(\omega=\omega_{p}\pm\omega_{q} ) =  \epsilon_{0} \sum_{jk} \sum_{(pq)}
 				\chi^{(2)}_{ijk}(\omega, \omega_{p},\omega_{q} ) 
-				E_{j}(\omega_{p} ) E_{k}(\omega_{q} )
+				E_{j}(\omega_{p} ) E_{k}(\omega_{q} ).
 \end{equation}
-The sum $\sum_{(pq)}$ is over fields who's frequencies sum to a fixed $\omega=\omega_{p}\pm\omega_{q}$. For two distinct input fields, at $\omega_{1}$ and $\omega_{2}$, $\omega_{p}$ and $\omega_{q}$ can each take one of these two values. This means that for known but different input frequencies, the polarisation can be given by equation \ref{eq:background:NonlinearOptics:shgP:Pw1w2}.
+The sum $\sum_{(pq)}$ is over fields who's frequencies sum to a fixed $\omega=\omega_{p}\pm\omega_{q}$. For two distinct input fields, at $\omega_{1}$ and $\omega_{2}$, $\omega_{p}$ and $\omega_{q}$ can each take one of these two values. This means that for known but different input frequencies, the polarisation can be given by 
 \begin{equation}\label{eq:background:NonlinearOptics:shgP:Pw1w2}
 	P_{i}(\omega=\omega_{1}+\omega_{2} ) =  \epsilon_{0} \sum_{jk} \big[
 				\chi^{(2)}_{ijk}(\omega, \omega_{1},\omega_{2} ) 
 				E_{j}(\omega_{1} ) E_{k}(\omega_{2} ) +
 				\chi^{(2)}_{ijk}(\omega, \omega_{2},\omega_{1} ) 
-				E_{j}(\omega_{2} ) E_{k}(\omega_{1} )
+				E_{j}(\omega_{2} ) E_{k}(\omega_{1} ).
 				\big]
 \end{equation}
-Due to permutation symmetry, where $E_{j}(\omega_{1} )=E_{k}(\omega_{1} )$ and $E_{j}(\omega_{2} )=E_{k}(\omega_{2} )$, this reduces to equation \ref{eq:background:NonlinearOptics:shgP:Pw1w2b} \cite[eq. 1.3.15]{Boyd2008a}.
+Due to permutation symmetry, where $E_{j}(\omega_{1} )=E_{k}(\omega_{1} )$ and $E_{j}(\omega_{2} )=E_{k}(\omega_{2} )$, this reduces to~\cite[eq. 1.3.15]{Boyd2008a}
 \begin{equation}\label{eq:background:NonlinearOptics:shgP:Pw1w2b}
 	P_{i}(\omega=\omega_{1}+\omega_{2} ) =  \epsilon_{0} \sum_{jk}
 				2 \chi^{(2)}_{ijk}(\omega, \omega_{1},\omega_{2} ) 
-				E_{j}(\omega_{1} ) E_{k}(\omega_{2} )
+				E_{j}(\omega_{1} ) E_{k}(\omega_{2} ).
 \end{equation}
 
-For second harmonic generation, we consider the case of a single input field, where now $\omega_{p}=\omega_{q}=\omega_{1}$, resulting in a polarisation $P_{i}(\omega=2\omega_{1} )$. In this case, the sum $\sum_{(pq)}$ collapses to a single term, and the polarisation is described by equation~\ref{eq:background:NonlinearOptics:shgP:Pw1w1}.
+For second harmonic generation, we consider the case of a single input field, where now $\omega_{p}=\omega_{q}=\omega_{1}$, resulting in a polarisation $P_{i}(\omega=2\omega_{1} )$. In this case, the sum $\sum_{(pq)}$ collapses to a single term, and the polarisation is described by
 \begin{equation}\label{eq:background:NonlinearOptics:shgP:Pw1w1}
 	P_{i}(\omega=2\omega_{1} ) =  \epsilon_{0} \sum_{jk}
 				\chi^{(2)}_{ijk}(\omega, \omega_{1},\omega_{1} ) 
-				E_{j}(\omega_{1} ) E_{k}(\omega_{1} )
+				E_{j}(\omega_{1} ) E_{k}(\omega_{1} ).
 \end{equation}
-
+The measurable SHG electric field, oscillating at the second harmonic, can then be obtained from $\mathbf{E}(2\omega)\sim[\mathbf{n}\times\mathbf{P}(2\omega)]\times\mathbf{n}$, where $\mathbf{P}(2\omega)$ is a vector describing the induced polarization from equation~\ref{eq:background:NonlinearOptics:shgP:Pw1w1}, and $\mathbf{n}$ is a unit vector describing the angle of observation. 
 
 %\subsection{Reducing \texorpdfstring{$\chi^{(2)}$}{Lg} with Symmetry}\label{sec:background:NonlinearOptics:tensorsymmetry}
 
@@ -185,12 +185,12 @@ Following the same reduction and rearrangement, the tensor product of the fields
 \end{equation}
 
 \subsection{Reducing \texorpdfstring{$\chi^{(2)}$}{Lg} with Rotational Symmetry}\label{sec:background:NonlinearOptics:rotation}
-he number of tensor components can also be reduced by considering rotational symmetry. If we rotate the system by an angle $\theta$ about a particular axis, we can define the new, rotated axes by applying the a set of coordinate transformations. For example, rotating in the $x-y$ plane, about the $z$ axis, applies the transformations
+The number of tensor components can also be reduced by considering rotational symmetry. If we rotate the system by an angle $\theta$ about a particular axis, we can define the new, rotated axes by applying a set of coordinate transformations. For example, rotating in the $x-y$ plane, about the $z$ axis, applies the transformations
 \begin{equation}\label{eq:background:NonlinearOptics:rotation:generalTrans}
     \begin{split}
         x \rightarrow x \cos{\theta} - y \sin{\theta} \\
         y \rightarrow x \sin{\theta} +y \cos{\theta} \\
-        z \rightarrow z
+        z \rightarrow z.
     \end{split}
 \end{equation}
 In matrix notation, this is given by
@@ -209,7 +209,7 @@ In matrix notation, this is given by
 		x\\ 
 		y\\ 
 		z
-	\end{pmatrix}
+	\end{pmatrix}.
 \end{equation}
 Following the same reasoning, we reach the matrices for rotating about each coordinate axis.
 \begin{equation}\label{eq:background:NonlinearOptics:rotation:AllRotationMatrices}
@@ -238,7 +238,7 @@ Rotations around multiple axes can then be solved by applying successive rotatio
 
 For rotational symmetry in the $x-y$ plane, we first rotate the tensor by the angle corresponding to our symmetry using
 \begin{equation}\label{eq:background:NonlinearOptics:rotation:RotateChi}
-	\chi_{ijk}^{\prime} =  R^{z}(\theta)_{i\alpha}R^{z}(\theta)_{j\beta}R^{z}(\theta)_{k\gamma}\chi^{(2)}_{\alpha \beta \gamma}
+	\chi_{ijk}^{\prime} =  R^{z}(\theta)_{i\alpha}R^{z}(\theta)_{j\beta}R^{z}(\theta)_{k\gamma}\chi^{(2)}_{\alpha \beta \gamma}.
 \end{equation}
 Due to symmetry, the tensor should remain unchanged under this transformation, and so we impose the equality $\chi_{ijk}^{\prime}=\chi_{ijk}$ to find any component dependencies. Solving for rotational symmetry can show various tensor components as being dependant, or necessarily equalling zero. Examples of this are given in Appendix~\ref{sec:appendix:rotations}.
 
@@ -289,7 +289,7 @@ If the line of mirror symmetry lies at an angle relative to this, the rotation m
 Under mirror symmetry about the $y$ axis, we impose the equality
 \begin{equation}\label{eq:background:NonlinearOptics:mirror:MirrorSymmetry}
 	A^{y}_{i\alpha}A^{y}_{j\beta}A^{y}_{k\gamma}\chi^{(2)}_{\alpha \beta \gamma}
-	=\chi^{(2)}_{ijk}
+	=\chi^{(2)}_{ijk}.
 \end{equation}
 From here, the initial and reflected tensors can be compared. It is found that the general tensor for such an achiral structure reduces to
 \begin{equation}\label{eq:background:NonlinearOptics:mirror:chiMirrory}
@@ -329,20 +329,22 @@ In the case of SHG, applying permutation symmetry reduces this further to
 \end{equation}
 The chirality is now described by a single independent component, since under permutation symmetry $\chi_{xyz} = -\chi_{yzx}$. Because of this, for C$_4$/C$_\infty$ structures the chiral contribution to SHG is often parametrized by this single ``chiral component''~$\chi_{xyz}$.
 
-\section{Second-Harmonic Generation as a Probe for Chirality}\label{sec:background:NonlinearOptics:chirality}
+\section{Second-Harmonic Generation as a Probe of Chirality}\label{sec:background:NonlinearOptics:chirality}
 
-From section~\ref{sec:background:NonlinearOptics:susceptibility} we know that non-zero SHG intrinsically requires a lack of centrosymmetry. For chiroptical measurements, this presents a clear advantage over the analysis of linear chiroptical effects. In linear measurements, any achiral background will contribute to the overall measured signal, reducing the contrast of chiroptical effects. However, an achiral bulk material cannot result in even-order nonlinear emission: SHG is forbidden, and so the achiral background is removed. In a system of chiral molecules amongst an achiral background, only the chiral structures, and weak contributions from surface interfaces, can contribute to SHG, drastically increasing the contrast in chiroptical dissymmetry.
+From section~\ref{sec:background:NonlinearOptics:susceptibility} we know that non-zero SHG intrinsically requires a lack of centrosymmetry. For chiroptical measurements, this presents a clear advantage over the analysis of linear chiroptical effects. In linear measurements, any achiral background will contribute to the overall measured signal, reducing the contrast of chiroptical effects. However, a centrosymmetric, achiral bulk material cannot result in even-order nonlinear emission: SHG is forbidden, and so the achiral background is removed. In a system of chiral molecules amongst an achiral background, only the chiral structures, and weak contributions from surface interfaces, can contribute to SHG. This intrinsic background removal can significantly increase the contrast in chiroptical dissymmetry.
 
 Aside from the background-reduction advantages, a somewhat more subtle advantages is also presented: Unlike linear chiroptical effects which \textit{require} coupling between electric dipoles and, typically weak, magnetic dipoles (section~\ref{sec:background:Chirality:Structural}), we have shown in section~\ref{sec:background:NonlinearOptics:mirror} that any structure lacking mirror symmetry can have a chiral contribution to SHG within the electric dipole approximation alone. 
 In second-harmonic generation experiments, analogues of linear circular dichroism and optical rotation can thus be measured. Second-harmonic generation optical rotation (SHG-OR) closely follows the definition discussed in section \ref{sec:background:Chirality:Chiroptics}: The angle of SHG-OR is given by the angle between the incident polarisation axis, and the angle of linearly polarised SHG from the material. The nonlinear analogue of circular dichroism is, however, somewhat less clearly defined. Often, SHG optical activity experiments measure a difference in the SHG \textit{intensity} from RCP and LCP incident light, $I_{RCP}$ and $I_{LCP}$ respectively. This is then normalised to $(I_{RCP} - I_{LCP})/(I_{RCP} + I_{LCP})$, and this quantity is called the SHG circular dichroism. However, this quantity typically gives no spectral information, and relates to the field intensity, rather than amplitude. A more appropriate term is ``circular intensity difference'' (CID), as used commonly in Raman optical activity measurements~\cite[\S 1.4]{Barron2004}. The CID is defined identically, and will be used here as a more suitable naming convention. The SHG-CID is thus defined by
 \begin{equation}\label{eq:background:NonlinearOptics:CID}	
-	\mathrm{SHG \mhyphen CID} = \frac{I_{RCP}^{SHG} - I_{LCP}^{SHG}}{I_{RCP}^{SHG} + I_{LCP}^{SHG}}
+	\mathrm{SHG \mhyphen CID} = \frac{I_{RCP}^{SHG} - I_{LCP}^{SHG}}{I_{RCP}^{SHG} + I_{LCP}^{SHG}}.
 \end{equation}
 Importantly, since the electric-dipole-only mechanism of the SHG chiroptical effects is fundamentally different to their linear chiroptical counterparts, SHG-CID and SHG-OR are not intrinsically linked by any simple relation. The two effects provide complementary information, allowing for more comprehensive structural characterisation.
 
-While strong SHG optical rotation has been demonstrated in chemical characterisation applications~\cite{Byers1994, Pena2006}, it has received significantly less attention than the relatively widespread use of SHG-CD/CID. First introduced in 1993~\cite{Petralli-Mallow1993}, SHG-CD/CID was shown to be 3 orders of magnitude higher contrast than linear optical activity.
-Even early experiments demonstrated monolayer sensitivity to both chirality and anisotropy when measuring SHG circular dichroism spectra~\cite{Byers1994a}, attributed to SHG-CD being an electric dipole allowed effect. Further experiments and theoretical analysis showed that since SHG-CD is electric dipole allowed, it can be much more sensitive to structural chirality than linear techniques, which require magneto-electric cross coupling, often present but not necessarily found in chiral structures~\cite{Verbiest1994b}. It has, however, also been shown that magneto-electric cross coupling can still contribute to SHG circular dichroism, by measuring SHG circular and linear dichroism in helical aggregates of achiral molecules~\cite{Fujiwara2004}.
-In more recent years, nonlinear chiroptical measurements have been combined with spectroscopic and microscopic measurement techniques. Again largely due to extreme symmetry/surface sensitivity, SHG microscopy has significant advantages over linear microscopy in many cases, in particular for cellular and tissue imaging. Samples can be pumped by intense laser light in the IR spectral region, allowing structural information to be obtained without the need for pumping in the UV, required by many fluorescence techniques, but often where the most sample damage is caused due to strong absorption in molecular systems~\cite{Campagnola2011}. SHG-CD/CID imaging has thus been used as a high-contrast chirally sensitive method for imaging and obtaining structural information of tissue samples~\cite{Lee2013a, Campbell2016}, even allowing differentiation between skin tissue with and without disorders~\cite{Chen2012}. Beyond bio-imaging and chemical characterisation, second-harmonic generation has been used in the chiroptical characterisation of metallic nanomaterials, through both nonlinear microscopy~\cite{Huttunen2011, Valev2012a, Mamonov2017} and more direct measurements~\cite{Guerrero-Martinez2011, Belardini2014, Hooper2017}. Such nanomaterials often lead to further enhancement of nonlinear emission, and are discussed further in section~\ref{sec:background:NonlinearOptics:plasmonic}. 
+While strong SHG optical rotation has been demonstrated in chemical characterisation applications~\cite{Byers1994, Pena2006}, it has received significantly less attention than the relatively widespread use of SHG-CID. First introduced in 1993~\cite{Petralli-Mallow1993}, SHG-CID was shown to be 3 orders of magnitude higher contrast than linear optical activity.
+Even early experiments demonstrated monolayer sensitivity to both chirality and anisotropy when measuring SHG circular dichroism spectra~\cite{Byers1994a}, attributed to SHG-CID being an electric dipole allowed effect. Further experiments and theoretical analysis showed that since SHG-CID is electric dipole allowed, it can be much more sensitive to structural chirality than linear techniques, which require magneto-electric cross coupling, often present but not necessarily found in chiral structures~\cite{Verbiest1994b}. It has, however, also been shown that magneto-electric cross coupling can still contribute to SHG circular dichroism, by measuring SHG circular and linear dichroism in helical aggregates of achiral molecules~\cite{Fujiwara2004}.
+In more recent years, nonlinear chiroptical measurements have been combined with spectroscopic and microscopic measurement techniques. Again largely due to extreme symmetry/surface sensitivity, SHG microscopy has significant advantages over linear microscopy in many cases, in particular for cellular and tissue imaging. 
+Samples can be pumped by intense laser light in the IR spectral region, allowing structural information to be obtained without the need for ultra-violet (UV) illuimination. UV wavelengths are required by many fluorescence techniques, but often lead to sample damage due to strong absorption in molecular systems~\cite{Campagnola2011}. 
+SHG-CID imaging has thus been used as a high-contrast chirally sensitive method for imaging and obtaining structural information of tissue samples~\cite{Lee2013a, Campbell2016}, even allowing differentiation between skin tissue with and without disorders~\cite{Chen2012}. Beyond bio-imaging and chemical characterisation, second-harmonic generation has been used in the chiroptical characterisation of metallic nanomaterials, through both nonlinear microscopy~\cite{Huttunen2011, Valev2012a, Mamonov2017} and more direct measurements~\cite{Guerrero-Martinez2011, Belardini2014, Hooper2017}. Such nanomaterials often lead to further enhancement of nonlinear emission, and are discussed further in section~\ref{sec:background:NonlinearOptics:plasmonic}. 
 
 
 
@@ -350,5 +352,7 @@ In more recent years, nonlinear chiroptical measurements have been combined with
 
 By considering the electromagnetic behaviour of a medium within the electric dipole approximation, we have shown how nonlinear optical measurements, specifically second-harmonic generation, can give robust information about the symmetry of a material.
 Nonlinear counterparts to the measurable chiroptical effects described in section~\ref{sec:background:Chirality:Chiroptics} are known to be much more sensitive, and higher contrast, than linear effects, while providing complementary information. This is typically owing to the significantly reduced background from achiral contributions, and the high symmetry-sensitivity of SHG emission.
-In an isotropic, chiral medium, the intrinsic chirality is described by a single independent susceptibility tensor component. However, the chirality of an anisotropic medium is described by a large number of independent components, entangled with terms associated with anisotropy. Despite this, chiroptical effects originating from structural anisotropy will have very different symmetry to those originating from intrinsic chirality. Therefore, in anisotropic structures, further consideration of the symmetry of the response can allow the disentangling of chirality from anisotropy. 
+In an isotropic, chiral medium, the intrinsic chirality is described by a single independent susceptibility tensor component. However, the chirality of an anisotropic medium is described by a large number of independent components, entangled with terms associated with anisotropy. 
+Despite this, chiroptical effects originating from structural anisotropy will vary, as the structure is transformed, with different symmetry compared to those originating from intrinsic chirality.
+Therefore, in anisotropic structures, further consideration of the symmetry of the response can allow the disentangling of chirality from anisotropy. 
 Generally, especially in molecular systems, the nonlinear response of a material is much weaker than the linear response. By fully exploiting the symmetry sensitivity of SHG, this response can be enhanced and utilised in chiroptical characterisation experiments, however in molecular systems this is often not possible. In the following chapter, we will discuss the emergence of plasmonic nanomaterials, which allow unprecedented enhancement of nonlinear emission, chiroptical dissymmetry, and allow the virtually limitless exploration of structurally-tailored artificial metamaterials.
