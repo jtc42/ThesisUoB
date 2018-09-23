@@ -36,7 +36,7 @@ A more general anharmonic potential contains higher order terms, and can be desc
 \begin{equation}\label{eq:NonlinearOptics:eqMotionNonlinear}
 	\frac{d^2 x}{dt^2} + \gamma \frac{dx}{dt} + \omega_{0}^2 x + \beta_2 x^2 +  \beta_3 x^3 + ... = -\frac{q}{m_{0} } E(t).
 \end{equation}
-For an oscillating $E(t)$, solving for $x(t)$ is difficult, however we can make use of the fact that, in general, $\omega_{0}^2 \ll \beta_2 \ll \beta_3 \ll ...$ to find a power series solution. By expanding $x = x_1 + x_2 + ...$ and equating successive higher orders, we obtain~\cite[\S 1.4.1]{Boyd2008a}
+For an oscillating $E(t)$, solving for $x(t)$ is difficult, however we can make use of the fact that, in general, $\omega_{0}^2 \ll \beta_2 \ll \beta_3 \ll ...$ to find a power series solution. By expanding $x = x_1 + x_2 + ...$ and equating successive higher orders, equations of motion for the lowest three orders can be obtained~\cite[\S 1.4.1]{Boyd2008a}:
 \begin{equation}\label{eq:NonlinearOptics:xorders}
 	\begin{split}
 		& \frac{d^2 x_1}{dt^2} + \gamma \frac{dx_1}{dt} + \omega_{0}^2 x_1 = -\frac{q}{m_{0} } E(t) \\
@@ -53,7 +53,7 @@ The lowest order in equation~\ref{eq:NonlinearOptics:xorders} ($x_{1}$) is equiv
 \begin{equation}
 	x_{1}(t) = \frac{-q}{m_0 D(\omega)} E_0 e^{-i\omega t}.
 \end{equation}
-Squaring $x_{1}(t)$, to obtain $x_{2}(t)$, gives both a DC component ($\omega=0$), and components oscillating at $\pm 2\omega$, proportional in amplitude to $E_{0}^2$, described by
+Squaring $x_{1}(t)$ and substituting in to the second-order expression in equation~\ref{eq:NonlinearOptics:xorders} to obtain $x_{2}(t)$ gives both a DC component ($\omega=0$), and components oscillating at $\pm 2\omega$, proportional in amplitude to $E_{0}^2$, described by
 \begin{equation}
 	x_{2}(t)\vert_{\mp 2\omega} = \frac{\beta_2 q^2}{m_{0}^2 D(\pm 2\omega) D^{2}(\omega)} E_0^2 e^{\pm i 2\omega t}
 \end{equation}
