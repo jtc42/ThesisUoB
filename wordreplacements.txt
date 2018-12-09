@@ -1,3 +1,0 @@
-polariz*, polaris*
-analyz*, analys*
-color, colour
