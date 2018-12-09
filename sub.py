@@ -18,7 +18,7 @@ if __name__ == "__main__":
 
     tex_files = glob.glob('./**/*.tex', recursive=True)
     
-    prefix = r'(?<!\\)(?<=\s)'
+    prefix = r'(?<!\\)(?<=\s|\-)'
 
     for fname in tex_files:
         #copyfile(fname, fname+'.bk')
