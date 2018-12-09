@@ -25,4 +25,6 @@ flavor, flavour
 neighbor, neighbour
 behavior, behaviour
 fiber, fibre
-ass, arse
+
+ass(?=\s), arse
+centreed, centred
