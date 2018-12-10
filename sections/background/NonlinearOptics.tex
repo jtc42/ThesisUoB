@@ -7,11 +7,11 @@ In the Lorentz model of an oscillating dipole driven by a time-varying electric 
 \begin{equation}\label{eq:NonlinearOptics:eqMotion}
 	m_{0} \frac{d^2 x}{dt^2} + m_{0} \gamma \frac{dx}{dt} + m_{0} \omega_{0}^2 x = -q E(t).
 \end{equation}
-Here, $x$ is the positional displacement of the electron, and $m_{0} \gamma \frac{dx}{dt}$ describes a damping force for a damping ratio $\gamma$. $\omega_{0}$ describes the resonant frequency of the system, and is defined in terms of a spring constant $k$ by $\omega_{0} = \sqrt{k/m_{0}}$. The restoring force $m_{0} \omega_{0}^2 x = kx$ is related to the potential $U(x)$ by
+Here, $x$ is the positional displacement of the electron, and $m_{0} \gamma \frac{dx}{dt}$ describes a damping force for a damping ratio $\gamma$. $\omega_{0}$ describes the resonant frequency of the system, and is defined in terms of a spring constant $k$ by $\omega_{0} = \sqrt{k/m_{0}}$. The restoring force $-m_{0} \omega_{0}^2 x = -kx$ is related to the potential $U(x)$ by
 \begin{equation}
-	F_{restoring} = \frac{d}{dx} U(x) = \frac{d}{dx} (1/2)kx^{2} = kx.
+	F_{restoring} = -\frac{d}{dx} U(x) = -\frac{d}{dx} (1/2)kx^{2} = -kx.
 \end{equation}
-The displacement $x(t)$ of the electron, of charge $e$,  results in a dipole moment $p(t) = ex(t)$, leading to a macroscopic induced polarisation of a material given by $P(t) = Np(t)$ where $N$ is the number of oscillators per unit volume.
+The displacement $x(t)$ of the electron, of charge $e$,  results in a dipole moment $p(t) = -ex(t)$, leading to a macroscopic induced polarisation of a material given by $P(t) = Np(t)$ where $N$ is the number of oscillators per unit volume.
 
 In the case of a driving field $E(t) = E_0 e^{-(i\omega t + \phi_E)}$, oscillating at a frequency $\omega$ with a phase $\phi_E$, solutions for $x(t)$ take the form of $x(t) = x_0 e^{-(i\omega t + \phi_x)}$. By including phase information by making $x_0$ and $E_0$ complex, these expressions can be substituted into equation~\ref{eq:NonlinearOptics:eqMotion} and solved for $x_0$ giving
 \begin{equation}\label{eq:NonlinearOptics:x0}
