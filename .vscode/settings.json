@@ -118,5 +118,5 @@
         "wavefront",
         "wavevector"
     ],
-    "cSpell.diagnosticLevel": "Hint",
+    "cSpell.diagnosticLevel": "Warning",
 }
