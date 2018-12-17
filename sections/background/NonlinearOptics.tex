@@ -67,7 +67,7 @@ Following from equation~\ref{eq:NonlinearOptics:PfullLinear}, from  the second-o
 
 \section{The Dielectric Susceptibility}\label{sec:background:NonlinearOptics:susceptibility}
 
-The general, 3-dimensional, macroscopic response of a material to an electric field is described by susceptibility tensors, as shown in equation~\ref{eq:background:NonlinearOptics:susceptibility:Pti}.
+The general, 3-dimensional, macroscopic response of a material to an electric field is described by susceptibility tensors, as shown in equation~\ref{eq:background:NonlinearOptics:susceptibility:Pti}~\cite[\S 1.1]{Boyd2008a}.
 \begin{equation}\label{eq:background:NonlinearOptics:susceptibility:Pti}
 	P_{i}(t) =  \epsilon_{0}\big[
 				\chi^{(1)}_{ij}  E_{j}(t) +
@@ -98,7 +98,7 @@ When studying nonlinear effects, the emitted radiation from the linear response 
 
 
 \subsection{Second-Order Electric Dipoles}\label{sec:background:NonlinearOptics:shgP}
-For second order effects $\chi^{(2)}_{ijk}$ is a rank 3 tensor of 27 components, which can be fully represented as
+For second order effects $\chi^{(2)}_{ijk}$ is a rank 3 tensor of 27 components, which can be fully represented by equation~\ref{eq:background:NonlinearOptics:shgP:chiFull}~\cite{verbiest2009second}.
 \begin{equation}\label{eq:background:NonlinearOptics:shgP:chiFull}
 	\chi^{(2)}_{ijk} =
 	\begin{bmatrix}
@@ -109,7 +109,7 @@ For second order effects $\chi^{(2)}_{ijk}$ is a rank 3 tensor of 27 components,
 \end{equation}
 Second-order nonlinear effects require two fields, however in practice these can be a single high-intensity field. We will first consider the general case allowing for two separate fields.
 
-In the frequency domain, two input fields $E_{j}(\omega_{p} )$ and $E_{k}(\omega_{q} )$ lead to an internal polarisation $P_{i}(\omega_{p}\pm\omega_{q} )$. As seen earlier, the susceptibility must now contain information about the response to three fields (two in, one out), each in three dimensions. The polarisation is then described by 
+In the frequency domain, two input fields $E_{j}(\omega_{p} )$ and $E_{k}(\omega_{q} )$ lead to an internal polarisation $P_{i}(\omega_{p}\pm\omega_{q} )$. As seen earlier, the susceptibility must now contain information about the response to three fields (two in, one out), each in three dimensions. The polarisation is then described by equation~\ref{eq:background:NonlinearOptics:shgP:Psfg}~\cite[\S 1.3]{Boyd2008a}.
 \begin{equation}\label{eq:background:NonlinearOptics:shgP:Psfg}
 	P_{i}(\omega=\omega_{p}\pm\omega_{q} ) =  \epsilon_{0} \sum_{jk} \sum_{(pq)}
 				\chi^{(2)}_{ijk}(\omega, \omega_{p},\omega_{q} ) 
