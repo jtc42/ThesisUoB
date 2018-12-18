@@ -36,7 +36,7 @@ A more general anharmonic potential contains higher order terms, and can be desc
 \begin{equation}\label{eq:NonlinearOptics:eqMotionNonlinear}
 	\frac{d^2 x}{dt^2} + \gamma \frac{dx}{dt} + \omega_{0}^2 x + \beta_2 x^2 +  \beta_3 x^3 + ... = -\frac{q}{m_{0} } E(t).
 \end{equation}
-For an oscillating $E(t)$, solving for $x(t)$ is difficult, however we can make use of the fact that, in general, $\omega_{0}^2 \ll \beta_2 \ll \beta_3 \ll ...$ to find a power series solution. By expanding $x = x_1 + x_2 + ...$ and equating successive higher orders, equations of motion for the lowest three orders can be obtained~\cite[\S 1.4.1]{Boyd2008a}:
+For an oscillating $E(t)$, solving for $x(t)$ is difficult, however we can make use of the fact that, in general, $\omega_{0}^2 \ll \beta_2 \ll \beta_3 \ll ...$ to describe the nonlinearity as a small perturbation to the system, and find a power series solution. We introduce a parameter $a$ characterising the perturbation, and make the substitutions $E(t)\rightarrow aE(t)$ and $x \rightarrow ax_1 + a^2 x_2 + a^3 x_3 + ...$ into equation~\ref{eq:NonlinearOptics:eqMotionNonlinear}. In order for this expansion of $x$ to be a valid solution, each term in equation~\ref{eq:NonlinearOptics:eqMotionNonlinear}, when grouped by powers of $a$, must satisfy the equation separately~\cite[\S 1.4.1]{Boyd2008a}. Equations of motion for the lowest three orders thus take the forms of~\cite[\S 1.4.1]{Boyd2008a}:
 \begin{equation}\label{eq:NonlinearOptics:xorders}
 	\begin{split}
 		& \frac{d^2 x_1}{dt^2} + \gamma \frac{dx_1}{dt} + \omega_{0}^2 x_1 = -\frac{q}{m_{0} } E(t) \\
