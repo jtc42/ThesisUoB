@@ -11,17 +11,17 @@ Here, $x$ is the positional displacement of the electron, and $m_{0} \gamma \fra
 \begin{equation}
 	F_{restoring} = -\frac{d}{dx} U(x) = -\frac{d}{dx} (1/2)kx^{2} = -kx.
 \end{equation}
-The displacement $x(t)$ of the electron, of charge $e$,  results in a dipole moment $p(t) = -ex(t)$, leading to a macroscopic induced polarisation of a material given by $P(t) = Np(t)$ where $N$ is the number of oscillators per unit volume~\cite[3.5.1]{Hecht2013}.
+The displacement $x(t)$ of the electron, of charge $e$,  results in a dipole moment $p(t) = -ex(t)$, leading to a macroscopic induced polarisation of a material given by $P(t) = Np(t)$ where $N$ is the number of oscillators per unit volume~\cite[\S 3.5.1]{Hecht2013}.
 
-In the case of a driving field $E(t) = E_0 e^{-i(\omega t + \phi_E)}$, oscillating at a frequency $\omega$ with a phase $\phi_E$, solutions for $x(t)$ take the form of $x(t) = x_0 e^{-i(\omega t + \phi_x)}$. By including phase information by making $x_0$ and $E_0$ complex, these expressions can be substituted into equation~\ref{eq:NonlinearOptics:eqMotion} and solved for $x_0$ giving
+In the case of a driving field $E(t) = {\mathop{\rm Re}\nolimits}[E_0 e^{-i(\omega t + \phi_E)}]$, oscillating at a frequency $\omega$ with a phase $\phi_E$, solutions for $x(t)$ take the form of $x(t) = {\mathop{\rm Re}\nolimits}[x_0 e^{-i(\omega t + \phi_x)}]$. Phase information is encoded by making $x_0$ and $E_0$ complex, and so these expressions can be substituted into equation~\ref{eq:NonlinearOptics:eqMotion} and solved for $x_0$ giving
 \begin{equation}\label{eq:NonlinearOptics:x0}
 	x_0 = \frac{-q E_0}{m_0 (\omega_{0}^2 -\omega^2 -i \gamma \omega)}.
 \end{equation}
 The macroscopic induced polarisation $P(t) = N q x(t)$ is now given by equation~\ref{eq:NonlinearOptics:PfullLinear}~\cite[\S 2.2.1]{fox2002optical}.
 \begin{equation}\label{eq:NonlinearOptics:PfullLinear}
 	\begin{split}
-		P(t) = & N q \left( \frac{-q E_0}{m_0 (\omega_{0}^2 -\omega^2 -i \gamma \omega)} \right) e^{-(i\omega t)} \\
-		= & \frac{N q^2}{m_0} \left( \frac{1}{\omega_{0}^2 -\omega^2 -i \gamma \omega} \right) E_0 e^{-(i\omega t)} \\
+		P(t) = & N q \left( \frac{-q E_0}{m_0 (\omega_{0}^2 -\omega^2 -i \gamma \omega)} \right) {\mathop{\rm Re}\nolimits}[e^{-(i\omega t)}] \\
+		= & \frac{N q^2}{m_0} \left( \frac{1}{\omega_{0}^2 -\omega^2 -i \gamma \omega} \right) {\mathop{\rm Re}\nolimits}[E_0 e^{-(i\omega t)}] \\
 		= & \frac{N q^2}{m_0} \left( \frac{1}{\omega_{0}^2 -\omega^2 -i \gamma \omega} \right) E(t).
 	\end{split}
 \end{equation}
