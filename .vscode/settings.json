@@ -62,6 +62,7 @@
         "gyrotropic",
         "heatmap",
         "helicity",
+        "hyperpolarisability",
         "ketamine",
         "kramers",
         "kretschmann",
@@ -90,6 +91,7 @@
         "nonlinear",
         "nonlinearities",
         "nonlinearity",
+        "orientational",
         "osteogenesis",
         "permittivities",
         "permittivity",
@@ -115,6 +117,7 @@
         "stereochemistry",
         "superchiral",
         "tellegen",
+        "unrotated",
         "wavefront",
         "wavevector"
     ],
